@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#1d3557">
+<meta name="description" content="UAV elettrico · Quota di tangenza · Strumentazione di bordo · Sicurezza in cabina">
+<title>Esame di Stato 2024 · Esami Costruzioni Aeronautiche</title>
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" integrity="sha384-nB0miv6/jRmo5UMMR1wu3Gz6NLsoTkbqJghGIsx//Rlm+ZU03BU6SQNC66uf4l5+" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" integrity="sha384-7zkQWkzuo3B5mTepMUcHkMB5jZaolc2xDwL6VFqjFALcbeS9Ggm/Yr2r3Dy4lfFg" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous" onload="renderMathInElement(document.body, {delimiters: [{left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}], throwOnError: false, macros: { '\\AR': '\\mathrm{AR}' } });"></script>
+</head>
+<body>
+<header class="site-header">
+<div class="site-header-inner">
+<a href="../index.html" class="brand">
+<span class="brand-mark">Esami</span>
+<span class="brand-sub">Costruzioni Aeronautiche · A038</span>
+</a>
+<nav class="site-nav">
+<a href="../index.html" >Indice</a>
+<a href="https://github.com" rel="noopener">GitHub</a>
+<a href="https://www.raucci.net" rel="noopener">Blog personale</a>
+</nav>
+</div>
+</header>
+
+<main class="container">
+<div class="exam-page">
+<article class="exam-article-wrap">
+<header class="exam-header">
+<a href="../index.html" class="exam-back">Tutte le prove</a>
+<div class="exam-eyebrow"><span>2024</span><span class="dot">·</span><span>Ordinaria</span></div>
+<h1 class="exam-title">Esame di Stato 2024</h1>
+<p class="exam-deck">UAV elettrico · Quota di tangenza · Strumentazione di bordo · Sicurezza in cabina</p>
+</header>
+<div class="exam-article">
+<p>La prova della sessione ordinaria 2024 ruota attorno a un <strong>velivolo UAV a propulsione elettrica</strong> (MTOW = 25 kg, $S = 2{,}5\,\mathrm{m}^2$, $\AR = 6{,}4$, profilo NACA 4412). La seconda parte propone quattro quesiti a risposta aperta, dei quali il candidato deve sceglierne due. Nei paragrafi seguenti viene fornita una risposta completa a ciascun quesito; le risposte ai quesiti <strong>1</strong> e <strong>2</strong> si raccordano direttamente con i risultati della Prima Parte.</p>
+
+<h2 id="utilità-potenzialità-e-limiti-del-velivolo-uav">Utilità, potenzialità e limiti del velivolo UAV</h2>
+
+<div class="quesito"><span class="quesito-num">Quesito 1</span><span class="quesito-text">Del velivolo oggetto della prima parte descriverne utilità, potenzialità e limiti.</span></div>
+
+<aside class="callout box-teoria"><div class="callout-label">Teoria</div><div class="callout-body">Un <strong>UAV</strong> (<em>Unmanned Aerial Vehicle</em>) è un aeromobile a pilotaggio remoto o
+completamente autonomo, privo di equipaggio a bordo. La classe di peso considerata
+(MTOW $\le 25\,\mathrm{kg}$, denominata "categoria aperta — sottocategoria A3"
+nel Regolamento EASA UE 2019/947) rappresenta il segmento operativamente più versatile
+dei droni professionali.</div></aside>
+
+<h3 id="utilità-e-applicazioni-operative">Utilità e applicazioni operative</h3>
+
+<p>Il velivolo UAV da 25 kg con propulsione elettrica trova impiego in numerosi settori civili e professionali.</p>
+
+<p><strong>Monitoraggio ambientale e rilievo topografico:</strong> ispezione di infrastrutture (tralicci, ponti, oleodotti, gasdotti), fotogrammetria aerea per ortofoto e modelli 3D, monitoraggio di incendi boschivi, analisi di colture agricole con sensori multispettrali (<em>precision farming</em>), controllo costiero e fluviale.</p>
+
+<p><strong>Sicurezza e protezione civile:</strong> ricerca e soccorso (SAR) con sensori termici IR, sorveglianza di aree vaste, supporto operativo a forze dell'ordine, gestione post-calamità (mappatura rapida di zone alluvionate o danneggiate da eventi sismici).</p>
+
+<p><strong>Cinematografia e broadcasting:</strong> riprese aeree per produzioni audiovisive, copertura di eventi sportivi, ispezioni in ambienti confinati (capannoni, silos) con telecamere ad alta risoluzione.</p>
+
+<p><strong>Logistica in aree disagiate:</strong> trasporto di farmaci, kit di pronto soccorso o piccoli dispositivi medici verso comunità remote o montane non raggiungibili agevolmente via terra.</p>
+
+<h3 id="potenzialità">Potenzialità</h3>
+
+<ul><li><strong>Costi operativi ridotti:</strong> l'assenza di equipaggio elimina i costi di
+    personale; la propulsione elettrica abbatte i costi di carburante e riduce la
+    manutenzione del gruppo propulsivo rispetto ai motori a pistoni.</li><li><strong>Accesso a zone pericolose o inaccessibili:</strong> l'UAV può operare in ambienti
+    tossici, irradiati o ad alto rischio senza mettere in pericolo operatori umani.</li><li><strong>Emissioni zero in volo:</strong> la propulsione elettrica non produce emissioni
+    locali di $\mathrm{CO_2}$ né inquinanti atmosferici durante il volo; vantaggio
+    rilevante nelle operazioni in aree urbane o protette.</li><li><strong>Silenziosità:</strong> un motore brushless con elica a basso numero di giri produce
+    livelli di rumore nettamente inferiori rispetto ad un motore a pistone equivalente;
+    questo amplia le finestre operative (orari notturni, zone residenziali).</li><li><strong>Agilità di schieramento:</strong> decollo e atterraggio non richiedono pista
+    dedicata; i tempi di allestimento sul campo sono dell'ordine di pochi minuti.</li></ul>
+
+<h3 id="limiti">Limiti</h3>
+
+<ul><li><strong>Autonomia limitata dalla densità energetica delle batterie:</strong>
+    con $C_{\mathrm{bat}} = 140\,\mathrm{Wh/kg}$ l'autonomia chilometrica è dell'ordine
+    di 80 km e quella oraria di circa 100 min; ben al di sotto dei velivoli a
+    combustione interna (avgas: $\sim 12\,000\,\mathrm{Wh/kg}$).</li><li><strong>Sensibilità alle condizioni meteorologiche:</strong> vento frontale prossimo a
+    $V_{MD} \approx 55\,\mathrm{km/h}$ riduce drasticamente l'autonomia chilometrica;
+    pioggia e ghiaccio degradano le prestazioni aerodinamiche e danneggiano
+    l'elettronica di bordo.</li><li><strong>Quadro normativo restrittivo:</strong> il Regolamento EASA UE 2019/947 impone
+    limitazioni operative stringenti. Il volo BVLOS (<em>Beyond Visual Line Of Sight</em>)
+    richiede autorizzazioni specifiche; esistono zone di esclusione permanente
+    (aeroporti, aree urbane ad alta densità, spazio aereo controllato CTR/TMA).</li><li><strong>Vulnerabilità elettronica:</strong> rischio di perdita di controllo per jamming
+    del segnale radio o GPS spoofing; in caso di interruzione del link di comando
+    il velivolo deve disporre di una procedura di failsafe (RTH, <em>Return To Home</em>).</li><li><strong>Payload limitato:</strong> con MTOW = 25 kg e batteria al 30% del peso,
+    il carico utile disponibile è dell'ordine di 5–8 kg, insufficiente per
+    applicazioni che richiedono sensori pesanti o carichi di massa significativa.</li></ul>
+
+<aside class="callout box-esempio"><div class="callout-label">Esempio</div><div class="callout-body"><strong>Confronto con un drone di categoria superiore.</strong>
+Il DJI Matrice 300 RTK (MTOW $\approx 9\,\mathrm{kg}$, payload massimo $\approx 2{,}7\,\mathrm{kg}$,
+autonomia $\approx 55\,\mathrm{min}$) rappresenta un benchmark per la classe professionale
+al di sotto dei 25 kg. Il velivolo della traccia, con MTOW quattro volte superiore,
+può portare payload più pesanti e coprire distanze maggiori, ma ricade in una categoria
+normativa più restrittiva (UA Class C2/C3 secondo il Reg. UE 2019/945).</div></aside>
+
+<aside class="callout box-risultati"><div class="callout-label">Risultati</div><div class="callout-body"><strong>Concetti-chiave:</strong>
+<ul><li>Gli UAV sotto 25 kg rientrano nella "categoria aperta" del Reg. EASA 2019/947;
+    il volo BVLOS richiede autorizzazione specifica.</li><li>La propulsione elettrica offre vantaggi in costi operativi, emissioni e
+    silenziosità, ma è penalizzata dalla bassa densità energetica delle batterie
+    ($\sim 140\,\mathrm{Wh/kg}$ contro $\sim 12\,000\,\mathrm{Wh/kg}$ dell'avgas).</li><li>L'autonomia tipica di $\sim 80\,\mathrm{km}$ / $\sim 100\,\mathrm{min}$
+    rappresenta il principale limite operativo.</li><li>Il vento frontale superiore a $V_{MD}$ rende impossibile il progresso di rotta.</li></ul></div></aside>
+
+<h2 id="quota-di-tangenza-definizione-e-dipendenza-dalle-c">Quota di tangenza: definizione e dipendenza dalle caratteristiche del velivolo</h2>
+
+<div class="quesito"><span class="quesito-num">Quesito 2</span><span class="quesito-text">Definire la quota di tangenza e illustrarne la dipendenza dalle caratteristiche del velivolo.</span></div>
+
+<aside class="callout box-teoria"><div class="callout-label">Teoria</div><div class="callout-body">La <strong>quota di tangenza</strong> è la quota massima alla quale un velivolo è in grado di
+volare in livellato. Fisicamente essa corrisponde alla quota alla quale il <em>supero
+di potenza</em> $\Delta\Pi = \Pi_d - \Pi_n$ si annulla (o si riduce ad un valore convenzionalmente
+piccolo), rendendo impossibile qualsiasi ulteriore salita.
+Si distinguono due definizioni operative:
+<dl><dt>Tangenza assoluta $h_{\mathrm{ass}}$:</dt><dd>quota alla quale $W = \Delta\Pi/Q = 0$,
+    ovvero la velocità ascensionale si azzera. È un limite teorico: richiederebbe
+    tempo infinito per essere raggiunto in salita.</dd><dt>Tangenza pratica $h_{\mathrm{prat}}$:</dt><dd>quota alla quale, con manetta al massimo
+    ($\varphi = 1$), la velocità ascensionale si riduce a $W = 0{,}5\,\mathrm{m/s}$
+    (valore convenzionale adottato dai Flight Manual).</dd></dl></div></aside>
+
+<h3 id="analisi-fisica-variazione-delle-potenze-con-la-quo">Analisi fisica: variazione delle potenze con la quota</h3>
+
+<p>La potenza necessaria al volo livellato vale: $$\Pi_n = \frac{W}{E} \cdot V = W^{3/2}
+    \sqrt{\frac{2}{\rho_z S}} \cdot \frac{C_D}{C_L^{3/2}}
+    \label{eq:Pn_quota}$$ Con il diminuire della densità $\rho_z$ al crescere della quota, la curva $\Pi_n(V)$ si sposta verso l'alto e verso destra: a parità di $C_L$ serve una velocità maggiore (l'aria è più rarefatta) e quindi la potenza cresce. In termini di densità relativa $\delta = \rho_z/\rho_0$: $$\Pi_{n,z} = \frac{\Pi_{n,0}}{\sqrt{\delta}}
+  \label{eq:Pn_scala}$$ La potenza disponibile $\Pi_d$ decade invece con la quota: <ul><li><strong>Motoelica (motore a pistone):</strong> $\Pi_d(z) \approx \Pi_0 \cdot \delta$, degrado lineare con la densità (il motore "respira" meno aria).</li><li><strong>Turbogetto:</strong> la spinta $T_d$ è quasi costante, quindi $\Pi_d = T_d \cdot V \propto 1/\sqrt{\delta}$, degrado molto più lento.</li><li><strong>Motore elettrico (come nell'UAV della traccia):</strong> la potenza disponibile non dipende dalla densità dell'aria ($\Pi_d \approx \Pi_{d,0} = \mathrm{cost}$); solo $\Pi_n$ varia con la quota.</li></ul></p>
+
+<p>Il supero di potenza $\Delta\Pi = \Pi_d - \Pi_n$ si riduce all'aumentare della quota. Quando $\Delta\Pi = 0$ si raggiunge la tangenza assoluta.</p>
+
+<figure class="block-figure">
+
+<img class="technical-figure" src="../assets/figures/2024-fig-01.png" alt="Figura tecnica 1 — 2024" loading="lazy">
+<figcaption>Variazione delle curve di potenza con la quota.
+  Il supero $\Delta\Pi = \Pi_d - \Pi_n$ si azzera alla tangenza assoluta.
+  Per il motore elettrico $\Pi_d \approx \mathrm{cost}$, per la motoelica $\Pi_d$ cala linearmente con $\delta$.</figcaption>
+</figure>
+
+<h3 id="dipendenza-dalle-caratteristiche-del-velivolo">Dipendenza dalle caratteristiche del velivolo</h3>
+
+<p class="para-head"><strong>Rapporto potenza/peso $\Pi_d/W$.</strong></p>
+È il parametro più direttamente influente: un supero iniziale $\Delta\Pi_0$ elevato si
+esaurisce più lentamente con la quota. Velivoli sportivi o militari con alto $\Pi_d/W$
+raggiungono tangenze molto superiori a quelle degli addestratori o dei velivoli da
+turismo.
+
+<p class="para-head"><strong>Efficienza aerodinamica massima $E_{\max}$.</strong></p>
+Dalla <span class="ref">(eq:Pn_quota)</span>, la potenza necessaria è $\Pi_n = WV/E$; aumentando $E_{\max}$
+(profilo più efficiente, allungamento maggiore, resistenza parassita ridotta) $\Pi_n$
+diminuisce e il supero cresce. Ricordando che:
+$$E_{\max} = \frac{1}{2}\sqrt{\frac{\pi\,\AR\,e}{C_{D0}}}$$
+la tangenza beneficia di: allungamento alare $\AR$ elevato, resistenza parassita $C_{D0}$
+ridotta, fattore di Oswald $e$ prossimo a 1.
+
+<p class="para-head"><strong>Carico alare $W/S$.</strong></p>
+Un carico alare elevato impone velocità operative più alte; poiché $\Pi_n \propto V^3$
+ad alto regime, la potenza necessaria cresce. A parità di propulsione, un'ala più grande
+($W/S$ minore) favorisce la tangenza — a discapito però della velocità di crociera.
+
+<p class="para-head"><strong>Legge di degrado della potenza disponibile.</strong></p>
+Il motore elettrico (caso dell'UAV in esame) non "respira" aria: la sua potenza è
+quasi indipendente dalla quota. Ne consegue che la tangenza è governata esclusivamente
+dalla crescita di $\Pi_n$ con la quota, e risulta notevolmente superiore rispetto ad una
+motoelica con pari rapporto $\Pi_d/W$ a livello del mare.
+
+<aside class="callout box-esempio"><div class="callout-label">Esempio</div><div class="callout-body"><strong>Stima grafica per l'UAV della traccia.</strong>
+Dalla Prima Parte: $P_{\max,\mathrm{el}} \times \eta_{\mathrm{tot}} = 2250 \times 0{,}42 = 945\,\mathrm{W}$.
+La velocità ascensionale al suolo (salita rapida) è
+$W_0 = \Delta\Pi_0 / Q = (945 - 302) / 245{,}25 \approx 2{,}6\,\mathrm{m/s}$.
+Poiché $\Pi_d$ è costante e $\Pi_n$ cresce come $1/\sqrt{\delta}$, la tangenza pratica
+($W = 0{,}5\,\mathrm{m/s}$) si raggiunge quando
+$\Pi_n(h_t) = 945 - 0{,}5 \times 245{,}25 \approx 822\,\mathrm{W}$,
+ovvero quando $\sqrt{\delta} \approx 302/822 \approx 0{,}367$,
+corrispondente a $\delta \approx 0{,}135$ — quota di circa 10 000 m.
+(Risultato indicativo, senza ottimizzazione della velocità di salita in quota.)</div></aside>
+
+<aside class="callout box-risultati"><div class="callout-label">Risultati</div><div class="callout-body"><strong>Concetti-chiave:</strong>
+<ul><li>Tangenza assoluta: $W = 0$; tangenza pratica (operativa): $W = 0{,}5\,\mathrm{m/s}$.</li><li>La tangenza cresce con: rapporto $\Pi_d/W$, $E_{\max}$, $\AR$; decresce con
+    $C_{D0}$ e carico alare $W/S$.</li><li>La potenza necessaria in quota scala come $\Pi_{n,z} = \Pi_{n,0}/\sqrt{\delta}$.</li><li>Il motore elettrico non degrada con la quota $(\Pi_d \approx \mathrm{cost})$:
+    gli UAV elettrici possono raggiungere tangenze molto elevate rispetto a un velivolo
+    a pistone di pari peso.</li></ul></div></aside>
+
+<h2 id="principale-strumentazione-di-bordo-di-un-velivolo">Principale strumentazione di bordo di un velivolo</h2>
+
+<div class="quesito"><span class="quesito-num">Quesito 3</span><span class="quesito-text">Illustrare la principale strumentazione di bordo di un velivolo.</span></div>
+
+<aside class="callout box-teoria"><div class="callout-label">Teoria</div><div class="callout-body">La strumentazione di bordo ha il compito di fornire al pilota — o al sistema di controllo
+automatico — le informazioni necessarie a condurre il velivolo in sicurezza in ogni fase
+della missione. Gli strumenti si suddividono in tre gruppi funzionali:
+<strong>strumenti di volo</strong>, <strong>strumenti di navigazione</strong> e
+<strong>strumenti di motore e impianti</strong>.</div></aside>
+
+<h3>Strumenti di volo (<em>flight instruments</h3>)</em>
+
+<p>Nel cruscotto analogico tradizionale gli strumenti di volo sono disposti secondo la <strong>"T di base"</strong> (<em>Basic-T</em>): anemometro in alto a sinistra, altimetro in alto a destra, orizzonte artificiale al centro, indicatore di virata e sbandamento in basso a sinistra, variometro in basso a destra, girobussola in basso al centro.</p>
+
+<p class="para-head"><strong>Anemometro (<em>Airspeed Indicator</em>, ASI).</strong></p>
+Misura la velocità indicata IAS (<em>Indicated Airspeed</em>) sfruttando la differenza tra
+pressione totale (tubo di Pitot) e pressione statica (presa statica):
+$$v_{\mathrm{IAS}} = \sqrt{\dfrac{2\,(p_t - p_s)}{\rho_0}}$$
+Il quadrante riporta settori colorati: arco <span class="color-word green"><strong>verde</strong></span> (velocità normali),
+arco <span class="color-word yellow"><strong>giallo</strong></span> (cautela, solo volo liscio),
+linea <span class="color-word red"><strong>rossa</strong></span> ($V_{NE}$, velocità mai da superare),
+arco <strong>bianco</strong> (intervallo con ipersostentatori estesi).
+
+<p class="para-head"><strong>Altimetro.</strong></p>
+Misura la quota barometrica dalla variazione di pressione statica rispetto a una
+pressione di riferimento (QNH, QFE o 1013,25 hPa per la quota standard).
+Tre lancette indicano migliaia, centinaia e decine di piedi (o di metri).
+Non è uno strumento inerziale: misura la pressione, non la quota geometrica.
+
+<p class="para-head"><strong>Orizzonte artificiale (<em>Attitude Indicator</em>, AI).</strong></p>
+Visualizza l'assetto del velivolo: angolo di rollio $\phi$ e di beccheggio $\theta$
+rispetto all'orizzonte. Si basa su un giroscopio a tre assi mantenuto verticale;
+nei sistemi moderni è realizzato con unità AHRS (<em>Attitude and Heading Reference
+System</em>) che integrano sensori MEMS e dati GPS. È lo strumento più critico in volo
+strumentale: una sua avaria improvvisa in IMC (<em>Instrument Meteorological Conditions</em>)
+è potenzialmente fatale se il pilota non è addestrato al volo con strumenti di riserva.
+
+<p class="para-head"><strong>Indicatore di virata e sbandamento (<em>Turn and Slip Indicator</em>).</strong></p>
+Misura la velocità angolare di imbardata $\dot\psi$ tramite un giroscopio a tasso
+(<em>rate gyro</em>) e il coordinamento della virata tramite una bolla livello. È il
+principale strumento di riserva in caso di avaria dell'orizzonte artificiale.
+
+<p class="para-head"><strong>Variometro (<em>Vertical Speed Indicator</em>, VSI).</strong></p>
+Indica la velocità verticale $\dot{h}$ in m/s o ft/min, derivata dalla variazione
+nel tempo della pressione statica. Ha un ritardo strumentale intrinseco di $\sim 5\,\mathrm{s}$,
+eliminato nei modelli IVSI (<em>Instantaneous VSI</em>) con una camera di accelerazione.
+
+<p class="para-head"><strong>Girobussola (<em>Direction Indicator</em>, DI).</strong></p>
+Indica la prua mediante un giroscopio orizzontatale. Accumula errori di precessione
+apparente ($\sim 15\,{}^{\circ}/\mathrm{h}$) e deve essere periodicamente riallineato
+con la bussola magnetica.
+
+<h3 id="strumenti-di-navigazione">Strumenti di navigazione</h3>
+
+<p class="para-head"><strong>Bussola magnetica.</strong></p>
+Orientamento rispetto al campo magnetico terrestre. Soggetta a errori di deviazione
+(disturbi magnetici del velivolo) e variazione (differenza Nord magnetico / Nord vero).
+In accelerazione e virata introduce errori sistematici (effetto pendolazione).
+
+<p class="para-head"><strong>VOR / DME.</strong></p>
+Il <strong>VOR</strong> (<em>VHF Omnidirectional Range</em>) fornisce la radiale rispetto alla
+stazione radio al suolo (accuratezza $\pm 1{,}4{}^{\circ}$). Il <strong>DME</strong>
+(<em>Distance Measuring Equipment</em>) misura la distanza obliqua (<em>slant range</em>)
+dalla stazione per triangolazione temporale degli impulsi radio.
+
+<p class="para-head"><strong>ILS (<em>Instrument Landing System</em>).</strong></p>
+Sistema di avvicinamento di precisione composto da:
+<em>localizer</em> (guida laterale, VHF 108–112 MHz) e
+<em>glide slope</em> (guida verticale, UHF 329–335 MHz),
+con il marker esterno, intermedio e interno per la verifica di quota.
+Classifica Cat. I (RVR $\ge 550\,\mathrm{m}$), Cat. II e Cat. III (fino ad autoland).
+
+<p class="para-head"><strong>GPS / GNSS.</strong></p>
+Fornisce posizione 3D, velocità rispetto al suolo e tempo con precisione
+$\le 3\,\mathrm{m}$ (SBAS). Non è influenzato da vento né campi magnetici;
+vulnerabile a jamming e spoofing. Integrato con sistemi inerziali INS/IRS nei
+velivoli di linea (navigazione ibrida GPS/INS).
+
+<p class="para-head"><strong>Transponder (SSR / ADS-B).</strong></p>
+Risponde alle interrogazioni radar secondario (SSR) trasmettendo codice ICAO e quota.
+I transponder <strong>Modo-S</strong> e <strong>ADS-B</strong> (<em>Automatic Dependent
+Surveillance-Broadcast</em>) diffondono identità, posizione GPS e velocità a tutti i
+ricevitori nel raggio utile; sono obbligatori in spazio aereo controllato dal 2023
+(Reg. UE 2020/587).
+
+<h3 id="strumenti-di-motore-e-impianti">Strumenti di motore e impianti</h3>
+
+<p>Includono: indicatori di regime (RPM per motore a pistone; $N_1$, $N_2$ per turbomotori), pressione di alimentazione carburante, temperatura testata cilindri (CHT) e gas di scarico (EGT) per motori a pistone, temperatura della sezione calda (ITT/TGT) per turbomotori, amperometri e voltmetri dell'impianto elettrico, manometri dell'impianto idraulico, indicatori dello stato del carrello.</p>
+
+<h3>Il <em>glass cockpit</h3></em>
+
+<p>Nei velivoli moderni (e negli UAV a controllo remoto) gli strumenti analogici sono sostituiti da display multifunzione digitali: <ul><li><strong>PFD</strong> (<em>Primary Flight Display</em>): replica elettronica della T di base — orizzonte artificiale, velocità, quota, variometro, prua — in un'unica schermata grafica ad alta risoluzione.</li><li><strong>MFD</strong> (<em>Multi Function Display</em>): carta di navigazione, dati motore, meteo radar, TCAS, FMS.</li></ul> La ridondanza è garantita da due display indipendenti con alimentazioni separate e da uno strumento di riserva autonomo (batteria dedicata).</p>
+
+<aside class="callout box-esempio"><div class="callout-label">Esempio</div><div class="callout-body"><strong>Strumentazione sull'UAV della traccia.</strong>
+Un UAV da 25 kg destinato al monitoraggio professionale equipaggia tipicamente:
+autopilota con AHRS + GPS (es. Pixhawk 6X o ArduPilot), telemetria bidirezionale
+su 900 MHz o 2,4 GHz, transponder ADS-B "out" (obbligatorio in Italia per MTOW
+$> 900\,\mathrm{g}$ in spazio aereo non segregato), sensore di pressione per
+l'altimetro barometrico, sensori ottici di flusso per la stabilizzazione in hovering.
+L'anemometro di Pitot è opzionale: a $V_{MD} \approx 55\,\mathrm{km/h}$ la pressione
+dinamica è solo $\sim 140\,\mathrm{Pa}$, prossima al limite dei sensori MEMS economici.</div></aside>
+
+<aside class="callout box-risultati"><div class="callout-label">Risultati</div><div class="callout-body"><strong>Concetti-chiave:</strong>
+<ul><li>La "T di base": anemometro (Pitot–statica), altimetro (pressione statica),
+    orizzonte artificiale (giroscopio), indicatore di virata, variometro, girobussola.</li><li>L'anemometro misura la pressione differenziale $p_t - p_s$; l'altimetro misura
+    la pressione statica assoluta; il variometro la sua variazione temporale.</li><li>VOR/DME per navigazione in rotta; ILS per avvicinamento strumentale di precisione.</li><li>Il glass cockpit (PFD + MFD) integra tutte le funzioni analogiche in display
+    digitali ridondati.</li><li>Il transponder ADS-B trasmette posizione e identità a tutti i ricevitori
+    compatibili; obbligatorio in spazio controllato.</li></ul></div></aside>
+
+<h2 id="sicurezza-del-trasporto-aereo-e-benessere-dei-pass">Sicurezza del trasporto aereo e benessere dei passeggeri</h2>
+
+<div class="quesito"><span class="quesito-num">Quesito 4</span><span class="quesito-text">Illustrare gli aspetti della sicurezza connessi al trasporto aereo e in particolare delle condizioni di benessere per i passeggeri.</span></div>
+
+<aside class="callout box-teoria"><div class="callout-label">Teoria</div><div class="callout-body">La <strong>sicurezza del trasporto aereo</strong> è il risultato di un approccio sistemico
+(<em>Safety Management System</em>, SMS, ICAO Doc 9859) che opera su tre livelli:
+<em>prevenzione</em> degli incidenti (safety by design, addestramento, manutenzione),
+<em>protezione</em> durante l'evento (sistemi di ritenuta, uscite di emergenza, materiali
+ignifughi) e <em>soccorso</em> post-incidente. Il benessere dei passeggeri rientra nella
+sicurezza passiva: ambienti fuori dai range fisiologici di pressione, temperatura o
+qualità dell'aria possono generare emergenze mediche indipendentemente da guasti strutturali.</div></aside>
+
+<h3 id="pressurizzazione-della-cabina">Pressurizzazione della cabina</h3>
+
+<p class="para-head"><strong>Perché pressurizzare.</strong></p>
+Alle quote di crociera tipiche ($10\,000$–$12\,000\,\mathrm{m}$) la pressione
+atmosferica scende a circa $\frac{1}{4}$ del valore al suolo
+($\sim 25\,\mathrm{kPa}$ contro $101\,\mathrm{kPa}$), rendendo la pressione parziale
+di ossigeno insufficiente alla sopravvivenza senza maschera. La cabina viene pertanto
+mantenuta a una pressione corrispondente a una "quota cabina" di circa
+$2400\,\mathrm{m}$ ($\sim 75\,\mathrm{kPa}$), valore stabilito dalla CS-25 e
+dall'IATA come compromesso tra comfort fisiologico e resistenza strutturale della fusoliera.
+
+<p class="para-head"><strong>Pressione differenziale strutturale.</strong></p>
+La differenza di pressione interno/esterno genera una sollecitazione di trazione sulla
+fusoliera (guscio cilindrico sotto pressione interna, con tensione circonferenziale
+$\sigma_\theta = \Delta p \cdot r / t$). Per i velivoli di linea:
+$$\Delta p = p_{\mathrm{cab}} - p_{\mathrm{ext}} \approx 75 - 20 = 55\,\mathrm{kPa}
+  \quad (\approx 8\,\mathrm{psi})$$
+La struttura è dimensionata su questo valore con $k = 1{,}5$ (CS-25.305).
+Valvole di sovrapressione impediscono $\Delta p$ eccessivi; valvole anti-vuoto
+evitano che in discesa rapida la pressione interna scenda sotto quella esterna.
+
+<p class="para-head"><strong>Impianto di condizionamento e pressurizzazione.</strong></p>
+L'aria fresca è prelevata come <em>bleed air</em> dai compressori del turbofan,
+raffreddata nel pacchetto ACM (<em>Air Cycle Machine</em> — ciclo aria bootstrap),
+filtrata con filtri HEPA e immessa in cabina. La portata è regolata per garantire
+un ricambio d'aria continuo ($\ge 0{,}25\,\mathrm{kg/min}$ per passeggero, IATA)
+e mantenere la $\mathrm{CO_2}$ al di sotto di $0{,}5\%$ in volume.
+
+<h3 id="temperatura-e-umidità">Temperatura e umidità</h3>
+
+<p>La temperatura di cabina è mantenuta nel range $18$–$24\,{}^{\circ}\mathrm{C}$. L'umidità relativa scende tipicamente al 5–15% su voli lunghi (l'aria ad alta quota è estremamente secca): causa irritazione delle mucose e degli occhi, affaticamento e disidratazione. I velivoli di nuova generazione in composito (es.\ Boeing 787) tollerano un'umidità del 15–16% (le strutture metalliche limiterebbero l'umidità per rischio di corrosione).</p>
+
+<h3 id="ossigeno-di-emergenza">Ossigeno di emergenza</h3>
+
+<p>In caso di depressurizzazione rapida, le maschere a ossigeno si aprono automaticamente quando la quota cabina supera $14\,000\,\mathrm{ft}$ ($\approx 4300\,\mathrm{m}$). Forniscono ossigeno da generatori chimici (perclorato di sodio, $\ge 12\,\mathrm{min}$) o da bombole centralizzate per un tempo sufficiente alla discesa di emergenza a quota sicura ($< 10\,000\,\mathrm{ft}$). I piloti dispongono di maschere a pressione positiva con autonomia di almeno 15 min (CS-25.1443).</p>
+
+<h3 id="sistemi-di-ritenuta-e-poltroncine">Sistemi di ritenuta e poltroncine</h3>
+
+<p>Le poltroncine sono certificate secondo CS-25.785 e devono resistere senza cedimento strutturale a un'accelerazione frontale di $16\,g$ (<em>crash pulse</em> di $0{,}1\,\mathrm{s}$, impulso triangolare). Le cinture di sicurezza a tre punti sono obbligatorie; durante le fasi critiche (decollo, atterraggio, turbolenza) la cintura deve essere allacciata. I corridoi devono rimanere percorribili dopo una deformazione residua del piano cabina.</p>
+
+<h3 id="uscite-di-emergenza-e-evacuazione">Uscite di emergenza e evacuazione</h3>
+
+<p>La CS-25.807 prescrive che <strong>tutti i passeggeri debbano poter evacuare il velivolo in 90 secondi</strong> con la metà delle uscite bloccate, in condizioni di illuminazione notturna simulata. Il numero, tipo (A, B, C, I, II, III, IV) e posizione delle uscite sono determinati in funzione della capacità massima del velivolo. Le uscite devono essere apribili dall'interno e dall'esterno; i meccanismi non devono richiedere più di $67\,\mathrm{N}$ di forza di apertura.</p>
+
+<h3 id="materiali-ignifughi-e-fumi">Materiali ignifughi e fumi</h3>
+
+<p>Tutti i materiali della cabina (rivestimenti, moquette, sedili, soffitti, cuscini) devono superare le prove di CS-25 Appendix F: <ul><li>Prova di propagazione della fiamma verticale (60 s di esposizione);</li><li>Prova di <em>heat release rate</em>: massimo $65\,\mathrm{kW/m^2}$ picco e $65\,\mathrm{kW{\cdot}min/m^2}$ integrale nei primi 2 min (OSU calorimeter);</li><li>Prova di opacità dei fumi: trasmittanza luminosa $\ge 0{,}15$ dopo 4 min.</li></ul></p>
+
+<h3 id="illuminazione-di-emergenza-e-segnaletica">Illuminazione di emergenza e segnaletica</h3>
+
+<p>L'impianto di illuminazione di emergenza (strisce a pavimento, insegne EXIT illuminate) deve funzionare per almeno 10 min a bordo completamente privo di alimentazione principale (batterie dedicate). Le strisce a pavimento guidano i passeggeri verso le uscite anche in caso di fumo denso in cabina (visibilità ridotta a pochi centimetri di altezza).</p>
+
+<aside class="callout box-esempio"><div class="callout-label">Esempio</div><div class="callout-body"><strong>Depressurizzazione esplosiva: il caso Aloha Airlines 243 (1988).</strong>
+Un Boeing 737-200 perse un pannello di $\approx 5\,\mathrm{m}^2$ di rivestimento
+a $24\,000\,\mathrm{ft}$ a causa di corrosione da fatica e delaminazione dei giunti
+rivettati per invecchiamento (<em>widespread fatigue damage</em>). La depressurizzazione
+fu istantanea; l'aereo atterrò senza altri incidenti. L'episodio accelerò l'adozione
+della filosofia <em>damage tolerance</em> e l'istituzione del programma FAA AAIP
+(<em>Aging Aircraft Inspection Program</em>).</div></aside>
+
+<aside class="callout box-risultati"><div class="callout-label">Risultati</div><div class="callout-body"><strong>Concetti-chiave:</strong>
+<ul><li>La quota cabina è $\approx 2400\,\mathrm{m}$ ($75\,\mathrm{kPa}$);
+    la $\Delta p$ strutturale di progetto è $\approx 55\,\mathrm{kPa}$ ($8\,\mathrm{psi}$)
+    per velivoli di linea.</li><li>Il condizionamento garantisce temperatura $18$–$24\,{}^{\circ}\mathrm{C}$
+    e rinnovo d'aria $\ge 0{,}25\,\mathrm{kg/min}$ per passeggero.</li><li>Le maschere a ossigeno si aprono automaticamente a quota cabina $> 14\,000\,\mathrm{ft}$.</li><li>Evacuazione completa in $\le 90\,\mathrm{s}$ con metà uscite bloccate (CS-25.807).</li><li>I materiali di cabina devono superare le prove di infiammabilità e opacità fumi
+    previste dalla CS-25 Appendix F.</li></ul></div></aside>
+</div>
+<nav class="exam-pagination">
+<a href="2023-straordinaria.html" class="">
+<span class="label">Precedente</span>
+<span class="title">2023 · Straordinaria</span>
+</a>
+<a href="2025.html" class="next">
+<span class="label">Successivo</span>
+<span class="title">2025 </span>
+</a>
+</nav>
+</article>
+<aside class="exam-aside">
+<div class="exam-aside-inner">
+<div class="toc-label">In questa pagina</div>
+<ul class="toc-list"><li><a href="#utilità-potenzialità-e-limiti-del-velivolo-uav"><span class="toc-num">1</span>Utilità, potenzialità e limiti del velivolo UAV</a></li>
+<li><a href="#quota-di-tangenza-definizione-e-dipendenza-dalle-c"><span class="toc-num">2</span>Quota di tangenza: definizione e dipendenza dalle caratteristiche del velivolo</a></li>
+<li><a href="#principale-strumentazione-di-bordo-di-un-velivolo"><span class="toc-num">3</span>Principale strumentazione di bordo di un velivolo</a></li>
+<li><a href="#sicurezza-del-trasporto-aereo-e-benessere-dei-pass"><span class="toc-num">4</span>Sicurezza del trasporto aereo e benessere dei passeggeri</a></li></ul>
+</div>
+</aside>
+</div>
+</main>
+<footer class="site-footer">
+<div class="site-footer-inner">
+<p>Prof. Ing. Raucci Biagio · ITIS E. Majorana, Cassino · A.S. 2025/26</p>
+<p class="credit">Costruzioni Aeronautiche · Classe A038</p>
+</div>
+</footer>
+<script src="../assets/script.js"></script>
+</body>
+</html>

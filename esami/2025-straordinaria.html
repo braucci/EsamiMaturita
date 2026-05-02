@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#1d3557">
+<meta name="description" content="Esame di Stato 2025 — sessione straordinaria">
+<title>Esame di Stato 2025 — sessione straordinaria · Esami Costruzioni Aeronautiche</title>
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" integrity="sha384-nB0miv6/jRmo5UMMR1wu3Gz6NLsoTkbqJghGIsx//Rlm+ZU03BU6SQNC66uf4l5+" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" integrity="sha384-7zkQWkzuo3B5mTepMUcHkMB5jZaolc2xDwL6VFqjFALcbeS9Ggm/Yr2r3Dy4lfFg" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous" onload="renderMathInElement(document.body, {delimiters: [{left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}], throwOnError: false, macros: { '\\AR': '\\mathrm{AR}' } });"></script>
+</head>
+<body>
+<header class="site-header">
+<div class="site-header-inner">
+<a href="../index.html" class="brand">
+<span class="brand-mark">Esami</span>
+<span class="brand-sub">Costruzioni Aeronautiche · A038</span>
+</a>
+<nav class="site-nav">
+<a href="../index.html" >Indice</a>
+<a href="https://github.com" rel="noopener">GitHub</a>
+<a href="https://www.raucci.net" rel="noopener">Blog personale</a>
+</nav>
+</div>
+</header>
+
+<main class="container">
+<div class="exam-page">
+<article class="exam-article-wrap">
+<header class="exam-header">
+<a href="../index.html" class="exam-back">Tutte le prove</a>
+<div class="exam-eyebrow"><span>2025</span><span class="dot">·</span><span>Straordinaria</span></div>
+<h1 class="exam-title">Esame di Stato 2025 — sessione straordinaria</h1>
+<p class="exam-deck">Esame di Stato 2025 — sessione straordinaria</p>
+</header>
+<div class="exam-article">
+<p>La sessione straordinaria del 2025 si svolge sulla stessa traccia di Prima parte già discussa nei capitoli precedenti (motoelica con struttura alare bilongherone), e propone una Seconda parte con quattro quesiti, fra i quali il candidato ne sceglie due. Per completezza didattica li trattiamo tutti e quattro: i primi tre (controllo a ultrasuoni, funzioni degli elementi dell'impennaggio orizzontale, fenomeni di flutter e divergenza) coprono argomenti già trattati in altri capitoli e qui vengono sintetizzati con la specificità del caso e con i necessari riferimenti incrociati; il quarto (<em>documentazione tecnica di manutenzione</em>) è invece un tema completamente nuovo e di particolare rilevanza professionale, e viene sviluppato in dettaglio.</p>
+
+<h2 id="prova-non-distruttiva-ad-ultrasuoni-principi-e-lim">Prova non distruttiva ad ultrasuoni: principi e limiti</h2>
+
+<div class="quesito"><span class="quesito-num">Quesito 1</span><span class="quesito-text">Descrivere la prova non distruttiva ad ultrasuoni applicata all'ispezione di un componente strutturale dell'ala. Spiegare i principi di funzionamento e i limiti del metodo.</span></div>
+
+<p>Il <strong>controllo a ultrasuoni</strong> (UT, <em>Ultrasonic Testing</em>) è la PND di elezione per ispezionare componenti strutturali metallici di forte spessore (longheroni, pannelli sandwich, raccordi forgiati) perché, a differenza delle PND superficiali, è in grado di rilevare difetti <em>interni</em> non altrimenti accessibili. Per la trattazione completa — principio fisico, apparecchiatura, procedimento operativo a 6 passi, schema TikZ del segnale A-scan — si rimanda al paragrafo <span class="ref">§sec:2016-q1</span> del Capitolo <span class="ref">§cap:esame2016</span>. In questa sede sintetizziamo i punti essenziali con specifico riferimento al caso del longherone alare.</p>
+
+<h3 id="principio-di-funzionamento">Principio di funzionamento</h3>
+
+<p>Un <em>trasduttore piezoelettrico</em> (sonda) genera un fascio di onde elastiche ad alta frequenza ($0{,}5\,\mathrm{}$–$25\,\mathrm{MHz}$) che penetra il materiale del pezzo. All'incontro con un'<em>interfaccia</em> (la superficie opposta del pezzo o un difetto interno) parte dell'energia viene riflessa e ritorna alla sonda, che la riconverte in segnale elettrico. Misurando il <em>tempo di volo</em> ($t$) e conoscendo la velocità del suono nel materiale ($v \approx 6300\,\mathrm{m/s}$ per le leghe di alluminio), si determina la profondità del riflettore: $$d = \frac{v \cdot t}{2}$$ ove il fattore $1/2$ tiene conto del cammino di andata e ritorno dell'onda.</p>
+
+<h3 id="visualizzazione-del-segnale">Visualizzazione del segnale</h3>
+
+<p>Sull'oscilloscopio (visualizzazione <em>A-scan</em>) compaiono tre echi caratteristici: <ul><li><strong>Eco di partenza</strong> (IP, <em>Initial Pulse</em>) all'istante $t=0$, generato dall'interfaccia sonda-pezzo;</li><li><strong>Eco di fondo</strong> (BWE, <em>Back-Wall Echo</em>) ad un tempo proporzionale al doppio dello spessore;</li><li><strong>Eco intermedio</strong> (eventualmente) fra IP e BWE, segnalatore di un difetto interno: la sua posizione fornisce la profondità, l'ampiezza la dimensione equivalente.</li></ul></p>
+
+<h3 id="applicazione-al-longherone-alare">Applicazione al longherone alare</h3>
+
+<p>Per ispezionare il longherone alare bilongherone del velivolo della Prima parte (lega 2024-T3, sezione rettangolare cava, momento flettente massimo alla radice) si procede come segue: <ol><li><em>pulizia</em> della superficie esterna dell'anima e delle solette;</li><li><em>calibrazione</em> su blocco di riferimento dello stesso materiale con riflettori artificiali noti, regolando velocità del suono ($6300\,\mathrm{m/s}$), base dei tempi e guadagno;</li><li>applicazione del <em>couplant</em> (gel) e <em>scansione raster</em> su tutta l'estensione del longherone, prestando particolare attenzione alla zona di radice e ai punti di attacco dei correnti;</li><li>interpretazione delle indicazioni: la presenza di un eco intermedia accompagnata dall'abbassamento dell'eco di fondo è il segno tipico di una cricca interna;</li><li>documentazione e rapporto di prova.</li></ol></p>
+
+<h3 id="limiti-del-metodo">Limiti del metodo</h3>
+
+<p>Pur essendo una PND molto potente, il controllo a ultrasuoni presenta alcune limitazioni di rilievo:</p>
+
+<ul><li><strong>Necessità del couplant</strong>: superfici scabrose, ossidate o verniciate richiedono preparazione preventiva.</li><li><strong>Geometrie complesse</strong>: spessori molto piccoli, raccordi curvi o sezioni a doppio T (caso tipico dei longheroni!) possono produrre echi di forma che mascherano i difetti reali; servono sonde focalizzate o angolari.</li><li><strong>Difetti lamellari paralleli al fascio</strong> (cricche orientate parallelamente alla direzione di propagazione): possono sfuggire alla rilevazione perché non producono riflessione significativa. Si supera la difficoltà con scansioni multi-angolari.</li><li><strong>Personale qualificato</strong>: l'interpretazione richiede operatori certificati al <em>livello II</em> secondo EN ISO 9712, capaci di distinguere echi reali da artefatti.</li><li><strong>Costo di apparecchiatura</strong>: significativamente superiore a quello di un controllo con liquidi penetranti, anche se ampiamente compensato dalla maggiore informazione fornita.</li></ul>
+
+<aside class="callout box-risultati"><div class="callout-label">Risultati</div><div class="callout-body"><strong>Concetti-chiave da ricordare:</strong>
+<ul><li>Il controllo a ultrasuoni rileva difetti interni sfruttando la riflessione di onde elastiche su interfacce.</li><li>Profondità del difetto: $d = v \cdot t/2$.</li><li>Procedimento: pulizia, calibrazione, couplant, scansione, interpretazione, rapporto.</li><li>Limiti principali: couplant, geometrie complesse, difetti lamellari, qualifica operatore.</li><li>Trattazione completa al paragrafo <span class="ref">§sec:2016-q1</span>.</li></ul></div></aside>
+
+<h2 id="funzioni-degli-elementi-dellimpennaggio-orizzontal">Funzioni degli elementi dell'impennaggio orizzontale</h2>
+
+<div class="quesito"><span class="quesito-num">Quesito 2</span><span class="quesito-text">Spiegare la funzione strutturale e aerodinamica degli elementi principali di un impennaggio orizzontale (stabilizzatore fisso, piani mobili, longheroni, ecc.).</span></div>
+
+<aside class="callout box-teoria"><div class="callout-label">Teoria</div><div class="callout-body">L'<strong>impennaggio orizzontale</strong> (<em>horizontal stabilizer / tail</em>) è la superficie portante di coda che assicura al velivolo la <em>stabilità longitudinale</em> attorno all'asse di beccheggio e fornisce il momento di equilibrio che bilancia la coppia generata dalla portanza dell'ala rispetto al baricentro. Strutturalmente è progettato come una piccola ala (longheroni + centine + rivestimento + superficie mobile) ma con dimensioni e spessori ridotti, dato che i carichi aerodinamici di equilibratura sono significativamente inferiori a quelli portanti dell'ala principale.</div></aside>
+
+<h3 id="configurazioni-principali">Configurazioni principali</h3>
+
+<p>L'impennaggio orizzontale può essere realizzato in due architetture differenti:</p>
+
+<dl><dt>Stabilizzatore fisso + equilibratore (<em>stabilizer + elevator</em>)</dt><dd>La superficie principale (<em>stabilizzatore</em>) è fissa rispetto alla fusoliera; alla sua estremità posteriore è incernierata una superficie mobile (<em>equilibratore</em>) che il pilota deflette per generare il momento di beccheggio. Soluzione tipica dei velivoli da turismo e di tutti i velivoli da trasporto subsonici.</dd><dt>Piano mobile (<em>stabilator</em> o <em>all-flying tail</em>)</dt><dd>L'intero impennaggio ruota attorno a un asse trasversale; non ci sono superfici incernierate. Soluzione tipica dei velivoli supersonici (per evitare onde d'urto sulle cerniere) e di alcuni velivoli ad alte prestazioni come il Piper Cherokee o il Beechcraft Bonanza. Richiede un sistema di trim più complesso e un'attenta cura della centratura.</dd></dl>
+
+<h3 id="funzioni-degli-elementi">Funzioni degli elementi</h3>
+
+<div class="table-wrap">
+
+<table><tr><td><strong>Elemento</strong></td><td><strong>Funzione strutturale e aerodinamica</strong></td></tr>
+<tr><td><strong>Stabilizzatore fisso</strong></td><td><em>Strutturale</em>: trasmette i carichi aerodinamici di equilibratura alla fusoliera; sostiene l'equilibratore con cerniere robuste. <em>Aerodinamica</em>: genera la portanza di coda (di solito <em>deportante</em>) che bilancia il momento di picchiata generato dall'ala.</td></tr>
+<tr><td><strong>Equilibratore</strong></td><td><em>Funzionale</em>: superficie mobile incernierata; la sua deflessione cambia la curvatura efficace dello stabilizzatore producendo una variazione di portanza e quindi un momento di beccheggio. <em>Aerodinamica</em>: controllo dell'asse di beccheggio.</td></tr>
+<tr><td><strong>Longheroni</strong></td><td><em>Strutturale</em> (primaria): assorbono il momento flettente dovuto al carico aerodinamico distribuito. La struttura è tipicamente bilongherone (anteriore + posteriore) per resistere anche alla torsione.</td></tr>
+<tr><td><strong>Centine</strong></td><td><em>Strutturale + aerodinamica</em>: mantengono il profilo, ripartiscono i carichi locali (ad esempio quelli sulle cerniere dell'equilibratore), evitano l'imbozzamento del rivestimento.</td></tr>
+<tr><td><strong>Rivestimento</strong></td><td><em>Strutturale + aerodinamica</em>: forma del profilo e cassone resistente a torsione (insieme alle anime dei longheroni); contribuisce al momento flettente come area collaborante.</td></tr>
+<tr><td><strong>Trim tab</strong></td><td><em>Funzionale</em>: piccola aletta posta sul bordo d'uscita dell'equilibratore. La sua deflessione genera una piccola forza che tende a mantenere l'equilibratore nella posizione voluta senza che il pilota debba esercitare uno sforzo continuo sul comando. Riduce il <em>carico statico sui comandi</em> (<em>stick force</em>).</td></tr>
+<tr><td><strong>Servo tab</strong></td><td><em>Funzionale</em>: aletta che, quando deflessa attivamente dal pilota, trascina con sé l'intero equilibratore. Tipica dei velivoli grandi senza servocomandi idraulici.</td></tr>
+<tr><td><strong>Compensatore aerodinamico</strong> (<em>horn balance</em>, <em>set-back hinge</em>)</td><td><em>Funzionale</em>: porzione di superficie mobile che si trova <em>davanti</em> all'asse di cerniera; quando l'equilibratore è deflesso essa genera un momento che aiuta il movimento, riducendo lo sforzo che il pilota deve esercitare.</td></tr>
+<tr><td><strong>Attacchi alla fusoliera</strong> (<em>fittings</em>)</td><td><em>Strutturale</em>: trasmettono il sistema di forze (taglio, flessione, torsione) alla struttura della fusoliera, attraverso la <em>paratia di coda</em>. Sono nodi rinforzati in alluminio fuso o forgiato.</td></tr></table>
+<figcaption>Funzioni degli elementi principali dell'impennaggio orizzontale.</figcaption>
+</div>
+
+<h3 id="specificità-funzionale-e-dimensionale">Specificità funzionale e dimensionale</h3>
+
+<p>L'impennaggio orizzontale opera con un <em>coefficiente di portanza assolutamente minore</em> di quello dell'ala (tipicamente $|C_{L,h}| < 0{,}3$) ma a un <em>braccio</em> molto più lungo rispetto al baricentro: il prodotto $C_{L,h} \cdot S_h \cdot \ell_h$ deve generare un momento sufficiente a compensare il momento di picchiata dell'ala. Per questo lo si dimensiona in modo che la sua <em>superficie</em> valga tipicamente il <span class="unit">20&nbsp;%</span>–<span class="unit">25&nbsp;%</span> di quella alare. Il braccio $\ell_h$ (distanza fra il fuoco dell'impennaggio e il baricentro del velivolo) determina anche il <em>volume di coda orizzontale</em>: $$bar{V}_h = \frac{S_h \cdot \ell_h}{S \cdot c_m}$$ parametro che, per i velivoli da turismo, vale tipicamente $bar{V}_h \approx 0{,}5$–$0{,}9$.</p>
+
+<aside class="callout box-esempio"><div class="callout-label">Esempio</div><div class="callout-body"><strong>Confronto fra configurazioni.</strong> Sul Cessna 172 si trova lo schema classico stabilizzatore fisso + equilibratore: una soluzione semplice e robusta, che richiede solo un piccolo sistema di trim a manovella sull'equilibratore. Sul Piper Cherokee (e su tutta la famiglia PA-28) si è invece adottato lo <em>stabilator</em> (impennaggio interamente mobile), che fornisce un'autorità di controllo maggiore con superficie ridotta del 20% circa, ma richiede un <em>anti-servo tab</em> per evitare sovrasensibilità. Sui velivoli supersonici (es.\ F-104, Tornado) lo stabilator è obbligatorio: in regime transonico, la cerniera di un equilibratore convenzionale si troverebbe in zona di onde d'urto con perdita totale di efficacia di controllo.</div></aside>
+
+<aside class="callout box-risultati"><div class="callout-label">Risultati</div><div class="callout-body"><strong>Concetti-chiave da ricordare:</strong>
+<ul><li>L'impennaggio orizzontale assicura la stabilità longitudinale e fornisce il momento di equilibrio del velivolo.</li><li>Configurazioni: <em>stabilizzatore + equilibratore</em> (subsonici) e <em>stabilator</em> (supersonici e alcuni velivoli ad alte prestazioni).</li><li>Strutturalmente è progettato come una piccola ala con longheroni, centine, rivestimento e superficie mobile.</li><li>Trim tab, servo tab e compensatori aerodinamici riducono lo sforzo di pilotaggio.</li><li>Volume di coda orizzontale: $bar{V}_h = (S_h \cdot \ell_h) / (S \cdot c_m) \approx 0{,}5$–$0{,}9$.</li></ul></div></aside>
+
+<h2 id="flutter-divergenza-elastica-e-tecniche-di-prevenzi">Flutter, divergenza elastica e tecniche di prevenzione</h2>
+
+<div class="quesito"><span class="quesito-num">Quesito 3</span><span class="quesito-text">Descrivere i fenomeni di flutter e divergenza elastica, indicando quali fattori strutturali e aerodinamici ne influenzano l'insorgenza, e le tecniche principali di prevenzione adottate nel progetto di velivoli.</span></div>
+
+<aside class="callout box-teoria"><div class="callout-label">Teoria</div><div class="callout-body">La <strong>aeroelasticità</strong> è la disciplina che studia l'interazione fra le forze aerodinamiche, quelle elastiche (deformazioni della struttura) e quelle inerziali (accelerazioni delle masse). I fenomeni aeroelastici si distinguono in <em>statici</em> (in cui le forze inerziali sono trascurabili: divergenza, inversione dei comandi) e <em>dinamici</em> (in cui le forze inerziali hanno ruolo essenziale: flutter, buffeting). Una trattazione completa è già stata svolta al paragrafo <span class="ref">§sec:2015-q3</span> del Capitolo <span class="ref">§cap:esame2015</span>; qui ci concentriamo specificamente su <em>divergenza</em> e <em>flutter</em> con riguardo ai fattori che ne determinano l'insorgenza e alle strategie progettuali di prevenzione.</div></aside>
+
+<h3 id="divergenza-elastica-fenomeno-statico">Divergenza elastica (fenomeno statico)</h3>
+
+<p class="para-head"><strong>Meccanismo.</strong></p>
+Un'ala investita dal flusso aerodinamico genera portanza, che produce un momento torcente attorno al suo asse elastico. Questo momento causa una <em>torsione</em> dell'ala che incrementa l'angolo d'attacco di ogni sezione, generando ulteriore portanza, che a sua volta aumenta la torsione, e così via in un <em>circolo vizioso</em>. Esiste una velocità critica $V_D$ (<em>velocità di divergenza</em>) oltre la quale il sistema diventa instabile: l'ala continua a torcersi indefinitamente fino al cedimento strutturale. Si tratta di un fenomeno <em>statico</em>, ovvero le forze inerziali non giocano alcun ruolo: il sistema raggiunge istantaneamente l'instabilità.
+
+<p class="para-head"><strong>Fattori che influenzano l'insorgenza.</strong></p>
+<ul><li><strong>Posizione del centro aerodinamico rispetto all'asse elastico</strong>: se il centro aerodinamico (CA, $\sim$ 25% della corda nei profili sottili) è <em>a monte</em> dell'asse elastico, la portanza genera un momento torcente che aumenta l'incidenza $\to$ rischio di divergenza. Se invece è <em>a valle</em>, il momento riduce l'incidenza e il sistema è stabile.</li><li><strong>Rigidezza torsionale dell'ala</strong> ($GJ$): più rigida l'ala, più alta la $V_D$. Per questo nelle ali a freccia in avanti, dove la divergenza è particolarmente critica, si ricorre a <em>wash-out passivo</em> dei rivestimenti in materiale composito.</li><li><strong>Allungamento alare</strong> ($\AR$): ali ad alto allungamento (es.\ alianti) sono più suscettibili perché più flessibili.</li><li><strong>Rastremazione e angolo di freccia</strong>: ali a freccia positiva (in avanti) hanno divergenza a velocità più basse; ali a freccia negativa (all'indietro) sono intrinsecamente più stabili.</li></ul>
+
+<p class="para-head"><strong>Velocità critica di divergenza.</strong></p>
+Per un'ala dritta non rastremata, la velocità di divergenza si calcola con una formula del tipo:
+$$V_D = \sqrt{\frac{GJ}{\rho \, e \, S \, c \, C_{L\alpha}}}$$
+ove $GJ$ è la rigidezza torsionale, $e$ è la distanza fra centro aerodinamico e asse elastico, $C_{L\alpha}$ è la pendenza della curva di portanza.
+
+<h3 id="flutter-fenomeno-dinamico">Flutter (fenomeno dinamico)</h3>
+
+<p class="para-head"><strong>Meccanismo.</strong></p>
+Il <strong>flutter</strong> è un'oscillazione <em>auto-sostenuta</em> (e crescente nel tempo, fino al cedimento) che insorge quando, ad una certa velocità $V_F$ (<em>velocità di flutter</em>), si verifica un <em>accoppiamento risonante</em> fra due o più modi propri di vibrazione della struttura, alimentato dalle forze aerodinamiche. Il caso classico è l'accoppiamento <strong>flessione-torsione</strong> dell'ala: una piccola perturbazione produce contemporaneamente una flessione e una torsione, le forze aerodinamiche generate dalla torsione amplificano la flessione, e viceversa. L'energia viene continuamente trasferita dal flusso d'aria alla struttura, in fase con il moto, fino a che le ampiezze diventano distruttive.
+
+<p>A differenza della divergenza, il flutter è un fenomeno <em>dinamico</em> con frequenze caratteristiche dell'ordine dei Hz; la sua manifestazione è preceduta da vibrazioni avvertibili dal pilota.</p>
+
+<p class="para-head"><strong>Fattori che influenzano l'insorgenza.</strong></p>
+<ul><li><strong>Posizione del baricentro rispetto all'asse elastico</strong>: se il baricentro della sezione si trova <em>a valle</em> dell'asse elastico (centro di taglio), un piccolo movimento di flessione genera un momento di torsione che amplifica il moto $\to$ accoppiamento favorevole al flutter. Spostare il baricentro <em>a monte</em> (<em>mass balancing</em>) è la principale tecnica di prevenzione.</li><li><strong>Rigidezze flessionale e torsionale</strong> dell'ala: il flutter compare quando le <em>frequenze proprie</em> dei modi di flessione e torsione si avvicinano fra loro. Si progetta affinché siano sufficientemente separate.</li><li><strong>Coefficiente di smorzamento strutturale</strong>: smorzamenti elevati ritardano l'insorgenza del flutter.</li><li><strong>Velocità di volo</strong>: $V_F$ si abbassa con il numero di Mach (<em>transonic dip</em>); per i velivoli da trasporto è quindi più critica nella zona transonica.</li></ul>
+
+<h3 id="tecniche-di-prevenzione-progettuale">Tecniche di prevenzione progettuale</h3>
+
+<div class="table-wrap">
+
+<table><tr><td><strong>Tecnica</strong></td><td><strong>Principio e applicazione</strong></td></tr>
+<tr><td><em>Mass balancing</em> (bilanciamento di massa)</td><td>Spostamento del baricentro delle superfici mobili (alettoni, equilibratori) <em>davanti</em> all'asse di cerniera, con masse di piombo o tungsteno installate nel naso della superficie. È la tecnica principale per evitare il flutter delle superfici mobili.</td></tr>
+<tr><td>Aumento della rigidezza torsionale</td><td>Cassoni alari multilongherone, rivestimenti più spessi nelle zone critiche, materiali compositi con orientazione delle fibre ottimizzata.</td></tr>
+<tr><td>Separazione delle frequenze proprie</td><td>Progettazione strutturale che mantiene le frequenze dei modi di flessione e torsione <em>sufficientemente diverse fra loro</em> (tipicamente con un rapporto $\ge 2$).</td></tr>
+<tr><td>Posizionamento accurato dei carichi pendolari</td><td>Motori, serbatoi e carrelli, se montati sull'ala, vengono posizionati in modo da non spostare i nodi di vibrazione verso configurazioni critiche.</td></tr>
+<tr><td>Test di flutter sperimentali (<em>flight flutter testing</em>)</td><td>Durante la certificazione, si eseguono prove di volo a velocità progressivamente crescenti, eccitando le superfici mobili con stick raps o eccitatori meccanici, e monitorando lo smorzamento. La $V_F$ deve risultare almeno <span class="unit">15&nbsp;%</span> al di sopra di $V_D$ (CS-23.629).</td></tr>
+<tr><td><em>Active flutter suppression</em></td><td>Sistemi fly-by-wire che, mediante sensori inerziali e attuatori sulle superfici mobili, generano in tempo reale comandi anti-flutter. Soluzione adottata nei velivoli moderni ad alte prestazioni (Boeing 787, Airbus A350).</td></tr>
+<tr><td>Limitazioni operative</td><td>In fase finale di certificazione, se un fenomeno aeroelastico non può essere completamente eliminato, si fissa una $V_{NE}$ (<em>Never Exceed Speed</em>) inferiore alla $V_F$ con margine di sicurezza, e si vincolano le condizioni di carico (peso, centraggio, velocità) negli inviluppi consentiti.</td></tr></table>
+<figcaption>Tecniche di prevenzione di divergenza e flutter nel progetto di velivoli.</figcaption>
+</div>
+
+<aside class="callout box-avviso"><div class="callout-label">Attenzione</div><div class="callout-body"><strong>Lezione storica: il L-188 Electra.</strong> Il quadrimotore turboelica Lockheed L-188 Electra (anni '50) subì due incidenti per flutter (Braniff 542 nel 1959 e Northwest 710 nel 1960) che causarono la perdita complessiva di 97 vite. La causa fu un <em>whirl mode flutter</em>: un cedimento progressivo degli attacchi del motore generava un'oscillazione del riduttore-elica che, accoppiandosi con il modo di flessione dell'ala, scatenava il flutter ad una velocità di volo molto inferiore a quella prevista dal progetto. La FAA impose il <em>LEAP program</em> (Lockheed Electra Action Program), che irrigidì gli attacchi motore e modificò il rivestimento alare. Da questo episodio derivano le pratiche moderne di certificazione del flutter.</div></aside>
+
+<aside class="callout box-risultati"><div class="callout-label">Risultati</div><div class="callout-body"><strong>Concetti-chiave da ricordare:</strong>
+<ul><li>La <em>divergenza</em> è statica: la torsione dell'ala alimenta sé stessa fino a cedimento.</li><li>Il <em>flutter</em> è dinamico: oscillazioni auto-sostenute per accoppiamento risonante flessione-torsione.</li><li>Fattori critici: posizione del baricentro rispetto all'asse elastico, rigidezza, allungamento, freccia.</li><li>Prevenzione: <em>mass balancing</em>, aumento rigidezza, separazione frequenze proprie, prove di volo, soppressione attiva, limitazioni operative ($V_{NE}$).</li><li>La $V_F$ certificata deve essere almeno $1{,}15 \cdot V_D$ (CS-23.629).</li></ul></div></aside>
+
+<h2 id="documentazione-tecnica-nella-manutenzione-di-una-f">Documentazione tecnica nella manutenzione di una flotta commerciale</h2>
+
+<div class="quesito"><span class="quesito-num">Quesito 4</span><span class="quesito-text">Illustrare la documentazione tecnica associata alla manutenzione di una flotta commerciale (logbook, MEL, AMM, CMM, SRM) e descriverne la funzione operativa nel contesto di una compagnia aerea.</span></div>
+
+<aside class="callout box-teoria"><div class="callout-label">Teoria</div><div class="callout-body">La gestione manutentiva di una flotta commerciale si fonda su un articolato <strong>sistema documentale</strong> che traccia, regolamenta e legittima ogni intervento eseguito. Questa documentazione è obbligatoria per legge (regolamento UE n. 1321/2014, Part-M e Part-145) e costituisce la <em>traccia documentale</em> dell'aeronavigabilità del velivolo. L'integrità del sistema documentale è verificata periodicamente dall'autorità di vigilanza (ENAC in Italia) e ne dipende il rilascio annuale dell'<strong>ARC</strong> (<em>Airworthiness Review Certificate</em>). Si distinguono due grandi famiglie: i documenti <em>operativi</em> (compilati dalla compagnia aerea e tracciano lo stato del singolo velivolo) e i documenti <em>tecnici</em> (forniti dal costruttore, sono manuali di riferimento che descrivono come eseguire le manutenzioni).</div></aside>
+
+<h3 id="logbook-giornale-di-bordo">Logbook — giornale di bordo</h3>
+
+<p>Il <strong>logbook</strong> (in italiano <em>libretto di bordo</em> o <em>giornale di bordo</em>) è il documento operativo <em>primario</em> del singolo velivolo. La sua funzione è registrare cronologicamente tutti gli eventi rilevanti dal punto di vista dell'aeronavigabilità.</p>
+
+<p class="para-head"><strong>Contenuto.</strong></p>
+<ul><li><em>Identificativi del velivolo</em>: marche di registrazione, numero seriale, costruttore, modello, anno di costruzione.</li><li><em>Voli effettuati</em>: data, equipaggio, tratta, ore-volo, cicli (decollo + atterraggio).</li><li><em>Anomalie rilevate dal pilota</em> (<em>pilot reports</em>): segnalazioni durante o al termine del volo.</li><li><em>Interventi correttivi</em> eseguiti dalla manutenzione, con riferimento alla documentazione tecnica applicata e firma del tecnico certificatore (CRS).</li><li><em>Riferimenti incrociati</em> a interventi maggiori riportati in dettaglio nei libretti di manutenzione.</li></ul>
+
+<p class="para-head"><strong>Funzione operativa.</strong></p>
+Il logbook è in possesso del comandante durante il volo e del responsabile di manutenzione a terra. È il documento che consente di: (a) verificare che il velivolo è aeronavigabile prima del decollo; (b) gestire la consegna fra equipaggi e fra base operativa e officina; (c) ricostruire la storia del velivolo per audit, indagini su incidenti, valutazione del valore residuo del velivolo.
+
+<h3 id="mel-minimum-equipment-list">MEL — Minimum Equipment List</h3>
+
+<p>La <strong>MEL</strong> (<em>Minimum Equipment List</em>) è il documento che specifica quali equipaggiamenti del velivolo possono essere temporaneamente <em>inoperativi</em> senza compromettere la sicurezza del volo, e a quali condizioni operative.</p>
+
+<p class="para-head"><strong>Origine e struttura.</strong></p>
+La MEL è derivata dalla <strong>MMEL</strong> (<em>Master MEL</em>), redatta dal costruttore e approvata da EASA, e poi adattata dalla compagnia aerea ai propri profili di missione e approvata dall'autorità nazionale (ENAC). Per ogni equipaggiamento elenca:
+<ul><li>l'identificativo (es.\ ATA Chapter, voce specifica);</li><li>il numero di unità installate e il numero <em>minimo</em> richiesto per il volo;</li><li>le <em>categorie di rettifica</em> (A, B, C, D) che fissano il tempo massimo entro cui il guasto deve essere riparato (es.\ A = entro lo stesso volo o 1 giorno, B = 3 giorni, C = 10 giorni, D = 120 giorni);</li><li>le eventuali <em>procedure operative</em> (<em>O</em>) o di manutenzione (<em>M</em>) da applicare per consentire il volo con l'equipaggiamento inoperativo (es.\ riduzione MTOW, limitazione di quota, divieto di volo notturno).</li></ul>
+
+<p class="para-head"><strong>Funzione operativa.</strong></p>
+La MEL evita che ogni piccola anomalia metta il velivolo a terra (e quindi causi cancellazioni di voli), pur garantendo livelli di sicurezza adeguati. È utilizzata quotidianamente dal comandante (per autorizzare la partenza con un'avaria minore) e dal manutentore (per applicare le procedure di rettifica). Dal punto di vista del business, una MEL ben gestita è uno strumento fondamentale per la <em>regolarità</em> della compagnia, ovvero la capacità di rispettare gli orari pubblicati.
+
+<h3 id="amm-aircraft-maintenance-manual">AMM — Aircraft Maintenance Manual</h3>
+
+<p>L'<strong>AMM</strong> (<em>Aircraft Maintenance Manual</em>) è il manuale di manutenzione del velivolo redatto dal costruttore e fornito alla compagnia aerea con il rilascio del Certificato di Tipo. Costituisce il <em>riferimento tecnico primario</em> per ogni intervento sulla cellula e sui sistemi di bordo.</p>
+
+<p class="para-head"><strong>Struttura ATA.</strong></p>
+L'AMM è organizzato secondo i <strong>capitoli ATA</strong> (Air Transport Association), uno standard di nomenclatura che assegna un numero a ciascun sistema. Esempi:
+<ul><li>ATA 21 — Air Conditioning;</li><li>ATA 27 — Flight Controls;</li><li>ATA 32 — Landing Gear;</li><li>ATA 71 — Power Plant.</li></ul>
+Ogni capitolo è suddiviso in sottocapitoli che descrivono i singoli componenti, le procedure di rimozione e installazione, le ispezioni periodiche, le tarature, i valori limite di accettabilità.
+
+<p class="para-head"><strong>Funzione operativa.</strong></p>
+L'AMM è il documento che il tecnico Part-145 deve consultare prima di eseguire qualsiasi intervento, e a cui fa riferimento nella registrazione finale (CRS). È in continua evoluzione: il costruttore emette <em>Service Bulletins</em> (SB), <em>Service Letters</em> (SL) e <em>revisions</em> per aggiornare le procedure in base all'esperienza di flotta e per implementare le <em>Airworthiness Directives</em> (AD) emesse dalle autorità.
+
+<h3 id="cmm-component-maintenance-manual">CMM — Component Maintenance Manual</h3>
+
+<p>Il <strong>CMM</strong> (<em>Component Maintenance Manual</em>) è il manuale di manutenzione del singolo <em>componente</em> (motore, APU, attuatore, computer di volo, ecc.), redatto dal fabbricante del componente stesso (che spesso è diverso dal costruttore del velivolo). È utilizzato nelle <em>officine specialistiche di terzo livello</em> (<em>component shops</em>), che riparano e revisionano il componente fuori dal velivolo.</p>
+
+<p class="para-head"><strong>Contenuto.</strong></p>
+<ul><li>Identificativo, costruttore, numero di parte (P/N) e numero seriale;</li><li>Procedure di smontaggio, ispezione, prove funzionali, riassemblaggio;</li><li>Limiti di vita utile (<em>life limits</em>), ore-funzionamento o cicli;</li><li>Parti di ricambio elencate per albero CCT (<em>Component Catalog Tree</em>);</li><li>Attrezzatura speciale necessaria (<em>special tools</em>).</li></ul>
+
+<p class="para-head"><strong>Funzione operativa.</strong></p>
+Il CMM è il riferimento per la <em>manutenzione modulare</em>: il velivolo viene riparato per <em>sostituzione</em> del componente difettoso (<em>LRU</em>, <em>Line Replaceable Unit</em>), e il componente smontato viene poi inviato in officina dove il CMM ne guida la riparazione. Questo schema riduce il tempo di fermo del velivolo e concentra le specializzazioni più costose.
+
+<h3 id="srm-structural-repair-manual">SRM — Structural Repair Manual</h3>
+
+<p>L'<strong>SRM</strong> (<em>Structural Repair Manual</em>) è il manuale di riparazione della struttura del velivolo, redatto dal costruttore. Contiene tutti i procedimenti standard certificati per riparare danni strutturali (ammaccature, perforazioni, cricche, distacchi di rivetti) sul rivestimento, sui longheroni, sulle centine, sugli attacchi.</p>
+
+<p class="para-head"><strong>Contenuto.</strong></p>
+<ul><li><em>Damage assessment</em>: criteri per valutare l'estensione del danno e classificarlo (lieve, riparabile, da rimpiazzare);</li><li><em>Repair schemes</em>: piani di riparazione standard certificati, con disegno tecnico, scelta del materiale di rinforzo, dimensione dei rivetti, sequenza di esecuzione;</li><li><em>Tolleranze</em>: limiti di accettabilità di un danno (entro cui non è necessaria riparazione) e criteri di accettazione della riparazione eseguita;</li><li><em>Materiali approvati</em>: leghe, finiture, mastici, sigillanti.</li></ul>
+
+<p class="para-head"><strong>Funzione operativa.</strong></p>
+L'SRM è utilizzato nelle officine Part-145 per gli interventi di tipo strutturale, tipici a seguito di danni accidentali (<em>ground damage</em>, <em>bird strike</em>, grandine, urto con <em>ground equipment</em>). Le riparazioni che esulano dallo schema SRM (<em>out-of-SRM repair</em>) richiedono un'autorizzazione specifica del costruttore (<em>Repair Approval Sheet</em>, RAS) o di un'organizzazione di progettazione approvata (Part-21 Design Organisation Approval).
+
+<h3 id="tabella-riassuntiva">Tabella riassuntiva</h3>
+
+<div class="table-wrap">
+
+<p>\setlength{\tabcolsep}{4pt} <table><tr><td>lp{3.5cm}Xp{3.5cm}@{}}</p>
+
+<p><strong>Sigla</strong></td><td><strong>Nome esteso</strong></td><td><strong>Funzione</strong></td><td><strong>Redatto da</strong></td></tr> <tr><td><strong>Logbook</strong></td><td>Giornale di bordo</td><td>Tracciamento operativo del singolo velivolo: voli, anomalie, interventi.</td><td>Compagnia aerea</td></tr> <tr><td><strong>MEL</strong></td><td>Minimum Equipment List</td><td>Equipaggiamenti che possono essere inoperativi e relative procedure.</td><td>Compagnia (da MMEL del costruttore)</td></tr> <tr><td><strong>AMM</strong></td><td>Aircraft Maintenance Manual</td><td>Procedure di manutenzione di cellula e sistemi, organizzate per capitoli ATA.</td><td>Costruttore del velivolo</td></tr> <tr><td><strong>CMM</strong></td><td>Component Maintenance Manual</td><td>Procedure di manutenzione di un singolo componente in officina.</td><td>Costruttore del componente</td></tr> <tr><td><strong>SRM</strong></td><td>Structural Repair Manual</td><td>Procedure standard di riparazione strutturale.</td><td>Costruttore del velivolo</td></tr></table> <figcaption>Documentazione tecnica per la manutenzione di una flotta commerciale.</figcaption> </div></p>
+
+<h3 id="schema-delle-interazioni">Schema delle interazioni</h3>
+
+<figure class="block-figure"><img class="technical-figure" src="../assets/figures/2025-straordinaria-fig-01.png" alt="Figura tecnica 1 — 2025-straordinaria" loading="lazy">
+<figcaption>Schema delle interazioni fra documentazione tecnica, attori (pilota, tecnico, CAMO) e velivolo. In verde i documenti operativi compilati dalla compagnia, in blu i manuali tecnici del costruttore consultati dai tecnici, in giallo l'organizzazione di sorveglianza.</figcaption></figure>
+
+<h3 id="documenti-complementari">Documenti complementari</h3>
+
+<p>Oltre ai cinque documenti principali oggetto del quesito, completano il quadro documentale di una flotta commerciale:</p>
+
+<ul><li><strong>IPC</strong> (<em>Illustrated Parts Catalog</em>): catalogo illustrato delle parti di ricambio del velivolo, con disegni esplosi e numero di parte (P/N) per ogni componente. Strumento di magazzino e di ordine ricambi.</li><li><strong>TSM</strong> (<em>Trouble Shooting Manual</em>): guida di diagnostica dei guasti, organizzata per sintomi.</li><li><strong>WDM</strong> (<em>Wiring Diagram Manual</em>): schemi elettrici dettagliati di tutto il cablaggio del velivolo.</li><li><strong>FCOM</strong> (<em>Flight Crew Operating Manual</em>): manuale operativo dell'equipaggio (procedure normali, di emergenza, prestazioni).</li><li><strong>MPD</strong> (<em>Maintenance Planning Document</em>): piano dei controlli periodici, tradotto in pratica dalla compagnia in un <em>programma di manutenzione approvato</em>.</li><li><strong>MOE</strong> (<em>Maintenance Organisation Exposition</em>): manuale dell'organizzazione Part-145 della compagnia, descrive procedure interne, qualifiche, struttura.</li><li><strong>CAME</strong> (<em>Continuing Airworthiness Management Exposition</em>): manuale equivalente per la CAMO.</li></ul>
+
+<aside class="callout box-esempio"><div class="callout-label">Esempio</div><div class="callout-body"><strong>Caso operativo.</strong> Un Boeing 737NG di una compagnia europea, durante il volo, riporta dal pilota un'anomalia (<em>pirep</em>) nel sistema di pressurizzazione — una valvola pneumatica fa rumore anomalo. Al rientro alla base, il pilota annota la segnalazione sul <strong>logbook</strong>. Il tecnico di linea consulta la <strong>MEL</strong> per verificare se il volo successivo possa partire con la valvola inoperativa: scopre che la voce ATA 21-31-01 è classificata categoria C (rettifica entro 10 giorni) con procedura M (la valvola va isolata, il velivolo opera con l'altro pacchetto di condizionamento). Effettua l'isolamento, lo certifica nel logbook e libera il velivolo. Nei giorni successivi, in officina, il tecnico applica le procedure dell'<strong>AMM</strong> ATA 21-31 per smontare la valvola difettosa; la valvola viene inviata al <em>component shop</em> dove il responsabile la ripara seguendo il <strong>CMM</strong> fornito dal costruttore della valvola. Tutta la sequenza è tracciata e firmata; al termine il CRS del tecnico Part-145 consente di rimettere il velivolo in piena efficienza. La <strong>CAMO</strong> aggiorna lo stato del velivolo nel sistema di gestione e segnala l'ARC come confermato.</div></aside>
+
+<aside class="callout box-risultati"><div class="callout-label">Risultati</div><div class="callout-body"><strong>Concetti-chiave da ricordare:</strong>
+<ul><li>Il sistema documentale è obbligatorio per legge e costituisce la traccia documentale dell'aeronavigabilità.</li><li><strong>Logbook</strong>: storia operativa del singolo velivolo (voli, anomalie, interventi).</li><li><strong>MEL</strong>: equipaggiamenti inoperativi consentiti e procedure relative; deriva dalla MMEL del costruttore.</li><li><strong>AMM</strong>: manuale di manutenzione del velivolo per cellula e sistemi, organizzato per capitoli ATA.</li><li><strong>CMM</strong>: manuale di manutenzione del singolo componente per le officine di terzo livello.</li><li><strong>SRM</strong>: manuale di riparazione strutturale standard certificato.</li><li>Documenti complementari (IPC, TSM, WDM, FCOM, MPD, MOE, CAME) completano il quadro.</li></ul></div></aside>
+</div>
+<nav class="exam-pagination">
+<a href="2025-suppletiva.html" class="">
+<span class="label">Precedente</span>
+<span class="title">2025 · Suppletiva</span>
+</a>
+<div class="placeholder"></div>
+</nav>
+</article>
+<aside class="exam-aside">
+<div class="exam-aside-inner">
+<div class="toc-label">In questa pagina</div>
+<ul class="toc-list"><li><a href="#prova-non-distruttiva-ad-ultrasuoni-principi-e-lim"><span class="toc-num">1</span>Prova non distruttiva ad ultrasuoni: principi e limiti</a></li>
+<li><a href="#funzioni-degli-elementi-dellimpennaggio-orizzontal"><span class="toc-num">2</span>Funzioni degli elementi dell'impennaggio orizzontale</a></li>
+<li><a href="#flutter-divergenza-elastica-e-tecniche-di-prevenzi"><span class="toc-num">3</span>Flutter, divergenza elastica e tecniche di prevenzione</a></li>
+<li><a href="#documentazione-tecnica-nella-manutenzione-di-una-f"><span class="toc-num">4</span>Documentazione tecnica nella manutenzione di una flotta commerciale</a></li></ul>
+</div>
+</aside>
+</div>
+</main>
+<footer class="site-footer">
+<div class="site-footer-inner">
+<p>Prof. Ing. Raucci Biagio · ITIS E. Majorana, Cassino · A.S. 2025/26</p>
+<p class="credit">Costruzioni Aeronautiche · Classe A038</p>
+</div>
+</footer>
+<script src="../assets/script.js"></script>
+</body>
+</html>

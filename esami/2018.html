@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#1d3557">
+<meta name="description" content="Comandi di volo · Quota di tangenza · Formazione di ghiaccio">
+<title>Esame di Stato 2018 · Esami Costruzioni Aeronautiche</title>
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" integrity="sha384-nB0miv6/jRmo5UMMR1wu3Gz6NLsoTkbqJghGIsx//Rlm+ZU03BU6SQNC66uf4l5+" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" integrity="sha384-7zkQWkzuo3B5mTepMUcHkMB5jZaolc2xDwL6VFqjFALcbeS9Ggm/Yr2r3Dy4lfFg" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous" onload="renderMathInElement(document.body, {delimiters: [{left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}], throwOnError: false, macros: { '\\AR': '\\mathrm{AR}' } });"></script>
+</head>
+<body>
+<header class="site-header">
+<div class="site-header-inner">
+<a href="../index.html" class="brand">
+<span class="brand-mark">Esami</span>
+<span class="brand-sub">Costruzioni Aeronautiche · A038</span>
+</a>
+<nav class="site-nav">
+<a href="../index.html" >Indice</a>
+<a href="https://github.com" rel="noopener">GitHub</a>
+<a href="https://www.raucci.net" rel="noopener">Blog personale</a>
+</nav>
+</div>
+</header>
+
+<main class="container">
+<div class="exam-page">
+<article class="exam-article-wrap">
+<header class="exam-header">
+<a href="../index.html" class="exam-back">Tutte le prove</a>
+<div class="exam-eyebrow"><span>2018</span><span class="dot">·</span><span>Ordinaria</span></div>
+<h1 class="exam-title">Esame di Stato 2018</h1>
+<p class="exam-deck">Comandi di volo · Quota di tangenza · Formazione di ghiaccio</p>
+</header>
+<div class="exam-article">
+<p>La prova della sessione ordinaria 2018 (codice I241, attuale A038) propone quattro quesiti, dei quali vengono affrontati i primi tre di carattere tecnico-disciplinare. Il quesito 4 richiede la descrizione dell'esperienza personale di Alternanza Scuola–Lavoro (PCTO) e non è oggetto di risposta nell'ambito di questo opuscoletto.</p>
+
+<h2 id="tipi-di-comandi-di-volo-e-loro-caratteristiche">Tipi di comandi di volo e loro caratteristiche</h2>
+
+<div class="quesito"><span class="quesito-num">Quesito 1</span><span class="quesito-text">Illustrare i diversi tipi di comandi di volo e le loro caratteristiche.</span></div>
+
+<aside class="callout box-teoria"><div class="callout-label">Teoria</div><div class="callout-body">I <strong>comandi di volo</strong> costituiscono la catena funzionale che collega i dispositivi
+di interfaccia del pilota (barra, volantino, pedaliera, leve) alle <em>superfici
+aerodinamiche di governo</em>, consentendo il controllo del velivolo attorno ai tre assi.
+Le tecnologie adottate variano in funzione della categoria del velivolo, delle sue
+dimensioni, della velocità di volo e dei requisiti di manovrabilità e sicurezza.</div></aside>
+
+<h3 id="superfici-di-governo-primarie-e-secondarie">Superfici di governo: primarie e secondarie</h3>
+
+<p>Si distinguono convenzionalmente: <ul><li><strong>Superfici primarie:</strong> governano i tre assi fondamentali. <em>Equilibratore</em> (beccheggio $\theta$), <em>timone di direzione</em> (imbardata $\psi$), <em>alettoni</em> (rollio $\phi$).</li><li><strong>Superfici secondarie:</strong> ipersostentatori (slat, flap), aerofreni, diruttori, spoiler, superfici di trimmaggio. Non controllano le manovre principali ma modificano le prestazioni in specifiche fasi di volo.</li></ul></p>
+
+<h3 id="comandi-meccanici-diretti">Comandi meccanici diretti</h3>
+
+<p>È il sistema più semplice: la forza muscolare del pilota viene trasmessa alla superficie tramite un <strong>cinematismo meccanico</strong> continuo (cavi in acciaio e carrucole, oppure aste e rinvii). Adatto ad alianti, ULM, velivoli da turismo di piccole dimensioni.</p>
+
+<p class="para-head"><strong>Caratteristiche:</strong></p>
+<ul><li>Semplicità costruttiva e manutenibilità elevata; basso costo.</li><li>Lo sforzo sulla barra aumenta con la velocità e con la deflessione
+    della superficie (pressione dinamica $q = \frac{1}{2}\rho V^2$).</li><li>Oltre un certo $V$ o una certa superficie, lo sforzo diventa
+    insostenibile dal pilota.</li><li>Sensazione tattile diretta (<em>force feedback</em>) naturale:
+    il pilota "sente" le forze aerodinamiche.</li></ul>
+
+<h3 id="comandi-potenziati-idraulicamente-servo-comandi">Comandi potenziati idraulicamente (servo-comandi)</h3>
+
+<p>Per velivoli di grandi dimensioni o ad alte velocità, lo sforzo richiesto dal pilota supera i limiti fisiologici: si inserisce un <strong>servo-attuatore idraulico</strong> nella catena di comando. Il pilota impone uno <em>spostamento di riferimento</em> (segnale di ingresso); il distributore idraulico amplifica la potenza e aziona la superficie.</p>
+
+<p class="para-head"><strong>Archittetture principali:</strong></p>
+<dl><dt>Servocomando reversibile:</dt><dd>una parte della forza aerodinamica viene ritrasmessa
+    al pilota tramite molle simulate (<em>spring feel</em> o <em>Q-feel</em>), mantenendo
+    la sensazione tattile. Comune sui velivoli civili degli anni '50–'80.</dd><dt>Servocomando irreversibile:</dt><dd>il pilota non avverte nessuna forza aerodinamica;
+    la sensazione è simulata da molle artificiali. Standard sui velivoli moderni.</dd><dt>Ridondanza:</dt><dd>i servomeccanismi su aeromobili certificati sono <em>triplex</em>
+    o <em>quadruplex</em>: tre o quattro circuiti idraulici indipendenti; il guasto di
+    uno o anche due non compromette il controllo. In emergenza totale, molti sistemi
+    consentono il comando meccanico diretto (bypassing idraulico) a sforzi elevati.</dd></dl>
+
+<h3 id="fly-by-wire-fbw">Fly-By-Wire (FBW)</h3>
+
+<p>Nel <strong>fly-by-wire</strong> (FBW, o DFBW — Digital Fly-By-Wire) la catena meccanica è completamente eliminata. Il comando del pilota viene convertito in un segnale elettrico digitale, elaborato da un sistema di calcolatori e trasmesso ai servo-attuatori.</p>
+
+<p class="para-head"><strong>Schema funzionale:</strong></p>
+$$\text{pilota (joystick)} \xrightarrow{\text{segnale elettrico}} \text{calcolatori FBW}
+  \xrightarrow{\text{segnale di comando}} \text{servo-attuatore idraulico/elettrico}
+  \rightarrow \text{superficie}$$
+
+<p class="para-head"><strong>Vantaggi del FBW:</strong></p>
+<ul><li><strong>Protezione dell'inviluppo di volo:</strong> i calcolatori rifiutano o modificano
+    i comandi che porterebbero a superare i limiti strutturali ($n_{\max}$, $\alpha_{\max}$,
+    $V_{\max}$). Il pilota non può «rompere» l'aereo con manovre errate.</li><li><strong>Pilotaggio di velivoli instabili:</strong> velivoli progettati con margine di
+    stabilità negativo (più manovrabili) sarebbero incontrollabili senza FBW.
+    Il calcolatore compensa l'instabilità in tempo reale (aggiornamento $>50\,\mathrm{Hz}$).</li><li><strong>Attenuazione delle raffiche:</strong> i sensori rilevano gli upset aerodinamici
+    prima che il pilota li percepisca; i calcolatori applicano contromanovre automatiche,
+    riducendo i carichi di fatica sulla struttura e il disagio dei passeggeri.</li><li><strong>Riduzione di peso:</strong> eliminazione di cavi, aste, carrucole e leveraggi
+    meccanici lungo tutta la fusoliera.</li><li><strong>Interfacciabilità con il pilota automatico</strong> e con i sistemi di guida
+    (FMS, GPWS, TCAS).</li></ul>
+
+<p class="para-head"><strong>Ridondanza e certificazione:</strong></p>
+Il software e l'hardware FBW devono dimostrare una probabilità di guasto catastrofico
+$< 10^{-9}$/h (CS-25.1309). Nei velivoli civili (es.\ Airbus A320) il sistema è
+<em>settuplo</em>: 7 calcolatori (FCPC + FCSC + SFCC) realizzati da due fornitori con
+hardware e software diversificati (<em>dissimilar redundancy</em>). In caso di avaria
+completa dell'elettronica, rimane disponibile il controllo diretto meccanico del timone
+e dello stabilizzatore.
+
+<div class="table-wrap">
+
+<table><tr><td>Tipo</td><td>Peso</td><td>Sforzo pilota</td><td>Protezione inv. volo</td></tr>
+<tr><td>Meccanico diretto</td><td>Basso</td><td>Alto (con $V$)</td><td>No</td></tr>
+<tr><td>Potenziato idraulico</td><td>Medio</td><td>Basso (simulato)</td><td>Parziale</td></tr>
+<tr><td>Fly-By-Wire</td><td>Minore</td><td>Minimo (joystick)</td><td>Completa</td></tr></table>
+<figcaption>Confronto tra le tipologie di comandi di volo.</figcaption>
+</div>
+
+<aside class="callout box-esempio"><div class="callout-label">Esempio</div><div class="callout-body"><strong>Primo FBW civile: Airbus A320 (1988).</strong>
+L'A320 è stato il primo velivolo di linea a sostituire i tradizionali volantini con due
+<em>sidestick</em> (joystick laterali). Il sistema FBW è basato su 7 calcolatori digitali
+ridondati. Caratteristica unica Airbus: i comandi dei due piloti non sono meccanicamente
+collegati (in Boeing 777 sono sommati elettronicamente), quindi un pilota può sovrascrivere
+l'altro premendo il tasto di priorità. La protezione dell'inviluppo impedisce qualsiasi
+manovra oltre $n = +2{,}5\,g$ / $-1\,g$ in configurazione pulita.</div></aside>
+
+<aside class="callout box-risultati"><div class="callout-label">Risultati</div><div class="callout-body"><strong>Concetti-chiave:</strong>
+<ul><li>Superfici primarie (equilibratore, timone, alettoni) vs secondarie
+    (flap, slat, aerofreni, trim).</li><li>Meccanico diretto: semplice, sforzo $\propto qS$; limite per velivoli grandi/veloci.</li><li>Potenziato idraulico: servocomando amplifica la potenza; sensazione simulata.</li><li>FBW: catena meccanica eliminata; calcolatori elaborano e adattano il comando;
+    protezione dell'inviluppo, riduzione di peso, pilotabilità di velivoli instabili.</li><li>Ridondanza FBW: $\ge 3$ canali, hardware/software dissimili; $P_{\mathrm{guasto}} < 10^{-9}$/h.</li></ul></div></aside>
+
+<h2 id="quota-di-tangenza-definizione-e-dipendenza-dalle-c">Quota di tangenza: definizione e dipendenza dalle caratteristiche del velivolo</h2>
+
+<div class="quesito"><span class="quesito-num">Quesito 2</span><span class="quesito-text">Definire la quota di tangenza e illustrarne la dipendenza dalle
+caratteristiche del velivolo.</span></div>
+
+<p>La trattazione completa di questo argomento è svolta nella sezione <span class="ref">§sec:2024-q2</span> (Esame 2024). In questa sede si richiamano i concetti fondamentali con una diversa angolazione, ponendo maggiore enfasi sul diagramma di supero di potenza, strumento grafico direttamente costruibile in fase di esame.</p>
+
+<aside class="callout box-teoria"><div class="callout-label">Teoria</div><div class="callout-body">La <strong>quota di tangenza</strong> è la quota massima alla quale il velivolo riesce a mantenere
+il volo livellato con la manetta al massimo. Si distinguono:
+<ul><li><strong>Tangenza assoluta $h_{\mathrm{ass}}$:</strong> supero di potenza $\Delta\Pi = 0$;
+    velocità ascensionale $W = 0$. Limite teorico raggiungibile in tempo infinito.</li><li><strong>Tangenza pratica $h_{\mathrm{prat}}$:</strong> $W = 0{,}5\,\mathrm{m/s}$
+    con massima spinta. Valore riportato nei Flight Manual; raggiungibile in tempo finito.</li></ul></div></aside>
+
+<h3 id="il-diagramma-del-supero-di-potenza">Il diagramma del supero di potenza</h3>
+
+<p>Il metodo grafico più efficace per la determinazione della tangenza è il <strong>diagramma $\Delta\Pi$ in funzione della quota</strong>, costruito nel modo seguente:</p>
+
+<ol><li>Per ogni quota $z$, calcolare la potenza disponibile $\Pi_d(z)$ e la potenza
+    necessaria minima $\Pi_{n,\min}(z)$.</li><li>Il supero di potenza è $\Delta\Pi(z) = \Pi_d(z) - \Pi_{n,\min}(z)$.</li><li>La velocità ascensionale massima è $W_{\max}(z) = \Delta\Pi(z)/W$.</li><li>Interpolando la curva $W_{\max}(z)$ vs. $z$:
+    <ul><li>Tangenza assoluta: intersezione con $W = 0$.</li><li>Tangenza pratica: intersezione con $W = 0{,}5\,\mathrm{m/s}$.</li></ul></li></ol>
+
+<p class="para-head"><strong>Andamento con la quota.</strong></p>
+Per la motoelica (motore a pistone + elica): $\Pi_d(z) \approx \Pi_0 \cdot \delta(z)$
+(degrado lineare con la densità relativa). La potenza necessaria minima cresce invece
+come $\Pi_{n,\min}(z) = \Pi_{n,\min,0}/\sqrt{\delta(z)}$ (a parità di peso e geometria,
+la velocità di volo cresce per compensare la minore densità). Il supero si riduce
+progressivamente con la quota.
+
+<p>Per il <strong>turbogetto</strong>: la spinta è quasi costante con la quota ($T_d \approx \mathrm{cost}$), quindi $\Pi_d = T_d \cdot V \propto 1/\sqrt{\delta}$ cresce più lentamente di $\Pi_{n,\min}$, portando a tangenze assai più elevate rispetto alla motoelica a parità di $\Pi_d/W$ al suolo.</p>
+
+<h3 id="dipendenza-dalle-caratteristiche-del-velivolo">Dipendenza dalle caratteristiche del velivolo</h3>
+
+<p class="para-head"><strong>Rapporto potenza/peso $\Pi_d/W$.</strong></p>
+È il fattore predominante: aumentando la potenza disponibile (o riducendo il peso),
+il supero al suolo $\Delta\Pi_0$ cresce e il suo esaurimento con la quota è più lento.
+Un caccia militare con $\Pi_d/W \gg 1$ raggiunge tangenze di $20\,000$–$25\,000\,\mathrm{m}$.
+
+<p class="para-head"><strong>Efficienza aerodinamica $E_{\max}$.</strong></p>
+Poiché $\Pi_{n,\min} = W\,V_{MP}/E_{MP}$ e $E_{MP} = \frac{1}{2}E_{\max}$, un'efficienza
+più alta riduce la potenza necessaria e aumenta il supero disponibile. L'efficienza è
+governata da:
+$$E_{\max} = \frac{1}{2}\sqrt{\frac{\pi\,\AR\,e}{C_{D0}}}$$
+Allungamento alare elevato, resistenza parassita ridotta e fattore di Oswald prossimo
+all'unità favoriscono la tangenza.
+
+<p class="para-head"><strong>Carico alare $W/S$.</strong></p>
+Carico alare elevato $\Rightarrow$ velocità operative più alte $\Rightarrow$ potenza
+necessaria maggiore $\Rightarrow$ supero ridotto. Un'ala grande (basso $W/S$) favorisce
+la tangenza ma penalizza la velocità di crociera.
+
+<p class="para-head"><strong>Legge di degrado propulsivo.</strong></p>
+Come discusso, i turbomotori degradano meno dei pistoni al crescere della quota:
+a parità di $\Pi_d/W$ al suolo, un turboreattore raggiunge tangenze da 2 a 4 volte
+superiori a quelle di una motoelica.
+
+<aside class="callout box-risultati"><div class="callout-label">Risultati</div><div class="callout-body"><strong>Concetti-chiave:</strong>
+<ul><li>Tangenza assoluta: $W=0$; tangenza pratica: $W=0{,}5\,\mathrm{m/s}$.</li><li>Si determina graficamente dall'intersezione della curva
+    $W_{\max}(z) = \Delta\Pi(z)/W$ con i valori soglia.</li><li>La tangenza cresce con $\Pi_d/W$ e $E_{\max}$; decresce con $C_{D0}$, $W/S$.</li><li>Turbogetto $\gg$ motoelica in tangenza perché il degrado propulsivo con la quota
+    è molto più lento.</li></ul></div></aside>
+
+<h2 id="formazione-di-ghiaccio-sulle-ali-problematiche-man">Formazione di ghiaccio sulle ali: problematiche, manutenzione e impianti antighiaccio</h2>
+
+<div class="quesito"><span class="quesito-num">Quesito 3</span><span class="quesito-text">Illustrare le problematiche connesse alla formazione di ghiaccio sulle ali,
+le principali procedure manutentive per ridurne il rischio di formazione ed accumulo
+ed il funzionamento di un impianto antighiaccio su aerei di linea.</span></div>
+
+<aside class="callout box-teoria"><div class="callout-label">Teoria</div><div class="callout-body">La <strong>formazione di ghiaccio</strong> è uno dei fenomeni meteorologici più insidiosi per
+la sicurezza del volo: altera la forma del profilo alare, riduce la portanza massima,
+aumenta la resistenza e può bloccare le superfici mobili. Gli incidenti correlati
+all'icing sono la causa di numerosi incidenti gravi, anche su velivoli di linea.</div></aside>
+
+<h3 id="fisica-della-formazione-di-ghiaccio">Fisica della formazione di ghiaccio</h3>
+
+<p>Il ghiaccio si forma quando il velivolo entra in una zona con <strong>gocce d'acqua sopraffusa</strong> (<em>supercooled droplets</em>): gocce allo stato liquido a temperatura inferiore a $0\,{}^{\circ}\mathrm{C}$, in equilibrio metastabile. Al contatto con la superficie del velivolo (bordo d'attacco, sensori), l'impulso meccanico innesca il congelamento istantaneo.</p>
+
+<p class="para-head"><strong>Condizioni di rischio.</strong></p>
+La zona di rischio massimo è compresa tra $-5$ e $-15\,{}^{\circ}\mathrm{C}$ (alta
+probabilità di droplets sopraffuse). Sopra i $12\,000\,\mathrm{m}$ ($40\,000\,\mathrm{ft}$)
+l'atmosfera è abbastanza secca da escludere praticamente la formazione di ghiaccio.
+
+<p class="para-head"><strong>Tipologie di ghiaccio.</strong></p>
+<dl><dt>Ghiaccio bianco (<em>rime ice</em>):</dt><dd>rugoso, opaco, meno aderente;
+    si forma con gocce piccole a temperatura molto bassa. Più facilmente rimovibile.</dd><dt>Ghiaccio vitreo (<em>glaze</em> o <em>clear ice</em>):</dt><dd>liscio, trasparente,
+    si forma con gocce grandi ($\mathrm{SLD}$, <em>supercooled large droplets</em>).
+    Segue il contorno del profilo; forma creste caratteristiche; molto aderente
+    e difficile da rimuovere.</dd><dt>Ghiaccio misto (<em>mixed ice</em>):</dt><dd>combinazione dei due; il più comune
+    in condizioni operative reali.</dd></dl>
+
+<h3 id="effetti-aerodinamici-e-strutturali">Effetti aerodinamici e strutturali</h3>
+
+<p class="para-head"><strong>Sull'ala.</strong></p>
+L'accumulo di ghiaccio sul <strong>bordo d'attacco</strong> altera profondamente la geometria
+del profilo: l'angolo di stallo si riduce anche del 30–50%; la portanza massima
+cala del $\sim 30\%$ e la resistenza aumenta del $\sim 40\%$. Il pericolo maggiore
+è uno <strong>stallo improvviso e asimmetrico</strong> (il ghiaccio raramente si deposita
+uniformemente): la perdita di efficacia degli alettoni può rendere impossibile
+recuperare l'assetto.
+
+<p class="para-head"><strong>Sugli impennaggi.</strong></p>
+Il piano di coda orizzontale può stallare per ghiaccio (<em>tail stall</em>) prima
+dell'ala, con conseguente perdita di controllo in beccheggio; particolarmente
+pericoloso in discesa o con flap estesi.
+
+<p class="para-head"><strong>Sulle superfici mobili e cerniere.</strong></p>
+Il ghiaccio nelle fessure tra parti fisse e mobili può bloccare fisicamente flap,
+alettoni ed equilibratore, rendendo il velivolo incontrollabile.
+
+<p class="para-head"><strong>Sulle prese di pressione (Pitot e statiche).</strong></p>
+L'ostruzione del tubo di Pitot annulla la misura della velocità indicata; l'ostruzione
+delle prese statiche altera altimetro e variometro. In entrambi i casi il pilota
+perde i riferimenti cinematici fondamentali.
+
+<p class="para-head"><strong>Sulle prese d'aria dei motori.</strong></p>
+I frammenti di ghiaccio proiettati all'interno del compressore possono causare
+danni alle pale (FOD, <em>Foreign Object Damage</em>) o lo stallo del compressore
+con spegnimento del motore.
+
+<h3 id="procedure-manutentive-a-terra-ground-de-icing">Procedure manutentive a terra (ground de-icing)</h3>
+
+<p>Prima del decollo in condizioni di icing, l'aeromobile deve essere trattato con procedure di sbrinamento e protezione:</p>
+
+<ol><li><strong>Ispezione visiva pre-volo:</strong> l'equipaggio verifica l'assenza di
+    contaminanti (ghiaccio, neve, brina, acqua gelata) su ali, impennaggi e
+    superfici di controllo. Il concetto "<em>clean aircraft</em>" è vincolante
+    per legge: nessun decollo è consentito con contaminanti sulle superfici
+    portanti (FAR/CS-25.1419).</li><li><strong>De-icing con fluidi tipo I (arancio):</strong> soluzione riscaldata di
+    glicole monoetilenico o propilenico ($\sim 60\,{}^{\circ}\mathrm{C}$), spruzzata
+    a bassa pressione per sciogliere e rimuovere ghiaccio e neve. Efficace ma
+    senza durata protettiva residua.</li><li><strong>Anti-icing con fluidi tipo II/IV (verde/giallo):</strong> fluidi
+    addensati (a base di glicole + tiotan) a bassa temperatura che formano uno
+    strato viscoso (<em>holdover time</em> fino a 45–75 min, a seconda della
+    temperatura e del tipo di precipitazione). Limitati dalla velocità minima
+    di distacco ($V > 100\,\mathrm{kt}$ per i fluidi tipo II).</li><li><strong>Holdover time (HOT):</strong> tabelle standardizzate (ICAO/FAA) indicano
+    il tempo di protezione garantita dal trattamento in funzione del tipo di
+    precipitazione e della temperatura. Il decollo deve avvenire entro tale limite.</li></ol>
+
+<h3 id="impianto-antighiaccio-in-volo-sui-velivoli-di-line">Impianto antighiaccio in volo sui velivoli di linea</h3>
+
+<p>I velivoli di linea moderni sono equipaggiati con sistemi integrati (ATA capitolo 30) che operano <em>in volo</em> per prevenire la formazione (<em>anti-ice</em>) e rimuovere il ghiaccio formato (<em>de-ice</em>).</p>
+
+<p class="para-head"><strong>Sistema termico pneumatico (bleed air anti-ice).</strong></p>
+È il sistema prevalente sui velivoli turbofan. L'aria calda spillata dal compressore
+del motore ($\sim 200$–$300\,{}^{\circ}\mathrm{C}$) è convogliata tramite il
+<em>piccolo tubo</em> (<em>piccolo pipe</em> o <em>Krueger duct</em>) all'interno del
+bordo d'attacco e distribuita nella cella anteriore dell'ala, riscaldando la
+superficie dall'interno.
+
+<p>Il ciclo di funzionamento è: <ol><li>Il pilota attiva il sistema quando il rilevatore di ghiaccio segnala le condizioni di icing (o profilatticamente prima di entrare in nuvolosità a temperatura negativa).</li><li>Aria calda spillata → valvola di intercettazione → piccolo tubo → irrorazione della cella del bordo d'attacco → scarico a trailing edge.</li><li>La temperatura del bordo d'attacco è mantenuta $> 0\,{}^{\circ}\mathrm{C}$ impedendo la formazione di ghiaccio (<em>evaporative mode</em>) o la limitando (<em>running wet mode</em>).</li><li>Il consumo di bleed air degrada leggermente le prestazioni del motore ($\sim 1$–$2\%$ di spinta): il sistema è attivato solo quando necessario.</li></ol></p>
+
+<p>Zone protette: bordo d'attacco delle ali (3 sezioni per semiala), piani di coda orizzontali (su alcuni velivoli), prese d'aria dei motori.</p>
+
+<p class="para-head"><strong>Sistema elettrico resistivo (<em>electric heating</em>).</strong></p>
+Resistenze elettriche incorporate nei bordi d'attacco o nelle guaine del tubo di
+Pitot convertono energia elettrica in calore. Usato per:
+<ul><li>Tubi di Pitot (sempre riscaldati in volo);</li><li>Rivelatori di angolo d'incidenza (vane AOA);</li><li>Parabrezza (strato conduttivo trasparente);</li><li>Piani di coda su velivoli di piccole dimensioni.</li></ul>
+Limite: la potenza elettrica disponibile a bordo è limitata; non adatto
+ai bordi d'attacco delle ali di grandi velivoli.
+
+<p class="para-head"><strong>Sistema meccanico a guaine pneumatiche (<em>pneumatic boots</em>).</strong></p>
+Guaine elastiche incollate sul bordo d'attacco vengono gonfiate e sgonfiate
+ciclicamente da aria compressa; la deformazione spezza e distacca il ghiaccio
+accumulato. Tipico sui turboelica (King Air, ATR) poiché economico in termini
+di energia. Svantaggio: occorre attendere che si formi uno strato di ghiaccio
+sufficiente per essere fratturato; possibile ghiaccio residuo tra i cicli
+di gonfiaggio.
+
+<p class="para-head"><strong>Sistema di rilevazione del ghiaccio.</strong></p>
+I velivoli di linea moderni montano sensori automatici:
+<ul><li><strong>Bacchetta vibrante (vibrating rod):</strong> vibra a 40 kHz; il
+    deposito di ghiaccio aumenta la massa e abbassa la frequenza di risonanza;
+    il cambio di frequenza attiva l'allarme.</li><li><strong>Indicatori visivi:</strong> luci illuminate di notte sul bordo d'attacco
+    (ice detection stroboscopic lights).</li></ul>
+
+<aside class="callout box-esempio"><div class="callout-label">Esempio</div><div class="callout-body"><strong>Incidente Comair 3272 (1997) — Valore didattico.</strong>
+Un ATR-42 in avvicinamento a Detroit si trovò in condizioni di SLD (gocce sopraffuse
+di grande diametro) non previste dalla certificazione dell'impianto anti-ice in dotazione.
+Il ghiaccio si depositò a valle dei boot, zona non protetta, causando uno stallo asimmetrico
+irreversibile. Tutti i 29 occupanti perirono. Questo incidente portò la FAA a emettere
+l'AD 97-26-07, vietando gli ATR di volare in condizioni SLD senza specifiche modifiche,
+e accelerò la revisione della CS-25 Appendix C con l'aggiunta dell'Appendix O
+per le condizioni SLD.</div></aside>
+
+<aside class="callout box-risultati"><div class="callout-label">Risultati</div><div class="callout-body"><strong>Concetti-chiave:</strong>
+<ul><li>Ghiaccio bianco (rime), vitreo (glaze), misto: il vitreo è il più pericoloso
+    (aderente, forma creste, difficile da rimuovere).</li><li>Effetti: $\Delta C_{L,\max} - 30\%$, $\Delta C_D + 40\%$, stallo prematuro
+    e asimmetrico, blocco superfici mobili, ostruzione Pitot.</li><li>A terra: de-icing (fluidi tipo I) + anti-icing (fluidi tipo II/IV, HOT).</li><li>In volo: bleed air anti-ice (bordi d'attacco, prese d'aria), riscaldamento
+    elettrico (Pitot, AOA, parabrezza), guaine pneumatiche (turboelica).</li><li>Rilevazione: bacchetta vibrante (40 kHz); indicatori visivi notturni.</li></ul></div></aside>
+</div>
+<nav class="exam-pagination">
+<a href="2017.html" class="">
+<span class="label">Precedente</span>
+<span class="title">2017 </span>
+</a>
+<a href="2018-suppletiva.html" class="next">
+<span class="label">Successivo</span>
+<span class="title">2018 · Suppletiva</span>
+</a>
+</nav>
+</article>
+<aside class="exam-aside">
+<div class="exam-aside-inner">
+<div class="toc-label">In questa pagina</div>
+<ul class="toc-list"><li><a href="#tipi-di-comandi-di-volo-e-loro-caratteristiche"><span class="toc-num">1</span>Tipi di comandi di volo e loro caratteristiche</a></li>
+<li><a href="#quota-di-tangenza-definizione-e-dipendenza-dalle-c"><span class="toc-num">2</span>Quota di tangenza: definizione e dipendenza dalle caratteristiche del velivolo</a></li>
+<li><a href="#formazione-di-ghiaccio-sulle-ali-problematiche-man"><span class="toc-num">3</span>Formazione di ghiaccio sulle ali: problematiche, manutenzione e impianti antighiaccio</a></li></ul>
+</div>
+</aside>
+</div>
+</main>
+<footer class="site-footer">
+<div class="site-footer-inner">
+<p>Prof. Ing. Raucci Biagio · ITIS E. Majorana, Cassino · A.S. 2025/26</p>
+<p class="credit">Costruzioni Aeronautiche · Classe A038</p>
+</div>
+</footer>
+<script src="../assets/script.js"></script>
+</body>
+</html>

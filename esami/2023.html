@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#1d3557">
+<meta name="description" content="Antincendio · Motorizzazione e serbatoio · Prove a terra · Corrosione">
+<title>Esame di Stato 2023 · Esami Costruzioni Aeronautiche</title>
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" integrity="sha384-nB0miv6/jRmo5UMMR1wu3Gz6NLsoTkbqJghGIsx//Rlm+ZU03BU6SQNC66uf4l5+" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" integrity="sha384-7zkQWkzuo3B5mTepMUcHkMB5jZaolc2xDwL6VFqjFALcbeS9Ggm/Yr2r3Dy4lfFg" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous" onload="renderMathInElement(document.body, {delimiters: [{left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}], throwOnError: false, macros: { '\\AR': '\\mathrm{AR}' } });"></script>
+</head>
+<body>
+<header class="site-header">
+<div class="site-header-inner">
+<a href="../index.html" class="brand">
+<span class="brand-mark">Esami</span>
+<span class="brand-sub">Costruzioni Aeronautiche · A038</span>
+</a>
+<nav class="site-nav">
+<a href="../index.html" >Indice</a>
+<a href="https://github.com" rel="noopener">GitHub</a>
+<a href="https://www.raucci.net" rel="noopener">Blog personale</a>
+</nav>
+</div>
+</header>
+
+<main class="container">
+<div class="exam-page">
+<article class="exam-article-wrap">
+<header class="exam-header">
+<a href="../index.html" class="exam-back">Tutte le prove</a>
+<div class="exam-eyebrow"><span>2023</span><span class="dot">·</span><span>Ordinaria</span></div>
+<h1 class="exam-title">Esame di Stato 2023</h1>
+<p class="exam-deck">Antincendio · Motorizzazione e serbatoio · Prove a terra · Corrosione</p>
+</header>
+<div class="exam-article">
+<p>La prova della sessione ordinaria 2023 propone quattro quesiti teorici che attraversano altrettante aree disciplinari: la sicurezza attiva in volo (impianto antincendio), la progettazione propulsiva con stima del serbatoio combustibile, le <em>prove a terra</em> come momento fondamentale del processo di certificazione, e la problematica della corrosione in ambito aeronautico con le relative metodiche di prevenzione e controllo. Le risposte dei quesiti <strong>2</strong> e <strong>3</strong> fanno riferimento a un velivolo da turismo monomotore a quattro posti, MTOW $\approx 1100\,\mathrm{kg}$, coerentemente con il velivolo dimensionato nella Prima Parte.</p>
+
+<h2 id="impianto-antincendio-di-un-velivolo-commerciale">Impianto antincendio di un velivolo commerciale</h2>
+
+<div class="quesito"><span class="quesito-num">Quesito 1</span><span class="quesito-text">Illustrare il funzionamento dell'impianto antincendio di un velivolo commerciale.</span></div>
+
+<aside class="callout box-teoria"><div class="callout-label">Teoria</div><div class="callout-body">Il rischio di incendio a bordo è sempre un problema di grandissima importanza,
+nonostante tutti i provvedimenti presi per ridurne al minimo la probabilità di
+innesco e limitarne la velocità di propagazione. Un incendio in volo può essere
+innescato da corto circuiti dell'impianto elettrico, da perdite di combustibile
+o di lubrificante a contatto con superfici calde, o da avarie strutturali alle
+nacelle motore. L'<strong>impianto antincendio</strong> è concettualmente diviso in due
+sottosistemi distinti: il <em>sistema di rilevazione</em> e il <em>sistema di estinzione</em>.</div></aside>
+
+<h3 id="il-triangolo-del-fuoco-e-i-principi-di-estinzione">Il triangolo del fuoco e i principi di estinzione</h3>
+
+<p>Perché un incendio si produca è necessaria la <strong>concomitanza di tre fattori</strong>: <strong>combustibile</strong>, <strong>ossigeno</strong> e <strong>calore</strong> ("triangolo del fuoco"). I sistemi estinguenti intervengono su uno o più di questi fattori: <ul><li><strong>Sottrazione del calore:</strong> i gas freddi inerti (CO$_2$, azoto) vengono iniettati nella zona di incendio allo stato liquido e compresso; per evaporazione sottraggono calore, abbassando la temperatura al di sotto del punto di ignizione.</li><li><strong>Sottrazione dell'ossigeno:</strong> l'espansione rapida del gas inerte diluisce l'ossigeno localmente, spegnendo per soffocamento. Gli schiumogeni formano una barriera fisica tra combustibile e ossigeno: questa tecnica è usata principalmente a terra (aeroporti) poiché l'acqua contenuta nella schiuma è incompatibile con gli impianti elettrici di bordo.</li><li><strong>Inibizione chimica della combustione:</strong> gli <em>idrocarburi alogenati</em> (halon, sostituiti dagli HFC/HFO nelle applicazioni più recenti) interrompono la reazione a catena della combustione interferendo tra la fiamma e l'ossidante; sono i più efficaci perché agiscono a basse concentrazioni e non danneggiano le strutture irrorated.</li></ul></p>
+
+<h3 id="sistema-di-rilevazione-incendio">Sistema di rilevazione incendio</h3>
+
+<p>La rilevazione precoce dell'incendio o del surriscaldamento è critica: ogni ritardo nell'allarme riduce le probabilità di un'estinzione efficace e aggrava i danni strutturali.</p>
+
+<p class="para-head"><strong>Zone di monitoraggio.</strong></p>
+Le zone prioritarie sono le <strong>nacelle motore</strong> (dove coesistono combustibile,
+olio e superfici ad alta temperatura), il vano ausiliare APU, i vani avionica e cargo,
+e i bagni (toilette), che sono fuori dalla visuale diretta dell'equipaggio.
+La cabina passeggeri, sebbene monitorata visivamente dall'equipaggio di cabina,
+è dotata di rilevatori di fumo nei soffitti.
+
+<p class="para-head"><strong>Tipi di sensori.</strong></p>
+<dl><dt>Rilevatori puntuali (bimetalliche):</dt><dd>una lamina bimetallica apre o chiude
+    un contatto elettrico al raggiungimento di una temperatura soglia. Economici
+    e robusti ma a risposta locale; impiegati come ridondanza secondaria.</dd><dt>Rilevatori continui (a resistenza variabile):</dt><dd>un conduttore è inserito
+    in un materiale semiconduttore dentro un tubo metallico. All'aumentare della
+    temperatura, la resistenza varia bruscamente, generando il segnale di allarme.
+    Coprono l'intera lunghezza del loop attorno alla nacelle e sono più affidabili
+    dei puntuali perché integrano l'informazione su tutta la zona sorvegliata.</dd><dt>Rilevatori di fumo (opacimetri):</dt><dd>misurano l'opacità di un fascio luminoso
+    o la presenza di particelle in sospensione; sono tipici nei vani bagagli, nelle
+    toilette e negli spazi cargo pressurizzati.</dd></dl>
+
+<p class="para-head"><strong>Logica di controllo e filtraggio dei falsi allarmi.</strong></p>
+In ogni zona sorvegliata sono installate <strong>almeno due sonde in parallelo</strong>. L'unità
+di controllo (<em>Fire Warning Computer</em>) comanda l'allarme acustico e visivo in
+cabina di pilotaggio <em>solo se entrambi i segnali</em> sono ricevuti; un segnale isolato
+genera invece solo un avviso (<em>caution</em>) che richiede verifica. Questa
+ridondanza logica riduce il tasso di falsi allarmi, che sono altrettanto pericolosi
+di quelli reali perché possono indurre lo spegnimento intempestivo di un motore
+operativo.
+
+<aside class="callout box-avviso"><div class="callout-label">Attenzione</div><div class="callout-body"><strong>Perché i falsi allarmi sono pericolosi.</strong>
+Un falso allarme motore in fase di decollo o avvicinamento può portare il pilota
+a mettere in <em>feathering</em> l'elica e chiudere la valvola di shut-off del carburante
+su un motore perfettamente funzionante. Per questa ragione i sistemi di rilevazione
+sono progettati con un ritardo deliberato ($\sim 3$–$5\,\mathrm{s}$) nell'emissione
+dell'allarme, sufficiente a discriminare i transitori termici da un incendio reale.</div></aside>
+
+<h3 id="sistema-di-estinzione">Sistema di estinzione</h3>
+
+<p class="para-head"><strong>Estintori fissi nelle nacelle e APU.</strong></p>
+Ogni nacelle è dotata di <strong>almeno due bottiglie di estinguente</strong> (tipicamente
+Halon 1301, in fase di sostituzione con HFC-125 o agenti "green") pressurizzate
+con azoto. L'apertura è comandata pirotecnicamente (<em>squib</em>) dal pilota tramite
+una maniglia rossa dedicata ("fire handle") sul pannello superiore.
+La procedura standard prevede:
+<ol><li>Chiusura della valvola <em>fuel shut-off</em> (interruzione del combustibile al motore).</li><li>Separazione elettrica del motore (taglio dell'alimentazione agli alternatori e starters).</li><li>Apertura della prima bottiglia (<em>first shot</em>); attesa 30 s.</li><li>Se l'allarme persiste, apertura della seconda bottiglia (<em>second shot</em>).</li></ol>
+
+<p class="para-head"><strong>Estintori portatili a bordo.</strong></p>
+Per incendi in cabina, vano bagagli o cucine, sono obbligatori estintori
+portatili a CO$_2$ o Halon accessibili all'equipaggio di cabina.
+La CS-25 prescrive il numero minimo in funzione della capacità di passeggeri.
+Lo spegnimento in cabina è effettuato a mano dall'assistente di volo; è
+fondamentale che non vengano usati agenti aquosi vicino a impianti elettrici.
+
+<p class="para-head"><strong>Sistema di pressurizzazione di terra (rampa aeroportuale).</strong></p>
+All'atterraggio di emergenza o in caso di incendio a terra, i mezzi aeroportuali
+antincendio (ARFF — <em>Aircraft Rescue and Fire Fighting</em>) utilizzano schiuma
+ad alta espansione e polvere chimica. La norma ICAO Annex 14 prescrive la categoria
+ARFF dell'aeroporto in funzione della lunghezza e larghezza della fusoliera del velivolo
+più grande in servizio regolare.
+
+<aside class="callout box-risultati"><div class="callout-label">Risultati</div><div class="callout-body"><strong>Concetti-chiave:</strong>
+<ul><li>Il triangolo del fuoco (combustibile + $\mathrm{O_2}$ + calore):
+    l'estinzione agisce su uno o più lati.</li><li>Sonde doppie per zona + logica AND: allarme solo se <em>entrambi</em>
+    i rilevatori confermano; un segnale isolato genera solo <em>caution</em>.</li><li>La "fire handle" comanda in sequenza: shut-off combustibile,
+    separazione elettrica, primo shot, secondo shot.</li><li>Il Halon 1301 (ideale) è in progressiva sostituzione con agenti
+    a basso impatto ambientale (HFC-125, FK-5-1-12) per rispetto
+    del Protocollo di Montreal.</li></ul></div></aside>
+
+<h2 id="motorizzazione-e-dimensionamento-del-serbatoio-com">Motorizzazione e dimensionamento del serbatoio combustibile</h2>
+
+<div class="quesito"><span class="quesito-num">Quesito 2</span><span class="quesito-text">Illustrare e descrivere una possibile motorizzazione e dimensionare di massima il serbatoio combustibile per garantire un'autonomia di volo di almeno 2,5 ore.</span></div>
+
+<aside class="callout box-teoria"><div class="callout-label">Teoria</div><div class="callout-body">La scelta motoristica di un velivolo da turismo segue un percorso logico che parte
+dalle prestazioni richieste (velocità di crociera, quota operativa, autonomia, tasso
+di salita) e seleziona, tra i motori disponibili in catalogo, quello che soddisfa
+la <em>potenza necessaria al volo livellato</em> con un appropriato margine.
+Il dimensionamento del serbatoio discende poi dal <em>consumo specifico</em> del
+motore prescelto, dalla potenza media di crociera e dall'autonomia totale richiesta,
+comprensiva delle riserve regolamentari.</div></aside>
+
+<h3 id="scelta-della-motorizzazione">Scelta della motorizzazione</h3>
+
+<p>Per il velivolo di riferimento (monomotore a quattro posti, MTOW $\approx1100\,\mathrm{kg}$), la motorizzazione canonica è il <strong>motore alternativo a quattro tempi a cilindri contrapposti</strong> (<em>flat engine</em>, configurazione boxer), raffreddato ad aria, alimentato ad Avgas 100LL. I motivi di questa scelta sono: <ul><li>ottimo rapporto potenza/peso ($0{,}5$–$0{,}6\,\mathrm{kW/kg}$) e affidabilità consolidata su decenni di servizio;</li><li>architettura orizzontale che minimizza la sezione frontale della gondola motore, riducendo la resistenza aerodinamica;</li><li>costo di acquisizione e manutenzione notevolmente inferiore rispetto alle turbomacchine;</li><li>efficienza termica superiore ai turbomotori nelle classi di potenza $\le 300\,\mathrm{hp}$;</li><li>capillare diffusione dell'Avgas 100LL nella rete aeroportuale dell'aviazione generale.</li></ul></p>
+
+<p class="para-head"><strong>Motore di riferimento: Lycoming O-360-A.</strong></p>
+Il Lycoming O-360 è un quattro cilindri boxer raffreddato ad aria, $360\,\mathrm{in}^3$
+di cilindrata ($5{,}9\,\mathrm{L}$), che eroga $180\,\mathrm{hp}$ ($134\,\mathrm{kW}$)
+a $2700\,\mathrm{RPM}$. Questo motore equipaggia il Cessna 172S, il Piper PA-28-181
+e numerosi altri velivoli della stessa categoria; costituisce pertanto un riferimento
+consolidato e ben documentato.
+
+<div class="table-wrap">
+
+<table><tr><td>Parametro</td><td>Valore</td><td>Unità</td></tr>
+<tr><td>Potenza massima continua (TO)</td><td>180</td><td>hp (134 kW)</td></tr>
+<tr><td>Potenza di crociera (75%)</td><td>135</td><td>hp (101 kW)</td></tr>
+<tr><td>Consumo specifico $c_s$</td><td>0{,}37</td><td>lb/hp$\cdot$h = 226 g/kW$\cdot$h</td></tr>
+<tr><td>Consumo in crociera a 75%</td><td>$\approx 50$</td><td>lb/h $\approx$ 33 L/h</td></tr>
+<tr><td>Numero di cilindri</td><td>4</td><td>—</td></tr>
+<tr><td>Massa a secco</td><td>129</td><td>kg</td></tr></table>
+<figcaption>Dati principali del Lycoming O-360-A (fonte: Textron Aviation Lycoming).</figcaption>
+</div>
+
+<h3 id="dimensionamento-del-serbatoio">Dimensionamento del serbatoio</h3>
+
+<p>L'autonomia richiesta dalla traccia è $t_{\mathrm{req}} = 2{,}5\,\mathrm{h}$. Le normative FAR/CS-23 prescrivono una <strong>riserva di carburante</strong> pari almeno a 30 min di volo a potenza di crociera in VFR (riserva finale) più l'eventuale alternata: aggiungendo un margine del 5% per deterioramento del consumo e la fase di rullaggio, si dimensiona con: $$t_{\mathrm{totale}} = t_{\mathrm{req}} + t_{\mathrm{riserva}}
+    = 2{,}5 + 0{,}5 + 0{,}10 = \mathbf{3{,}1\,\mathrm{h}}$$</p>
+
+<p>Il consumo orario in crociera (potenza 75%) è $\dot{m} \approx 33\,\mathrm{L/h}$. Il volume di Avgas 100LL necessario vale: $$V_{\mathrm{fuel}} = \dot{m} \times t_{\mathrm{totale}}
+    = 33 \times 3{,}1 \approx \mathbf{102\,\mathrm{L}}$$</p>
+
+<p>La massa di combustibile corrispondente (densità Avgas: $\rho \approx 0{,}72\,\mathrm{kg/L}$) è: $$m_{\mathrm{fuel}} = 102 \times 0{,}72 \approx \mathbf{74\,\mathrm{kg}}$$</p>
+
+<p class="para-head"><strong>Posizionamento del serbatoio.</strong></p>
+Il serbatoio è alloggiato <strong>nelle ali</strong>, nelle cavità tra longherone anteriore
+e posteriore (<em>wet wing</em>): questa soluzione è strutturalmente ottimale poiché
+il peso del carburante bilancia parzialmente il momento flettente aerodinamico
+in radice, riducendo i carichi sull'incastro. Sul Cessna 172 i due serbatoi da
+$114\,\mathrm{L}$ ciascuno (200 L totali sfruttabili) sono posizionati proprio
+nelle semiali.
+
+<aside class="callout box-esempio"><div class="callout-label">Esempio</div><div class="callout-body"><strong>Verifica della frazioni di peso.</strong>
+$m_{\mathrm{fuel}} = 74\,\mathrm{kg}$, MTOW $ = 1100\,\mathrm{kg}$: la
+<em>fuel fraction</em> è $74/1100 \approx 6{,}7\%$, valore tipico per i velivoli
+da turismo ad elica ($5$–$10\%$ MTOW). Per confronto, un 737-800 ha una fuel
+fraction del $\sim$23% del MTOW; la differenza è giustificata dall'efficienza
+propulsiva della turbofan e dalla lunghezza della rotta.</div></aside>
+
+<aside class="callout box-risultati"><div class="callout-label">Risultati</div><div class="callout-body"><strong>Risultati del dimensionamento:</strong>
+<ul><li>Motore: Lycoming O-360-A, 180 hp, consumo crociera $\approx 33\,\mathrm{L/h}$.</li><li>Autonomia totale richiesta (con riserve): $t = 3{,}1\,\mathrm{h}$.</li><li>Volume serbatoio: $V_{\mathrm{fuel}} \approx \mathbf{102\,\mathrm{L}}$
+    (massa $\approx 74\,\mathrm{kg}$).</li><li>Posizionamento: serbatoi integrali in entrambe le semiali (<em>wet wing</em>).</li></ul></div></aside>
+
+<h2 id="prove-a-terra-procedure-e-valutazione-dei-risultat">Prove a terra: procedure e valutazione dei risultati</h2>
+
+<div class="quesito"><span class="quesito-num">Quesito 3</span><span class="quesito-text">Descrivere la procedura per le prove a terra illustrando e valutando i risultati ottenuti.</span></div>
+
+<aside class="callout box-teoria"><div class="callout-label">Teoria</div><div class="callout-body">Le <strong>prove a terra</strong> (<em>ground tests</em>) sono l'insieme delle verifiche strutturali,
+funzionali e di sistema che vengono eseguite prima del primo volo di un prototipo o dopo
+interventi di manutenzione/modifica significativi, allo scopo di dimostrare la conformità
+del velivolo alle specifiche di progetto e ai requisiti di aeronavigabilità. Il processo
+è regolato a livello europeo da <strong>EASA CS-23/CS-25</strong> e dalle circolari applicative
+<strong>AMC/GM</strong> associate, e culmina nel rilascio del <strong>Certificato di Navigabilità</strong>
+da parte dell'Autorità competente (EASA in Europa, FAA negli Stati Uniti, ENAC per la
+registrazione italiana).</div></aside>
+
+<h3 id="tipologie-di-prove-a-terra">Tipologie di prove a terra</h3>
+
+<p>Le prove a terra si suddividono nelle seguenti categorie principali.</p>
+
+<p class="para-head"><strong>Prove strutturali statiche.</strong></p>
+Verificano che la struttura resista ai <em>carichi limite</em> ($P_{\mathrm{lim}}$) senza
+deformazioni permanenti e ai <em>carichi ultimi</em> ($P_{\mathrm{ult}} = 1{,}5\,P_{\mathrm{lim}}$)
+senza cedimento per almeno 3 secondi (CS-25.305). I carichi vengono applicati tramite
+martinetti idraulici o sacchi di sabbia, con incrementi graduali monitorati da estensimetri
+(<em>strain gauges</em>) e sistemi di acquisizione dati. Sul banco di prova sono verificati:
+cassone alare (flessione, taglio, torsione), giunzione ala–fusoliera, carrello d'atterraggio
+(prova di caduta), impennaggi, porte e portelli.
+
+<p class="para-head"><strong>Prove strutturali di fatica.</strong></p>
+Simulano la storia di carico dell'intera vita operativa del velivolo in tempi
+accelerati. Un programma di carico (<em>load spectrum</em>) derivato dalle statistiche
+di volo (FALSTAFF per i velivoli militari, mini-TWIST per quelli civili) viene
+applicato ciclicamente fino al raggiungimento di $4\times$ la vita operativa prevista
+(CS-23.571, <em>damage tolerance</em> / <em>fail safe</em>). Le prove di fatica sono
+normalmente completate <em>prima</em> dell'entrata in servizio del prototipo.
+
+<p class="para-head"><strong>Prove funzionali degli impianti.</strong></p>
+Verificano il corretto funzionamento di ogni sottosistema nelle condizioni operative
+estreme previste. Le principali sono:
+<ul><li><strong>Impianto idraulico:</strong> ciclo completo del carrello (apertura/chiusura),
+    flap, freni, sterzo del ruotino di coda — verifica di pressione, portata e assenza
+    di perdite.</li><li><strong>Impianto combustibile:</strong> rifornimento al limite di capacità, verifica
+    dell'autonomia media a banco, test della pompa di emergenza, prova di vent
+    (sfiato) nei serbatoi.</li><li><strong>Impianto elettrico:</strong> verifica della corretta sequenza di carico degli
+    bus bar, funzionamento dell'APU o della batteria in regime di emergenza,
+    test degli UPS avionica.</li><li><strong>Impianto antincendio:</strong> prova di continuità dei loop di rilevazione,
+    verifica della pressione degli estintori, test dei circuiti di innesco pirotecnico
+    (<em>squib continuity check</em>). <em>Nota: la prova di scarica reale degli
+    estintori non si esegue a terra in condizioni normali</em>.</li><li><strong>Pressurizzazione:</strong> inflazione della fusoliera alla pressione
+    differenziale massima di progetto ($\Delta p_{\mathrm{max}}$), verifica delle
+    valvole di sovrapressione e anti-vuoto.</li></ul>
+
+<p class="para-head"><strong>Prove al banco motore (<em>engine run-up</em>).</strong></p>
+Prima dell'installazione, il motore è qualificato sul banco di prova del costruttore:
+<em>test di accettazione</em> (verifica delle prestazioni rispetto alle specifiche),
+<em>test di resistenza</em> (ore di funzionamento continuo ai massimi regimi).
+Sull'aeromobile assemblato si eseguono invece gli <em>engine run-up a terra</em>:
+verifica dell'accelerazione al massimo regime, controllo dell'impianto di accensione
+(magneti), test degli strumenti motore, run-up delle elettropompe carburante.
+
+<p class="para-head"><strong>Prove di vibrazione e compatibilità elettromagnetica (EMC).</strong></p>
+Verificano che le vibrazioni indotte dal motore e dall'elica non generino risonanze
+strutturali o strumentali critiche (<em>ground vibration test</em>, GVT). La prova EMC
+garantisce che i sistemi avionici non si disturbino reciprocamente (<em>avionics
+HIRF/EMC compliance</em>).
+
+<h3 id="procedura-generale-e-valutazione-dei-risultati">Procedura generale e valutazione dei risultati</h3>
+
+<p>Una prova a terra tipica si articola nelle fasi seguenti:</p>
+
+<ol><li><strong>Pianificazione:</strong> redazione del piano di prova (<em>test plan</em>),
+    identificazione dei parametri da misurare, setup della strumentazione,
+    definizione dei criteri di accettazione (<em>pass/fail criteria</em>).</li><li><strong>Configurazione zero:</strong> azzeramento di tutti i sensori e verifica
+    della conformità dell'installazione ai disegni di progetto.</li><li><strong>Applicazione dei carichi/stimoli</strong> in modo incrementale e
+    controllato; monitoraggio continuo in tempo reale.</li><li><strong>Acquisizione dati:</strong> registrazione di tutte le misure su sistemi
+    di acquisizione dati (DAQ) ad alta frequenza di campionamento.</li><li><strong>Valutazione:</strong> confronto tra i valori misurati e i valori attesi
+    (analisi FEM, specifiche di progetto). I criteri tipici sono:
+    <ul><li>Assenza di deformazioni permanenti al carico limite;</li><li>Assenza di cedimento al carico ultimo (3 s);</li><li>Parametri funzionali (pressioni, portate, tensioni) rientranti nelle
+        tolleranze di specifica ($\pm5\%$ tipico).</li></ul></li><li><strong>Redazione del report:</strong> il rapporto di prova documenta le condizioni
+    di test, i risultati e le eventuali non conformità; costituisce la base
+    documentale per il rilascio della certificazione.</li></ol>
+
+<aside class="callout box-esempio"><div class="callout-label">Esempio</div><div class="callout-body"><strong>Prova statica dell'ala: scenario pratico.</strong>
+Per un'ala con $n_{\lim} = 3{,}8$ (categoria Normal CS-23), il carico limite
+corrisponde a $3{,}8\,W$. Con MTOW = 1100 kg, il carico limite totale è
+$3{,}8 \times 1100 \times 9{,}81 \approx 41\,\mathrm{kN}$, distribuito
+sulla semiala. Il carico ultimo è $1{,}5 \times 41 = 61{,}5\,\mathrm{kN}$.
+I sensori estensimetrici registrano le deformazioni nella sezione di radice:
+la conformità è verificata se la deformazione residua dopo scarico è $< 0{,}2\%$.</div></aside>
+
+<aside class="callout box-risultati"><div class="callout-label">Risultati</div><div class="callout-body"><strong>Concetti-chiave:</strong>
+<ul><li>Prove statiche: carico limite (no deformazioni permanenti)
+    e carico ultimo $= 1{,}5 P_{\mathrm{lim}}$ (no cedimento per 3 s).</li><li>Prove di fatica: simulazione della vita completa (fino a $4\times$)
+    su banco con spettro di carico standard.</li><li>Prove funzionali: idraulico, combustibile, elettrico, antincendio,
+    pressurizzazione — verifica di pressioni, portate e sequenze operative.</li><li>Il report di prova è il documento di riferimento per il rilascio
+    del Certificato di Navigabilità (EASA/ENAC).</li></ul></div></aside>
+
+<h2 id="corrosione-in-ambito-aeronautico-problematiche-pre">Corrosione in ambito aeronautico: problematiche, prevenzione e controllo</h2>
+
+<div class="quesito"><span class="quesito-num">Quesito 4</span><span class="quesito-text">Il candidato illustri brevemente le problematiche inerenti i fenomeni di corrosione in ambito aeronautico, soffermandosi sulle metodiche di prevenzione e di controllo.</span></div>
+
+<aside class="callout box-teoria"><div class="callout-label">Teoria</div><div class="callout-body">La <strong>corrosione</strong> è il deterioramento del metallo dovuto a un attacco chimico
+o elettrochimico da parte dell'ambiente. In campo aeronautico rappresenta una delle
+principali cause di riduzione della vita strutturale e di incremento dei costi manutentivi:
+i velivoli commerciali operano in ambienti altamente corrosivi (umidità, sali marini,
+ozono in quota, gas industriali), con strutture in lega di alluminio intimamente a contatto
+con materiali metallici di diversa natura (acciai inossidabili, titanio, compositi).</div></aside>
+
+<h3 id="cause-e-meccanismi-della-corrosione">Cause e meccanismi della corrosione</h3>
+
+<p class="para-head"><strong>Attacco chimico diretto.</strong></p>
+L'attacco avviene per contatto diretto della superficie metallica con agenti chimici
+aggressivi: acidi (sversamenti di acido batteria), basi concentrate (detergenti alcalini
+intrappolati), gas di scarico (ossidi di zolfo e azoto). Le reazioni si verificano
+simultaneamente nel sito di attacco, senza richiedere la presenza di un circuito elettrico.
+Cause frequenti in campo aeronautico: residui di flusso di saldatura/brasatura,
+gas di scarico nelle zone posteriori della fusoliera, soluzioni detergenti non risciacquate.
+
+<p class="para-head"><strong>Attacco elettrochimico (corrosione galvanica).</strong></p>
+È la forma più pericolosa e diffusa nelle strutture aeronautiche. Richiede tre condizioni:
+<ol><li>Due metalli (o due zone della stessa lega) con <em>diverso potenziale elettrochimico</em>;</li><li>Un <em>elettrolita</em> (acqua con sali disciolti) che faccia da ponte ionico;</li><li>Un <em>collegamento elettrico</em> (contatto fisico o conduttore) tra le due zone.</li></ol>
+Il metallo con potenziale più basso (anodico, meno nobile) si ossida cedendo elettroni;
+il metallo più nobile (catodico) si riduce. L'alluminio (Gruppi 3–6 nella serie galvanica
+aeronautica, FAA-8083-30) è anodico rispetto ad acciai inox, titanio, rame e compositi
+CFRP. In particolare, il <strong>CFRP conduce corrente elettrica</strong> e può agire da polo
+catodico, accelerando la corrosione dell'alluminio a contatto.
+
+<p class="para-head"><strong>Regola dei potenziali.</strong></p>
+Il manuale FAA-8083-30 classifica i materiali in 11 gruppi galvanici in ordine
+crescente di nobiltà (dal magnesio all'oro). L'accostamento di materiali separati da
+<strong>più di 4 gruppi</strong> ha elevata probabilità di sviluppare corrosione galvanica.
+
+<h3 id="tipologie-di-corrosione-in-campo-aeronautico">Tipologie di corrosione in campo aeronautico</h3>
+
+<dl><dt>Corrosione per vaiolatura (<em>pitting</em>):</dt><dd>attacco localizzato che forma cavità
+    puntiformi sulla superficie. Pericolosa perché si insinua sotto il rivestimento
+    protettivo senza essere visibile dall'esterno fino a stadio avanzato.</dd><dt>Corrosione interstiziale:</dt><dd>si sviluppa nelle zone ristrette (giunti rivettati,
+    sovrapposizioni di lamiera) dove l'elettrolita è intrappolato e il ricambio di
+    ossigeno è ridotto (ambiente anaerobico favorevole).</dd><dt>Corrosione intercristallina (<em>intergranular</em>):</dt><dd>attacca i confini dei grani
+    cristallini, propagandosi in profondità senza evidente deterioramento superficiale;
+    caratteristica delle leghe Al-Cu-Mg (serie 2000) sensibilizzate da trattamenti
+    termici impropri.</dd><dt>Corrosione per sfogliamento (<em>exfoliation</em>):</dt><dd>forma laminare della corrosione
+    intercristallina; i prodotti di ossidazione (a volume maggiore del metallo di partenza)
+    sollevamo strati paralleli alla superficie, conferendo un tipico aspetto "a cipolla".</dd><dt>Corrosione sotto tensione (<em>SCC, Stress Corrosion Cracking</em>):</dt><dd>frattura
+    fragile prodotta dall'azione combinata di tensioni di trazione e ambiente corrosivo.
+    Particolarmente insidiosa perché instaura cricche ad alta velocità in materiali
+    che risulterebbero altrimenti duttili.</dd></dl>
+
+<h3 id="metodiche-di-prevenzione">Metodiche di prevenzione</h3>
+
+<p class="para-head"><strong>Protezione passiva: isolamento dall'ambiente.</strong></p>
+<ul><li><strong>Verniciatura:</strong> primer a base di cromato di zinco (o suoi sostituti
+    a basso contenuto di cromo esavalente) come strato aderente + smalto di finitura
+    come barriera impermeabile. Il primer ha anche funzione inibente chimica.</li><li><strong>Alclad:</strong> laminazione di un sottile strato di alluminio puro (o lega
+    meno nobile) sulle superfici esterne della lamiera strutturale (es.\ 2024-T3 Alclad).
+    Lo strato esterno, anodico rispetto al nucleo, si corrode sacrificalmente, proteggendo
+    la struttura portante.</li><li><strong>Anodizzazione:</strong> trattamento elettrochimico che ispessisce e indurisce
+    lo strato di ossido di alluminio naturale (Al$_2$O$_3$), rendendolo impermeabile
+    e resistente all'abrasione.</li><li><strong>Placcatura / cromatura:</strong> deposizione elettrochimica di cromo, nichel
+    o cadmio su parti in acciaio per creare uno strato catodico protettivo.</li></ul>
+
+<p class="para-head"><strong>Protezione attiva: anodi sacrificali.</strong></p>
+Nelle zone critiche (struttura carrello, galleggianti, fusoliere di idrovolanti)
+si fissano <strong>anodi in zinco o magnesio</strong>: essendo più anodici della lega protetta,
+si corrodono preferenzialmente, costituendo un "sacrificio elettrochimico programmato".
+
+<p class="para-head"><strong>Progettazione resistente alla corrosione.</strong></p>
+<ul><li>Evitare accoppiamenti galvanici sfavorevoli ($>$4 gruppi di distanza);
+    frapporre guarnizioni isolanti o sigillanti tra parti in contatto di natura diversa.</li><li>Drenaggi adeguati per evitare ristagni di umidità nei vani strutturali.</li><li>Fori di drenaggio (<em>drain holes</em>) in tutte le cavità strutturali chiuse.</li><li>Uso di sigillanti poliuretanici o polisolfurici nei giunti rivettati delle zone
+    esposte a immersione o spray salino.</li></ul>
+
+<h3 id="metodiche-di-controllo-ispezione">Metodiche di controllo (ispezione)</h3>
+
+<p>Il controllo della corrosione si basa su <strong>ispezioni periodiche</strong> pianificate nel programma di manutenzione del velivolo (MMP — Maintenance Planning Document):</p>
+
+<dl><dt>Ispezione visiva (VT):</dt><dd>primo livello d'ispezione; individua corrosione superficiale,
+    rigonfiamenti, sfogliamento del rivestimento. Si effettua con luce bianca, lente
+    d'ingrandimento (10$\times$) e specchietto per le aree di difficile accesso.
+    Semplice ed economica, ma limitata a difetti visibili dall'esterno.</dd><dt>Liquidi penetranti (PT):</dt><dd>applica un liquido colorato o fluorescente sulla
+    superficie pulita; dopo un tempo di <em>penetrazione</em>, il liquido in eccesso
+    viene rimosso e si applica uno sviluppatore che fa emergere i difetti aperti in
+    superficie (cricche, porosità). Adatto a materiali non porosi; non rileva difetti
+    sub-superficiali.</dd><dt>Correnti indotte (Eddy Current, ET):</dt><dd>una bobina percorsa da corrente alternata
+    induce correnti parassite nel metallo; le variazioni di impedenza della bobina
+    rivelano la presenza di cricche, variazioni di spessore o corrosione sub-superficiale.
+    Particolarmente indicata per le leghe di alluminio; non richiede rimozione del
+    rivestimento in molte applicazioni.</dd><dt>Ultrasuoni (UT):</dt><dd>impulsi ultrasonici riflessi dalle discontinuità interne
+    (delaminazioni, corrosione intercristallina, cricche profonde) ne consentono
+    la localizzazione e la valutazione dimensionale. Ottima profondità di ispezione;
+    richiede accoppiamento acustico (gel) e personale qualificato.</dd><dt>Radiografia (RT):</dt><dd>fasci di raggi X o $\gamma$ attraversano la struttura
+    e impressionano una lastra fotografica o un sensore digitale; le zone corrose
+    (di densità diversa) appaiono come variazioni di grigio. Permette un'ispezione
+    bidimensionale proiettiva dell'intero componente, ma espone il personale a
+    radiazioni ionizzanti.</dd></dl>
+
+<aside class="callout box-esempio"><div class="callout-label">Esempio</div><div class="callout-body"><strong>Corrosione galvanica CFRP–alluminio.</strong>
+Nei velivoli di nuova generazione (Boeing 787, Airbus A350) la struttura primaria
+in CFRP è a diretto contatto con componenti in lega d'alluminio (longheroni,
+centine metalliche). La fibra di carbonio è catodica rispetto all'alluminio: senza
+isolamento adeguato, si innesca una cella galvanica che può erodere la lamiera
+in pochi mesi di operatività in ambiente marino. La soluzione adottata è
+l'interposizione di uno strato di fibra di vetro (non conduttivo) tra CFRP e
+alluminio ("glass ply barrier"), abbinato a sigillatura con polisolfuro.</div></aside>
+
+<aside class="callout box-risultati"><div class="callout-label">Risultati</div><div class="callout-body"><strong>Concetti-chiave:</strong>
+<ul><li>Due meccanismi fondamentali: attacco chimico diretto e corrosione elettrochimica
+    (galvanica). La galvanica richiede: bimetallo + elettrolita + collegamento elettrico.</li><li>Forme più pericolose in aeronautica: pitting, corrosione per sfogliamento,
+    intercristallina, SCC.</li><li>Prevenzione passiva: verniciatura, Alclad, anodizzazione, placcatura.
+    Prevenzione attiva: anodi sacrificali. Progettuale: drenaggi, isolamento galvanico.</li><li>Metodi di ispezione CND: VT (visiva), PT (penetranti), ET (correnti indotte),
+    UT (ultrasuoni), RT (radiografia) — in ordine crescente di profondità di rilevazione.</li><li>Il CFRP conduce corrente: è catodico rispetto all'alluminio. Richiede isolamento
+    galvanico dedicato (<em>glass ply barrier</em>).</li></ul></div></aside>
+</div>
+<nav class="exam-pagination">
+<a href="2019.html" class="">
+<span class="label">Precedente</span>
+<span class="title">2019 </span>
+</a>
+<a href="2023-straordinaria.html" class="next">
+<span class="label">Successivo</span>
+<span class="title">2023 · Straordinaria</span>
+</a>
+</nav>
+</article>
+<aside class="exam-aside">
+<div class="exam-aside-inner">
+<div class="toc-label">In questa pagina</div>
+<ul class="toc-list"><li><a href="#impianto-antincendio-di-un-velivolo-commerciale"><span class="toc-num">1</span>Impianto antincendio di un velivolo commerciale</a></li>
+<li><a href="#motorizzazione-e-dimensionamento-del-serbatoio-com"><span class="toc-num">2</span>Motorizzazione e dimensionamento del serbatoio combustibile</a></li>
+<li><a href="#prove-a-terra-procedure-e-valutazione-dei-risultat"><span class="toc-num">3</span>Prove a terra: procedure e valutazione dei risultati</a></li>
+<li><a href="#corrosione-in-ambito-aeronautico-problematiche-pre"><span class="toc-num">4</span>Corrosione in ambito aeronautico: problematiche, prevenzione e controllo</a></li></ul>
+</div>
+</aside>
+</div>
+</main>
+<footer class="site-footer">
+<div class="site-footer-inner">
+<p>Prof. Ing. Raucci Biagio · ITIS E. Majorana, Cassino · A.S. 2025/26</p>
+<p class="credit">Costruzioni Aeronautiche · Classe A038</p>
+</div>
+</footer>
+<script src="../assets/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#1d3557">
+<meta name="description" content="Velivolo bimotore · Impianto idraulico · Prove di laboratorio">
+<title>Esame di Stato 2017 · Esami Costruzioni Aeronautiche</title>
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" integrity="sha384-nB0miv6/jRmo5UMMR1wu3Gz6NLsoTkbqJghGIsx//Rlm+ZU03BU6SQNC66uf4l5+" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" integrity="sha384-7zkQWkzuo3B5mTepMUcHkMB5jZaolc2xDwL6VFqjFALcbeS9Ggm/Yr2r3Dy4lfFg" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous" onload="renderMathInElement(document.body, {delimiters: [{left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}], throwOnError: false, macros: { '\\AR': '\\mathrm{AR}' } });"></script>
+</head>
+<body>
+<header class="site-header">
+<div class="site-header-inner">
+<a href="../index.html" class="brand">
+<span class="brand-mark">Esami</span>
+<span class="brand-sub">Costruzioni Aeronautiche · A038</span>
+</a>
+<nav class="site-nav">
+<a href="../index.html" >Indice</a>
+<a href="https://github.com" rel="noopener">GitHub</a>
+<a href="https://www.raucci.net" rel="noopener">Blog personale</a>
+</nav>
+</div>
+</header>
+
+<main class="container">
+<div class="exam-page">
+<article class="exam-article-wrap">
+<header class="exam-header">
+<a href="../index.html" class="exam-back">Tutte le prove</a>
+<div class="exam-eyebrow"><span>2017</span><span class="dot">·</span><span>Ordinaria</span></div>
+<h1 class="exam-title">Esame di Stato 2017</h1>
+<p class="exam-deck">Velivolo bimotore · Impianto idraulico · Prove di laboratorio</p>
+</header>
+<div class="exam-article">
+<p>La prova del 2017 si concentra su tre temi che, nel loro insieme, coprono l'intero ciclo di vita del velivolo: la <em>manutenzione</em> (controlli periodici per garantirne l'aeronavigabilità), la <em>propulsione</em> (caratteristiche del sistema motore-elica che genera la spinta) e l'<em>impianto combustibile</em> (sottosistema che alimenta il motore). I quesiti 3 e 4 fanno esplicito riferimento al "velivolo sopra descritto", ovvero quello dimensionato nel quesito 1 della prima parte. Mantenendo la coerenza del nostro velivolo di riferimento — monomotore da turismo a quattro posti, MTOW $\approx 1100\,\mathrm{kg}$, motore Lycoming O-360 da <span class="unit">180&nbsp;hp</span>, autonomia operativa di <span class="unit">3&nbsp;h</span> — procediamo allo svolgimento dei quesiti.</p>
+
+<h2 id="controlli-per-la-manutenzione-regolare-del-velivol">Controlli per la manutenzione regolare del velivolo</h2>
+
+<div class="quesito"><span class="quesito-num">Quesito 2</span><span class="quesito-text">Indicare i principali controlli da eseguire per una regolare manutenzione del velivolo.</span></div>
+
+<aside class="callout box-teoria"><div class="callout-label">Teoria</div><div class="callout-body">La <strong>manutenzione</strong> è l'insieme delle operazioni svolte durante l'intero ciclo di vita del velivolo per garantirne il <em>mantenimento dell'aeronavigabilità</em> (<em>Continuous Airworthiness</em>). Il principio cardine è la <em>prevenzione del guasto</em>: un velivolo non è considerato sicuro per il volo se non si trova entro precisi limiti di efficienza certificati dalla sua organizzazione di manutenzione. Il processo è regolato dalla <strong>Part-M</strong> (manutenzione gestita), dalla <strong>Part-145</strong> (organizzazioni di manutenzione approvate), dalla <strong>Part-66</strong> (licenze del personale di manutenzione) e dalla <strong>Part-147</strong> (formazione) emanate da EASA.</div></aside>
+
+<h3 id="filosofie-di-manutenzione">Filosofie di manutenzione</h3>
+
+<p>Le moderne pratiche aeronautiche distinguono quattro filosofie di manutenzione, ciascuna applicabile in funzione della criticità del componente:</p>
+
+<dl><dt>Manutenzione correttiva</dt><dd>Il componente viene riparato <em>dopo</em> il manifestarsi del guasto. Si applica solo a sistemi non critici per la sicurezza.</dd><dt>Manutenzione preventiva programmata (<em>hard time</em>)</dt><dd>Il componente viene sostituito al raggiungimento di un intervallo prefissato (ore di volo, cicli, tempo solare), <em>prima</em> che il guasto si verifichi. Richiede la conoscenza statistica della vita utile.</dd><dt>Manutenzione preventiva "on condition"</dt><dd>Il componente viene sostituito quando i suoi indicatori di stato (rilevati da ispezioni o sensori) mostrano segni di prossimo cedimento.</dd><dt>Manutenzione "condition monitoring"</dt><dd>Il componente viene sostituito sulla base dell'analisi statistica del comportamento di una popolazione di componenti simili.</dd></dl>
+
+<p>Le quattro filosofie non sono esclusive: il programma di manutenzione di un velivolo le impiega congiuntamente, scegliendo la più adatta a ciascun sottosistema sulla base della sua criticità per la sicurezza, dell'impatto economico e della disponibilità di tecniche di ispezione.</p>
+
+<h3 id="articolazione-temporale-dei-controlli">Articolazione temporale dei controlli</h3>
+
+<p>I controlli si articolano su scale temporali diverse: dai più frequenti (giornalieri, prima di ogni volo) ai più approfonditi (a frequenza pluriennale). La loro organizzazione, comune all'aviazione commerciale e general aviation, è schematizzata nella tabella seguente.</p>
+
+<div class="table-wrap">
+
+<table><tr><td><strong>Livello</strong></td><td><strong>Periodicità</strong></td><td><strong>Operazioni tipiche</strong></td></tr>
+<tr><td><em>Pre-flight check</em></td><td>Prima di ogni volo</td><td>Ispezione visiva esterna, controllo livelli, controllo superfici mobili, controllo pneumatici, prove pre-decollo.</td></tr>
+<tr><td><em>Daily check</em></td><td>Giornaliero</td><td>Verifica generale dello stato del velivolo, lettura del giornale di bordo, eventuale rettifica di anomalie minori.</td></tr>
+<tr><td><em>A-check</em></td><td>400–600 ore di volo</td><td>Ispezione visiva di superfici, comandi, impianti; controllo perdite olio/idraulico/combustibile; lubrificazione; eseguibile in hangar in una notte.</td></tr>
+<tr><td><em>B-check</em></td><td>6–8 mesi</td><td>Approfondimento dell'A-check con maggior dettaglio sui sistemi di bordo; oggi spesso assorbito nell'A-check "progressivo".</td></tr>
+<tr><td><em>C-check</em></td><td>20–24 mesi</td><td>Visita completa con apertura di pannelli ispettivi, smontaggio di componenti, lubrificazione completa, prove funzionali su tutti gli impianti. Velivolo fermo 1–3 settimane.</td></tr>
+<tr><td><em>D-check</em></td><td>6–10 anni</td><td>Revisione strutturale completa con velivolo smontato fino al cassone; ispezioni a ultrasuoni e correnti indotte sull'intera struttura; ricondizionamento. Fermo 1–2 mesi.</td></tr></table>
+<figcaption>Organizzazione gerarchica dei controlli di manutenzione (riferimento aviazione commerciale; per la general aviation gli intervalli sono espressi in genere in ore di volo o anni e sono ridefiniti da Part-M e dal manuale di manutenzione del costruttore).</figcaption>
+</div>
+
+<h3>Controlli giornalieri (<em>daily check</h3> e \emph{pre-flight})</em>
+
+<p>Il controllo <em>pre-flight</em> è eseguito direttamente dal pilota (o da personale tecnico abilitato) prima di ogni volo, secondo la <em>checklist</em> riportata nel manuale di volo. Esso comprende:</p>
+
+<ul><li><strong>Controllo della documentazione di bordo</strong> (giornale di bordo, certificato di aeronavigabilità in corso di validità, manuale di volo, dichiarazione di assicurazione, registro radio).</li><li><strong>Ispezione visiva esterna</strong> (<em>walk-around</em>): verifica dell'integrità del rivestimento (assenza di ammaccature o cricche visibili), del corretto allineamento delle superfici mobili, dell'assenza di perdite di olio/combustibile/idraulico, della pulizia delle prese d'aria e dei tubi di Pitot, dello stato dei pneumatici (pressione, usura), della sicurezza di portelloni e cofanature.</li><li><strong>Controllo livelli</strong>: livello del combustibile (campionatura tramite <em>drain valve</em> per accertare l'assenza di acqua), livello dell'olio motore, livello del fluido idraulico (se presente), pressione dei pneumatici, pressione dell'estintore.</li><li><strong>Verifica del corretto funzionamento dei comandi</strong>: prova di completa libera escursione di alettoni, equilibratore, timone, flap, trim.</li><li><strong>Prove pre-decollo</strong> (<em>run-up check</em>): a motore avviato, controllo dei parametri (regime, pressione olio, temperatura, magneti, carburatore con riscaldamento aria, generatore).</li></ul>
+
+<h3 id="controlli-periodici-dei-sistemi-del-velivolo">Controlli periodici dei sistemi del velivolo</h3>
+
+<p>Per ciascun sistema di bordo, il manuale di manutenzione del costruttore prescrive ispezioni periodiche, le cui principali sono riassunte nella tabella seguente.</p>
+
+<div class="table-wrap">
+
+<table><tr><td><strong>Sistema</strong></td><td><strong>Controlli tipici</strong></td></tr>
+<tr><td>Cellula (struttura)</td><td>Ispezione visiva, NDT (ultrasuoni, correnti indotte, liquidi penetranti) sui punti critici (attacco ala-fusoliera, longheroni, ordinate principali, attacchi del carrello), serraggio bulloneria di forza.</td></tr>
+<tr><td>Motore</td><td>Controllo compressione cilindri, ispezione candele, controllo gioco valvole, sostituzione olio, sostituzione filtri, ispezione boroscopica della camera di combustione (motori a getto), sostituzione candele.</td></tr>
+<tr><td>Elica</td><td>Controllo del passo, ispezione bordi pale per impatti (<em>nicks</em>), bilanciatura statica e dinamica, lubrificazione del mozzo a passo variabile.</td></tr>
+<tr><td>Carrello</td><td>Controllo della pressione degli ammortizzatori (azoto/olio), controllo usura pastiglie freni, prova di estensione/retrazione, lubrificazione perni.</td></tr>
+<tr><td>Impianto idraulico</td><td>Controllo pressione di esercizio, ispezione tubazioni e raccordi, sostituzione filtri, prova tenuta di valvole e martinetti.</td></tr>
+<tr><td>Impianto elettrico</td><td>Verifica delle barre di carico, controllo delle batterie (capacità, densità elettrolito), ispezione cablaggi, prova generatori e regolatori.</td></tr>
+<tr><td>Avionica</td><td><em>Built-in test</em> (BIT) automatici, calibrazione strumenti di volo, prova autopilota, controllo trasponder, taratura altimetro (entro 24 mesi).</td></tr>
+<tr><td>Comandi di volo</td><td>Controllo della tensione cavi (per comandi meccanici), prova escursione, ispezione attacchi e perni di cerniera, lubrificazione articolazioni.</td></tr></table>
+<figcaption>Principali controlli periodici dei sistemi di bordo.</figcaption>
+</div>
+
+<h3 id="documentazione-e-tracciabilità">Documentazione e tracciabilità</h3>
+
+<p>Ogni intervento di manutenzione deve essere <em>documentato</em> e <em>tracciato</em>. Gli strumenti principali sono:</p>
+
+<ul><li><strong>Giornale di bordo</strong> (<em>logbook</em>): registra ogni volo, le ore di funzionamento del motore, eventuali anomalie segnalate dal pilota.</li><li><strong>Libretto di manutenzione del velivolo</strong>: registra ogni intervento eseguito, con data, descrizione, parti sostituite, firma del tecnico abilitato (Part-66) e dell'organizzazione di manutenzione (Part-145).</li><li><strong>Libretti dei componenti a vita limitata</strong>: motore, elica e altri componenti tracciati individualmente con totale ore in servizio e cicli.</li><li><strong>Airworthiness Review Certificate</strong> (ARC): certificato di revisione di aeronavigabilità rilasciato annualmente dalla CAMO sulla base della documentazione di manutenzione.</li></ul>
+
+<aside class="callout box-esempio"><div class="callout-label">Esempio</div><div class="callout-body"><strong>Programma di manutenzione di un Piper PA-28.</strong> Il manuale di manutenzione del costruttore prescrive ispezioni a 50 ore (sostituzione olio e filtro), 100 ore (<em>annual inspection</em>: ispezione completa di motore, cellula, sistemi), 500 ore (controllo magneti, pompa carburante, eliche), 1000 ore (controllo <em>wing spar attachment fitting</em> con liquidi penetranti), e revisione completa del motore (<em>Top Overhaul</em>) ogni 2000 ore o 12 anni (TBO — Time Between Overhauls). Il pilota proprietario può eseguire personalmente la manutenzione minore (sostituzione olio, candele, pneumatici) elencata nell'Allegato 8 al regolamento UE 1321/2014, mentre tutti gli altri interventi richiedono personale Part-66 abilitato.</div></aside>
+
+<aside class="callout box-risultati"><div class="callout-label">Risultati</div><div class="callout-body"><strong>Concetti-chiave da ricordare:</strong>
+<ul><li>Le filosofie di manutenzione sono quattro: correttiva, preventiva programmata (<em>hard time</em>), <em>on condition</em>, <em>condition monitoring</em>.</li><li>I controlli si articolano su livelli temporali: pre-flight, daily, A-check, B-check, C-check, D-check.</li><li>Il pre-flight comprende: documentazione, walk-around, livelli, comandi, run-up.</li><li>Ogni sistema di bordo ha controlli periodici specifici prescritti dal costruttore.</li><li>Tutta la manutenzione deve essere documentata in giornale di bordo, libretti di manutenzione e libretti dei componenti.</li><li>Il quadro normativo è dato da Part-M, Part-145, Part-66 e Part-147 di EASA.</li></ul></div></aside>
+
+<h2 id="caratteristiche-principali-della-propulsione-ad-el">Caratteristiche principali della propulsione ad elica</h2>
+
+<div class="quesito"><span class="quesito-num">Quesito 3</span><span class="quesito-text">Illustrare le caratteristiche principali della propulsione ad elica.</span></div>
+
+<aside class="callout box-teoria"><div class="callout-label">Teoria</div><div class="callout-body">La <strong>propulsione ad elica</strong> è la più antica forma di propulsione meccanica dell'aviazione e tuttora la soluzione di elezione per i velivoli che operano in regime subsonico fino a numeri di Mach $M \approx 0{,}65$ ($V \approx 700\,\mathrm{km/h}$ alla quota di crociera). Il principio fisico è quello della <em>reazione</em>: un'elica, posta in rotazione da un motore (alternativo o turbina), accelera all'indietro una grande massa d'aria; per il principio di azione e reazione, il velivolo riceve in avanti una spinta pari alla variazione di quantità di moto impressa al fluido nell'unità di tempo.</div></aside>
+
+<h3 id="il-sistema-motore-elica">Il sistema motore-elica</h3>
+
+<p>L'apparato propulsivo a elica è costituito da due sottosistemi distinti ma interconnessi:</p>
+
+<ul><li>un <strong>motore</strong> (motore alternativo a pistoni o turbina a gas) che genera <em>potenza meccanica</em> all'albero, espressa in kilowatt o cavalli vapore;</li><li>un'<strong>elica</strong>, calettata direttamente o tramite riduttore sull'albero motore, che converte la potenza meccanica in <em>spinta propulsiva</em>, ossia in potenza utile al volo.</li></ul>
+
+<p>In base al tipo di motore impiegato, si distinguono tre famiglie di propulsori a elica:</p>
+
+<dl><dt>Motoelica</dt><dd>Il motore è un <em>motore alternativo</em> a pistoni a quattro tempi (ciclo Otto), tipicamente boxer raffreddato ad aria, alimentato ad avgas. È la soluzione standard per l'aviazione generale (potenze fino a $\sim350\,\mathrm{hp}$).</dd><dt>Turboelica</dt><dd>Il motore è una <em>turbina a gas</em> (compressore + camera di combustione + turbina), che fornisce potenza all'elica tramite un riduttore. Soluzione tipica per velivoli da trasporto regionale (ATR-72, Bombardier Q400) e per molti militari da addestramento.</dd><dt>Elettroelica</dt><dd>Il motore è un <em>motore elettrico</em> alimentato da batterie o celle a combustibile. Tecnologia in via di sviluppo (Pipistrel Velis Electro, primo velivolo elettrico certificato EASA nel 2020).</dd></dl>
+
+<h3 id="funzionamento-aerodinamico-dellelica">Funzionamento aerodinamico dell'elica</h3>
+
+<p>L'elica è costituita da un <em>mozzo</em> centrale e da due o più <em>pale</em> che si comportano come piccole ali rotanti: ogni sezione di pala è un profilo aerodinamico che, investito dal flusso, genera una forza aerodinamica le cui componenti sono:</p>
+
+<ul><li>una componente <em>assiale</em> (lungo l'asse di rotazione), diretta in avanti, che costituisce la <strong>spinta</strong> dell'elica;</li><li>una componente <em>tangenziale</em>, che si oppone alla rotazione e dà luogo alla <strong>coppia</strong> resistente, equilibrata dalla coppia motrice.</li></ul>
+
+<p>La velocità relativa che investe ciascuna sezione di pala è la composizione vettoriale di due velocità: <ul><li>la <em>velocità di avanzamento</em> $V_0$ del velivolo, parallela all'asse;</li><li>la <em>velocità di rotazione</em> $\omega r$, tangenziale, che varia linearmente con il raggio $r$.</li></ul></p>
+
+<figure class="block-figure"><img class="technical-figure" src="../assets/figures/2017-fig-01.png" alt="Figura tecnica 1 — 2017" loading="lazy">
+<figcaption>Sezione di una pala di elica con la composizione delle velocità (avanzamento $V_0$ e rotazione $\omega r$) e le forze aerodinamiche risultanti. La componente assiale della portanza costituisce la spinta $T$; la componente tangenziale dà la coppia resistente $Q$.</figcaption></figure>
+
+<h3 id="spinta-e-potenza-dellelica">Spinta e potenza dell'elica</h3>
+
+<p>Applicando il teorema della quantità di moto al tubo di flusso attraversato dall'elica, la spinta vale: $$T = \dot{m}_a (u_w - V_0)$$ ove $\dot{m}_a$ è la portata massica d'aria attraversata dal disco dell'elica e $u_w$ la velocità della scia a valle dell'elica stessa. La <em>potenza propulsiva</em> effettivamente utilizzata per il volo è il prodotto della spinta per la velocità di avanzamento: $$P_p = T \cdot V_0$$ Il <strong>rendimento propulsivo</strong> dell'elica è definito come rapporto fra la potenza propulsiva e la potenza all'asse fornita dal motore ($P_{asse}$): $$\eta_p = \frac{P_p}{P_{asse}} = \frac{T \cdot V_0}{P_{asse}} = \frac{2\,V_0}{u_w + V_0}$$ L'ultima espressione mostra che $\eta_p$ tende a $1$ solo quando $u_w \to V_0$, ossia quando la scia è poco accelerata: ciò richiede una grande portata d'aria, ottenibile con eliche di grande diametro. Nelle eliche aeronautiche di buona progettazione il rendimento massimo si attesta su valori di $\eta_p \approx 0{,}80$–$0{,}85$.</p>
+
+<h3 id="eliche-a-passo-fisso-ed-eliche-a-passo-variabile">Eliche a passo fisso ed eliche a passo variabile</h3>
+
+<p>Il <em>passo</em> dell'elica ($p$) è la distanza che essa percorrerebbe avanzando in un mezzo solido durante una rotazione completa, ed è legato all'<em>angolo di calettamento</em> delle pale. Si distinguono due tipologie:</p>
+
+<dl><dt>Eliche a passo fisso (<em>fixed-pitch</em>)</dt><dd>L'angolo di calettamento è fissato in costruzione. Sono semplici, leggere ed economiche, ma il rendimento è ottimale solo a una velocità di volo specifica: si distinguono <em>eliche da decollo</em> (passo corto, ottimizzate per la salita) ed <em>eliche da crociera</em> (passo lungo, ottimizzate per la velocità). Tipiche dei velivoli scuola e ULM.</dd><dt>Eliche a passo variabile (<em>constant-speed</em>)</dt><dd>L'angolo di calettamento può essere modificato in volo da un meccanismo idraulico o elettrico. Un <em>governor</em> regola il passo automaticamente in modo da mantenere costante il regime di rotazione del motore al variare della velocità di volo: il pilota agisce indipendentemente sul gas (potenza) e sul passo (giri). Il rendimento è massimizzato in tutte le fasi di volo. Sono lo standard nei velivoli da turismo medi e in tutti i turboelica.</dd></dl>
+
+<h3 id="vantaggi-e-limiti-della-propulsione-a-elica">Vantaggi e limiti della propulsione a elica</h3>
+
+<div class="table-wrap">
+
+<table><tr><td><strong>Vantaggi</strong></td><td><strong>Limiti</strong></td></tr>
+<tr><td>Elevato rendimento propulsivo a velocità subsoniche moderate ($\eta_p$ fino a 0{,}85).</td><td>Limite di velocità: oltre $M \approx 0{,}65$ il rendimento crolla per la formazione di onde d'urto sulle estremità delle pale.</td></tr>
+<tr><td>Eccellente prestazione al decollo: la spinta diminuisce poco con la velocità, garantendo grande spinta a bassa $V$.</td><td>Limite di quota: nei motori alternativi la potenza diminuisce con la quota per la rarefazione dell'aria (pressione di alimentazione).</td></tr>
+<tr><td>Potenza in eccesso utile per la salita e le manovre di emergenza.</td><td>Effetti collaterali sul velivolo: coppia di reazione (rollio), effetto giroscopico, effetto P, soffio dell'elica sulle superfici di coda.</td></tr>
+<tr><td>Bassi consumi specifici nei motori alternativi ($c_{sf} \approx 0{,}25$–$0{,}30\,\mathrm{kg/(kW\cdot h)}$).</td><td>Rumorosità a terra significativa (impulsi periodici delle pale).</td></tr>
+<tr><td>Possibilità di <em>passo bandiera</em> (<em>feathering</em>) per ridurre la resistenza in caso di motore in avaria.</td><td>Maggiore complessità meccanica rispetto al getto puro (riduttori, governor, mozzo a passo variabile).</td></tr></table>
+<figcaption>Vantaggi e limiti della propulsione ad elica.</figcaption>
+</div>
+
+<h3 id="effetti-collaterali-dellelica-sul-velivolo">Effetti collaterali dell'elica sul velivolo</h3>
+
+<p>La rotazione dell'elica produce sul velivolo una serie di <em>effetti collaterali</em> che il pilota deve compensare con i comandi di volo:</p>
+
+<ul><li><strong>Coppia di reazione</strong>: la coppia che il motore esercita sull'elica per farla girare in senso orario (visto dal pilota) si scarica sulla cellula in senso antiorario, tendendo a far rollare il velivolo a sinistra. Si compensa progettando l'ala destra con incidenza leggermente maggiore.</li><li><strong>Effetto P</strong> (<em>P-factor</em>): a incidenze elevate (decollo, volo lento) la pala discendente ha un angolo d'attacco maggiore di quella ascendente, generando una spinta asimmetrica che tende a imbardare il velivolo a sinistra.</li><li><strong>Effetto giroscopico</strong>: l'elica si comporta come un giroscopio; ogni manovra di beccheggio produce un'imbardata e viceversa.</li><li><strong>Soffio dell'elica</strong>: la scia dell'elica investe la coda con un flusso elicoidale che esercita una pressione asimmetrica sulla deriva, tendendo a imbardare il velivolo. Si compensa disassando lievemente il motore o installando un <em>trim tab</em> sul timone.</li></ul>
+
+<aside class="callout box-esempio"><div class="callout-label">Esempio</div><div class="callout-body"><strong>La famiglia ATR-72.</strong> Il regionale italo-francese ATR-72, ampiamente utilizzato in Europa per voli a corto raggio, monta due turboelica Pratt &amp; Whitney Canada PW127 da <span class="unit">2750&nbsp;hp</span> ciascuno, accoppiati a eliche esapala in materiale composito Hamilton Standard. Velocità di crociera <span class="unit">510&nbsp;km/h</span> (Mach 0{,}45), quota di crociera <span class="unit">7600&nbsp;m</span>. La scelta del turboelica rispetto al turbofan, su tratte brevi, permette di ridurre i consumi del 25–30%, dato che il turbofan rende meglio solo alle alte quote che il regionale non raggiunge.</div></aside>
+
+<aside class="callout box-risultati"><div class="callout-label">Risultati</div><div class="callout-body"><strong>Concetti-chiave da ricordare:</strong>
+<ul><li>L'elica accelera una grande massa d'aria all'indietro generando una spinta per reazione.</li><li>Il rendimento propulsivo di una buona elica si attesta su $\eta_p \approx 0{,}80$–$0{,}85$.</li><li>Tre tipologie di propulsori: motoelica (alternativo), turboelica (turbina), elettroelica (motore elettrico).</li><li>Eliche a passo fisso (semplici, economiche) ed eliche a passo variabile (rendimento ottimo in tutto l'inviluppo).</li><li>Vantaggi: alto rendimento subsonico, grande spinta al decollo, bassi consumi.</li><li>Limiti: velocità massima $M \approx 0{,}65$, effetti collaterali (coppia, P-factor, soffio, giroscopico).</li></ul></div></aside>
+
+<h2 id="descrizione-schematica-dellimpianto-combustibile">Descrizione schematica dell'impianto combustibile</h2>
+
+<div class="quesito"><span class="quesito-num">Quesito 4</span><span class="quesito-text">Fornire una descrizione schematica dell'impianto combustibile idoneo per il velivolo sopra descritto.</span></div>
+
+<aside class="callout box-teoria"><div class="callout-label">Teoria</div><div class="callout-body">L'<strong>impianto combustibile</strong> ha il compito di <em>stivare</em> il combustibile a bordo, di <em>distribuirlo</em> alle utenze (motori, APU) nelle condizioni di pressione e portata richieste in tutte le fasi di volo, e di <em>misurare</em> la quantità presente in tempo reale. Per un velivolo da turismo monomotore l'impianto ha un'architettura relativamente semplice rispetto a quella di un velivolo di linea, ma deve comunque rispondere a precisi requisiti di sicurezza e affidabilità imposti dalla CS-23 (Subpart E, "Powerplant").</div></aside>
+
+<h3 id="specifiche-di-progetto">Specifiche di progetto</h3>
+
+<p>Per il velivolo di riferimento (Lycoming O-360, autonomia operativa di <span class="unit">3&nbsp;h</span> + <span class="unit">0,5&nbsp;h</span> di riserva) le specifiche dell'impianto sono:</p>
+
+<ul><li><strong>volume di combustibile</strong>: $V_c \approx 130\,\mathrm{L}$ (corrispondenti a $\sim94\,\mathrm{kg}$);</li><li><strong>portata di alimentazione massima</strong>: $\dot{V}_{\max} \approx 40\,\mathrm{L/h}$, corrispondenti al consumo a piena potenza;</li><li><strong>pressione di alimentazione al carburatore</strong>: $0{,}2\,\mathrm{}$–$0{,}5\,\mathrm{bar}$ (relativa);</li><li><strong>tipo di combustibile</strong>: avgas <span class="unit">100&nbsp;LL</span> (densità $\rho_c = 0{,}72\,\mathrm{kg/L}$);</li><li><strong>esercizio garantito</strong>: in tutte le condizioni di assetto previste dalla certificazione (incluso decollo a $\theta = +20°$ e volo livellato a sbandamenti fino a $30°$).</li></ul>
+
+<h3 id="architettura-dellimpianto">Architettura dell'impianto</h3>
+
+<p>L'impianto è organizzato in cinque sottosistemi funzionali, descritti nei paragrafi seguenti.</p>
+
+<p class="para-head"><strong>Stivaggio.</strong></p>
+La soluzione adottata è quella dei <strong>serbatoi alari integrali</strong>: il combustibile è ricavato direttamente nel cassone alare fra i due longheroni, in due vani simmetrici da <span class="unit">65&nbsp;L</span> ciascuno. Le centine interne, opportunamente sigillate, fungono da paratie anti-sbattimento (<em>anti-slosh</em>) che smorzano le oscillazioni del fluido durante le manovre. La parte superiore di ciascun serbatoio è dotata di uno <strong>sfiato</strong> con valvola di non ritorno che assicura la ventilazione (impedendo la depressione durante l'aspirazione e lo sfogo dell'aria durante il rifornimento). Il punto più basso di ciascun serbatoio ospita un <em>pozzetto di raccolta</em> (<em>sump</em>) dotato di <strong>valvola di drenaggio</strong> (<em>drain valve</em>), accessibile dall'esterno, che il pilota apre prima del volo per scaricare eventuale acqua di condensa accumulatasi.
+
+<p class="para-head"><strong>Alimentazione.</strong></p>
+Dal pozzetto di ciascun serbatoio parte la tubazione di mandata che conduce al <strong>selettore di alimentazione</strong>, una valvola a quattro posizioni accessibile al pilota dalla cabina:
+<ul><li><span class="sf">LEFT</span>: alimentazione dal solo serbatoio sinistro;</li><li><span class="sf">RIGHT</span>: alimentazione dal solo serbatoio destro;</li><li><span class="sf">BOTH</span>: alimentazione da entrambi (uso normale in crociera);</li><li><span class="sf">OFF</span>: chiusura totale dell'impianto (per emergenze e a velivolo a terra).</li></ul>
+La selezione <span class="sf">LEFT</span>/<span class="sf">RIGHT</span> consente di gestire eventuali sbilanci di centraggio laterale e di isolare un serbatoio in caso di perdita.
+
+<p class="para-head"><strong>Pressurizzazione e pompaggio.</strong></p>
+A valle del selettore si trova una <strong>pompa elettrica ausiliaria</strong> (<em>boost pump</em>) attivata dal pilota nelle fasi critiche (avviamento, decollo, atterraggio, virate accentuate) e una <strong>pompa meccanica</strong> trascinata direttamente dal motore, che assicura l'alimentazione in volo normale. La pompa elettrica è in parallelo a quella meccanica e fornisce ridondanza in caso di avaria di quest'ultima. Sui velivoli da turismo l'alimentazione può anche avvenire <em>a gravità</em> per i serbatoi alari posti sopra il motore (configurazione ad ala alta tipo Cessna 172): in tal caso la pompa è solo di ausilio.
+
+<p class="para-head"><strong>Filtraggio.</strong></p>
+Lungo la linea, prima dell'ingresso al motore, è installato il <strong>gascolator</strong>, un filtro decantatore con vaschetta trasparente posta nel punto più basso del circuito. Esso separa per gravità acqua e sedimenti (più densi del combustibile), che si raccolgono sul fondo della vaschetta da dove possono essere scaricati prima del volo tramite un'apposita drain valve. A monte e a valle del gascolator sono presenti elementi filtranti di sicurezza.
+
+<p class="para-head"><strong>Misura e controllo.</strong></p>
+In ciascun serbatoio è installata una <strong>sonda di livello</strong>, generalmente di tipo <em>capacitivo</em>: due cilindri coassiali costituiscono le armature di un condensatore la cui capacità varia con il livello di combustibile (il dielettrico è in parte combustibile, in parte aria, e la loro proporzione varia con il livello). Il segnale è inviato a un <strong>indicatore di livello</strong> in cabina, tarato in litri o in galloni. A bordo sono inoltre presenti: un <em>indicatore di pressione del combustibile</em>, un <em>flussometro</em> (per la portata istantanea), un <em>primer</em> per l'iniezione di combustibile diretto al cilindro durante l'avviamento a freddo, e una <strong>valvola firewall</strong> (<em>shut-off valve</em>) sulla paratia parafiamma che il pilota può chiudere dalla cabina per isolare il motore dai serbatoi in caso di incendio.
+
+<h3 id="schema-funzionale">Schema funzionale</h3>
+
+<figure class="block-figure"><img class="technical-figure" src="../assets/figures/2017-fig-02.png" alt="Figura tecnica 2 — 2017" loading="lazy">
+<figcaption>Schema funzionale dell'impianto combustibile per il velivolo monomotore di riferimento. In verde i serbatoi e gli elementi a tenuta, in blu i componenti meccanici di linea, in arancio le valvole di selezione, in rosso il motore e gli organi di sicurezza, in giallo strumentazione e filtraggio. Le linee tratteggiate rappresentano i collegamenti elettrici (segnali) e di servizio.</figcaption></figure>
+
+<h3 id="sicurezza-dellimpianto">Sicurezza dell'impianto</h3>
+
+<p>L'impianto combustibile è classificato dalla CS-23 come sistema <em>critico per la sicurezza</em>, e presenta diversi livelli di ridondanza e protezione:</p>
+
+<ul><li><strong>Doppio serbatoio</strong> con possibilità di alimentazione indipendente: se un serbatoio si rompe o si contamina, l'altro garantisce comunque l'alimentazione del motore.</li><li><strong>Doppia pompa</strong> (meccanica + elettrica) in parallelo: ridondanza attiva sull'alimentazione.</li><li><strong>Valvola firewall</strong>: in caso di incendio motore, il pilota chiude l'alimentazione e isola la zona infiammabile dai serbatoi.</li><li><strong>Drain valves</strong> su serbatoi e gascolator per il controllo pre-volo dell'acqua di condensa.</li><li><strong>Sfiati</strong> tarati per evitare sia depressioni (cavitazione delle pompe) sia sovrapressioni dei serbatoi.</li><li><strong>Indicatore di pressione</strong> in cabina: una caduta di pressione segnala al pilota un'anomalia in atto (filtro intasato, pompa in avaria, perdita).</li></ul>
+
+<aside class="callout box-avviso"><div class="callout-label">Attenzione</div><div class="callout-body"><strong>Confronto con i grandi velivoli da trasporto.</strong> Negli airliner moderni l'impianto è notevolmente più complesso: i serbatoi possono essere 7-9 (alari sinistro/destro, centrali, di compensazione in coda), con valvole <em>cross-feed</em> che consentono di alimentare ciascun motore da qualsiasi serbatoio, pompe di travaso (<em>transfer pumps</em>), pompe di alimentazione (<em>boost pumps</em>) ridondate, dispositivo di scarico rapido (<em>fuel jettison</em>, per consentire atterraggi di emergenza riducendo il peso a un valore inferiore al MLW), inertizzazione del cielo dei serbatoi con azoto (<em>NGS</em>, dopo l'incidente del TWA-800 del 1996). La filosofia generale, tuttavia, resta quella qui descritta in scala ridotta: stivaggio $\to$ selezione $\to$ pompaggio $\to$ filtraggio $\to$ erogazione al motore, con strumentazione e sicurezze.</div></aside>
+
+<aside class="callout box-risultati"><div class="callout-label">Risultati</div><div class="callout-body"><strong>Concetti-chiave da ricordare:</strong>
+<ul><li>L'impianto combustibile è strutturato in cinque sottosistemi: stivaggio, alimentazione, pressurizzazione/pompaggio, filtraggio, misura/controllo.</li><li>Per il velivolo monomotore tipico: due serbatoi alari integrali con sfiato e drain valve, selettore L/R/BOTH/OFF, pompe meccanica + elettrica in parallelo, gascolator, valvola firewall.</li><li>Le sonde di livello sono tipicamente capacitive; in cabina sono presenti indicatori di livello, pressione e portata.</li><li>La sicurezza è garantita da ridondanza (doppio serbatoio, doppia pompa) e da dispositivi di emergenza (firewall, drain).</li><li>Negli airliner l'architettura si arricchisce di cross-feed, transfer pumps, jettison e inertizzazione, ma la logica generale resta la stessa.</li></ul></div></aside>
+</div>
+<nav class="exam-pagination">
+<a href="2016.html" class="">
+<span class="label">Precedente</span>
+<span class="title">2016 </span>
+</a>
+<a href="2018.html" class="next">
+<span class="label">Successivo</span>
+<span class="title">2018 </span>
+</a>
+</nav>
+</article>
+<aside class="exam-aside">
+<div class="exam-aside-inner">
+<div class="toc-label">In questa pagina</div>
+<ul class="toc-list"><li><a href="#controlli-per-la-manutenzione-regolare-del-velivol"><span class="toc-num">1</span>Controlli per la manutenzione regolare del velivolo</a></li>
+<li><a href="#caratteristiche-principali-della-propulsione-ad-el"><span class="toc-num">2</span>Caratteristiche principali della propulsione ad elica</a></li>
+<li><a href="#descrizione-schematica-dellimpianto-combustibile"><span class="toc-num">3</span>Descrizione schematica dell'impianto combustibile</a></li></ul>
+</div>
+</aside>
+</div>
+</main>
+<footer class="site-footer">
+<div class="site-footer-inner">
+<p>Prof. Ing. Raucci Biagio · ITIS E. Majorana, Cassino · A.S. 2025/26</p>
+<p class="credit">Costruzioni Aeronautiche · Classe A038</p>
+</div>
+</footer>
+<script src="../assets/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#1d3557">
+<meta name="description" content="Inviluppo di volo · Impianto combustibile · Sollecitazione longherone · CND magnetoscopico">
+<title>Esame di Stato 2019 · Esami Costruzioni Aeronautiche</title>
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" integrity="sha384-nB0miv6/jRmo5UMMR1wu3Gz6NLsoTkbqJghGIsx//Rlm+ZU03BU6SQNC66uf4l5+" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" integrity="sha384-7zkQWkzuo3B5mTepMUcHkMB5jZaolc2xDwL6VFqjFALcbeS9Ggm/Yr2r3Dy4lfFg" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous" onload="renderMathInElement(document.body, {delimiters: [{left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}], throwOnError: false, macros: { '\\AR': '\\mathrm{AR}' } });"></script>
+</head>
+<body>
+<header class="site-header">
+<div class="site-header-inner">
+<a href="../index.html" class="brand">
+<span class="brand-mark">Esami</span>
+<span class="brand-sub">Costruzioni Aeronautiche · A038</span>
+</a>
+<nav class="site-nav">
+<a href="../index.html" >Indice</a>
+<a href="https://github.com" rel="noopener">GitHub</a>
+<a href="https://www.raucci.net" rel="noopener">Blog personale</a>
+</nav>
+</div>
+</header>
+
+<main class="container">
+<div class="exam-page">
+<article class="exam-article-wrap">
+<header class="exam-header">
+<a href="../index.html" class="exam-back">Tutte le prove</a>
+<div class="exam-eyebrow"><span>2019</span><span class="dot">·</span><span>Ordinaria</span></div>
+<h1 class="exam-title">Esame di Stato 2019</h1>
+<p class="exam-deck">Inviluppo di volo · Impianto combustibile · Sollecitazione longherone · CND magnetoscopico</p>
+</header>
+<div class="exam-article">
+<p>La prova della sessione ordinaria 2019 combina un quesito semi-numerico (il diagramma di inviluppo di volo), un quesito impiantistico (impianto combustibile), un quesito strutturale numerico (sollecitazione del longherone in condizione di g-stallo) e un quesito di tecnica delle prove non distruttive (CND magnetoscopico). Per i quesiti 1 e 3, che fanno riferimento al velivolo della Prima Parte, si adottano i dati di un velivolo da turismo monomotore MTOW = 1100 kg, categgoria Normal CS-23, coerente con i velivoli di riferimento dei capitoli precedenti.</p>
+
+<h2 id="diagramma-di-inviluppo-di-volo">Diagramma di inviluppo di volo</h2>
+
+<div class="quesito"><span class="quesito-num">Quesito 1</span><span class="quesito-text">Il candidato determini il diagramma di inviluppo di volo del velivolo progettato.</span></div>
+
+<aside class="callout box-teoria"><div class="callout-label">Teoria</div><div class="callout-body">Il <strong>diagramma di inviluppo di volo</strong> (o diagramma $V$–$n$) è la rappresentazione
+grafica nel piano velocità–fattore di carico che delimita tutte le condizioni di volo
+<em>strutturalmente e aerodinamicamente ammissibili</em>. Si costruisce sovrapponendo:
+<ul><li>il <strong>diagramma di manovra</strong>: definisce i limiti aerodinamici (parabole di stallo)
+    e strutturali (fattori di carico limite imposti dalla normativa CS-23/CS-25);</li><li>il <strong>diagramma di raffica</strong>: definisce i carichi dovuti a raffiche atmosferiche
+    verticali standard.</li></ul>
+L'inviluppo è il perimetro esterno risultante dalla sovrapposizione dei due diagrammi.</div></aside>
+
+<h3 id="dati-di-riferimento-e-fattori-di-carico-cs-23-cate">Dati di riferimento e fattori di carico (CS-23, categoria Normal)</h3>
+
+<aside class="callout box-ipotesi"><div class="callout-label">Ipotesi e dati</div><div class="callout-body">$W = 10\,791\,\mathrm{N}$;&ensp; $S = 16\,\mathrm{m}^2$;&ensp; $\AR = 7{,}5$;&ensp;
+$C_{L,\max} = 1{,}60$;&ensp; $C_{L,\min} = -0{,}60$.
+
+<p>Fattori di carico limite (CS-23.337, categoria Normal, $W < 5670\,\mathrm{kg}$): $$n_{\lim} = 3{,}8 \qquad n_{\lim,R} = -1{,}52 \quad (= -0{,}4 \times n_{\lim})$$</div></aside></p>
+
+<h3 id="velocità-caratteristiche">Velocità caratteristiche</h3>
+
+<p class="para-head"><strong>Velocità di stallo.</strong></p>
+$$V_S = \sqrt{\frac{2\,W}{\rho_0\,S\,C_{L,\max}}}
+    = \sqrt{\frac{2 \times 10\,791}{1{,}225 \times 16 \times 1{,}60}}
+    = \mathbf{26{,}2\,\mathrm{m/s}} \;(94{,}4\,\mathrm{km/h})$$
+$$V_{SR} = \sqrt{\frac{2\,W}{\rho_0\,S\,|C_{L,\min}|}}
+    = \sqrt{\frac{2 \times 10\,791}{1{,}225 \times 16 \times 0{,}60}}
+    = \mathbf{42{,}8\,\mathrm{m/s}} \;(154\,\mathrm{km/h})$$
+
+<p class="para-head"><strong>Velocità di manovra.</strong></p>
+$$V_A = V_S\sqrt{n_{\lim}} = 26{,}2 \times \sqrt{3{,}8} = \mathbf{51{,}1\,\mathrm{m/s}}
+  \;(184\,\mathrm{km/h})$$
+$$V_{AR} = V_{SR}\sqrt{|n_{\lim,R}|} = 42{,}8 \times \sqrt{1{,}52}
+  = \mathbf{52{,}8\,\mathrm{m/s}} \;(190\,\mathrm{km/h})$$
+
+<p class="para-head"><strong>Velocità di crociera e di picchiata.</strong></p>
+Per la categoria Normal CS-23 si adotta:
+$$V_C = 2{,}0 \times V_S = 52{,}5\,\mathrm{m/s}\;(189\,\mathrm{km/h}),
+  \qquad V_D = 1{,}5 \times V_C = 78{,}7\,\mathrm{m/s}\;(283\,\mathrm{km/h})$$
+
+<h3 id="diagramma-di-manovra">Diagramma di manovra</h3>
+
+<p>Il diagramma si costruisce tracciando le parabole di stallo e i tratti a $n$ costante:</p>
+
+<div class="table-wrap">
+
+<table><tr><td>$n$</td><td>$V\,[\mathrm{m/s}]$</td><td>$V\,[\mathrm{km/h}]$</td><td>Tratto</td><td>Note</td></tr>
+<tr><td>1{,}00</td><td>26{,}2</td><td>94</td><td>Parabola S–A</td><td>stallo volo diretto</td></tr>
+<tr><td>1{,}50</td><td>32{,}1</td><td>116</td><td></td><td></td></tr>
+<tr><td>2{,}50</td><td>41{,}5</td><td>149</td><td></td><td></td></tr>
+<tr><td>3{,}50</td><td>49{,}1</td><td>177</td><td></td><td></td></tr>
+<tr><td><strong>3{,}80</strong></td><td><strong>51{,}1</strong></td><td><strong>184</strong></td><td></td><td>punto A</td></tr>
+<tr><td>3{,}80</td><td>51{,}1</td><td>184</td><td>A–C</td><td></td></tr>
+<tr><td>3{,}80</td><td>52{,}5</td><td>189</td><td>A–C</td><td>punto C = $(V_C, n_{\lim})$</td></tr>
+<tr><td>3{,}80</td><td>78{,}7</td><td>283</td><td>C–D</td><td>punto D = $(V_D, n_{\lim})$</td></tr>
+<tr><td>0{,}00</td><td>78{,}7</td><td>283</td><td>D–E</td><td>$n$ decresce a 0 (Norm.)</td></tr>
+<tr><td>$-1{,}00$</td><td>42{,}8</td><td>154</td><td>Parabola $S_R$–$A_R$</td><td>stallo rovescio</td></tr>
+<tr><td>$-1{,}52$</td><td>52{,}8</td><td>190</td><td></td><td>punto $A_R$</td></tr>
+<tr><td>$-1{,}52$</td><td>42{,}8</td><td>154</td><td>$A_R$–F</td><td>$n_{\lim,R} = -1{,}52$ fino a $V_C$</td></tr>
+<tr><td>0{,}00</td><td>78{,}7</td><td>283</td><td>F–E</td><td>decresce linearmente</td></tr></table>
+<figcaption>Punti caratteristici del diagramma di manovra (categoria Normal, CS-23).</figcaption>
+</div>
+
+<h3 id="diagramma-di-raffica-cs-23">Diagramma di raffica (CS-23)</h3>
+
+<p>Il fattore di carico da raffica vale (formula CS-23): $$n_{\mathrm{raff}} = 1 \pm \frac{K_g\,\rho_0\,U_{de}\,V\,a}{2\,(W/S)}$$ dove $K_g \approx 0{,}88\,\mu_g/(5{,}3 + \mu_g)$ è il fattore di attenuazione e $a = C'_L$. Le velocità di raffica standard a SL sono: $U_{de} = 15{,}2\,\mathrm{m/s}$ a $V_C$ e $U_{de} = 7{,}6\,\mathrm{m/s}$ a $V_D$. Le linee di raffica sono rette che passano per $(V = 0,\, n = 1)$ con pendenza proporzionale a $U_{de}$.</p>
+
+<aside class="callout box-avviso"><div class="callout-label">Attenzione</div><div class="callout-body"><strong>Inviluppo finale.</strong>
+L'inviluppo di volo si ottiene tracciando il perimetro esterno risultante dalla
+sovrapposizione dei due diagrammi. Per i velivoli di aviazione generale leggera
+(categoria Normal) le condizioni di manovra ($n_{\lim} = 3{,}8$) sono quasi sempre
+prevalenti rispetto a quelle di raffica: l'inviluppo coincide sostanzialmente con
+il diagramma di manovra. Nei grandi trasporti (CS-25) la situazione si inverte:
+le raffiche sono prevalenti e contengono il diagramma di manovra al loro interno.</div></aside>
+
+<figure class="block-figure">
+
+<img class="technical-figure" src="../assets/figures/2019-fig-01.png" alt="Figura tecnica 1 — 2019" loading="lazy">
+<figcaption>Diagramma di inviluppo di volo (schematico) per il velivolo di riferimento
+  CS-23 categoria Normal. Tratti in <span class="color-word blue">blu</span>: lato positivo;
+  in <span class="color-word red">rosso</span>: lato negativo.</figcaption>
+</figure>
+
+<aside class="callout box-risultati"><div class="callout-label">Risultati</div><div class="callout-body"><strong>Valori caratteristici dell'inviluppo:</strong>
+$V_S = 26{,}2$,  $V_A = 51{,}1$,  $V_C = 52{,}5$,  $V_D = 78{,}7\,\mathrm{m/s}$; 
+$n_{\lim} = +3{,}8$;  $n_{\lim,R} = -1{,}52$.</div></aside>
+
+<h2 id="impianto-combustibile-del-velivolo">Impianto combustibile del velivolo</h2>
+
+<div class="quesito"><span class="quesito-num">Quesito 2</span><span class="quesito-text">Illustrare il funzionamento dell'impianto combustibile del velivolo.</span></div>
+
+<aside class="callout box-teoria"><div class="callout-label">Teoria</div><div class="callout-body">L'<strong>impianto combustibile</strong> (ATA capitolo 28) ha il compito di stoccare il
+carburante a bordo e di fornirlo al motore alle condizioni di portata e pressione
+richieste, in tutte le fasi del volo (decollo, salita, crociera, discesa, inversione
+di prua, manovre) e in qualsiasi assetto, garantendo continuità di erogazione.</div></aside>
+
+<h3 id="circuito-del-velivolo">Circuito del velivolo</h3>
+
+<p class="para-head"><strong>Serbatoi.</strong></p>
+I serbatoi sono il deposito primario di combustibile. La loro posizione influisce
+sull'equilibrio del baricentro: sui velivoli leggeri sono tipicamente alloggiati
+nelle ali (<em>wet wing</em> o serbatoi integrali), con vantaggi strutturali (il peso
+del carburante bilancia il momento flettente aerodinamico). Sui velivoli di linea
+si trovano serbatoi alari, centrali e di coda (per il controllo del baricentro).
+
+<p>Caratteristiche costruttive: <ul><li>pareti impermeabilizzate con sigillante polisolturico resistente al kerosene;</li><li>fori di drenaggio (drain valves) per eliminare l'acqua condensata sul fondo;</li><li>diaframmi interni (<em>baffles</em>) che smorzano il movimento del carburante nelle manovre, evitando scoprimento delle pompe;</li><li>sistema di sfiato (<em>venting</em>): i serbatoi comunicano con l'esterno per compensare la variazione di volume del carburante con la temperatura e la quota, evitando pressioni differenziali pericolose.</li></ul></p>
+
+<p class="para-head"><strong>Pompe di alimentazione.</strong></p>
+<dl><dt>Pompe centrifughe immerse (boost pumps):</dt><dd>elettropompe centrifughe
+    installate direttamente nel serbatoio, immerse nel combustibile.
+    Preriscaldano il carburante e garantiscono la pressione positiva all'ingresso
+    della pompa motore (prevenzione della vaporizzazione). Su motori a pistoni
+    una sola pompa elettrica è sufficiente; sui turbomotori ne sono installate
+    due per serbatoio (principale + riserva).</dd><dt>Pompa meccanica del motore:</dt><dd>azionata direttamente dall'albero motore,
+    determina la portata effettiva al carburatore o all'iniettore.</dd><dt>Alimentazione per gravità (solo monomotori leggeri):</dt><dd>se il serbatoio è
+    fisicamente più alto del carburatore, la gravità è sufficiente; non richiede
+    pompe elettriche. Limite: l'alimentazione si interrompe in assetti negativi.</dd></dl>
+
+<p class="para-head"><strong>Rete di distribuzione.</strong></p>
+Comprende: tubazioni di mandata (dall'elettropompa al motore), tubazione di
+<em>cross-feed</em> (alimentazione incrociata, consente a qualsiasi serbatoio di
+rifornire qualsiasi motore), valvola di <em>shut-off</em> motore (sulla paratia
+antifiamma: esclude il carburante al motore in caso di incendio), filtri
+(rimozione di particelle e acqua libera), separatori di vapori (evitano la
+<em>vapour lock</em>).
+
+<p class="para-head"><strong>Indicatori e monitoraggio.</strong></p>
+<ul><li><strong>Indicatori di livello:</strong> a galleggiante (potenziometrico) o a
+    misura capacitiva (più precisi, misurano la massa tramite dielettrico del
+    fluido).</li><li><strong>Flussometri:</strong> misurano il consumo orario in tempo reale.</li><li><strong>Indicatori di pressione</strong> alla pompa e al motore.</li></ul>
+
+<h3 id="circuito-del-motore">Circuito del motore</h3>
+
+<p>Il carburante entra nel motore alla pressione erogata dal boost pump e viene ulteriormente pressurizzato dalla pompa ad alta pressione (<em>high pressure fuel pump</em>) prima dell'iniezione. Il <strong>regolatore di carburante</strong> (FCU — <em>Fuel Control Unit</em> o FADEC nei motori moderni) dosa la portata in funzione del regime motore, dell'incidenza dell'elica, della quota e della temperatura. Il carburante in eccesso viene ricircolato al serbatoio tramite la <strong>linea di ritorno</strong>, riportando il calore ceduto dalla pompa HP nel serbatoio (nota: nei turbofan moderni il carburante è usato anche come fluido refrigerante per l'olio motore).</p>
+
+<h3 id="sicurezza-e-normativa">Sicurezza e normativa</h3>
+
+<p>Aspetti critici per la sicurezza dell'impianto combustibile: <ul><li><strong>Inerting (inertizzazione):</strong> nei serbatoi grandi, l'azoto sostituisce i vapori di carburante sopra il livello del liquido, eliminando il rischio di esplosione. Obbligatorio sui grandi trasporti (Boeing 787, A380).</li><li><strong>Fuel jettison (scarico rapido):</strong> sui velivoli con MTOW$_{\mathrm{ldg}}$ $<$ MTOW$_{\mathrm{TO}}$, un sistema di scarico rapido consente di alleggerire l'aeromobile prima di un atterraggio d'emergenza.</li><li><strong>Combustibili:</strong> motori a pistone usano Avgas 100LL; turbomotori usano Jet-A (Avtur) o JP-8 in ambito militare.</li></ul></p>
+
+<aside class="callout box-risultati"><div class="callout-label">Risultati</div><div class="callout-body"><strong>Concetti-chiave:</strong>
+<ul><li>Circuito velivolo: serbatoi (wet wing, integrali), boost pump centrifughe immerse,
+    cross-feed, shut-off valvola, sfiato, indicatori di livello/portata.</li><li>Circuito motore: pompa HP, FCU/FADEC, linea di ritorno.</li><li>La boost pump garantisce pressione positiva all'ingresso della pompa motore
+    in tutte le fasi del volo e tutti gli assetti.</li><li>Inerting: azoto nei serbatoi per prevenire l'esplosione dei vapori.</li></ul></div></aside>
+
+<h2 id="sollecitazione-del-longherone-in-condizione-di-g-s">Sollecitazione del longherone in condizione di g-stallo a \texorpdfstring{$1{,}3\,V_S$</h2>{1.3 Vs}}
+
+<div class="quesito"><span class="quesito-num">Quesito 3</span><span class="quesito-text">Determinare la sollecitazione agente sul longherone nel punto di attacco
+alla fusoliera nelle condizioni di g-stallo alla velocità $1{,}3\,V_S$.</span></div>
+
+<aside class="callout box-teoria"><div class="callout-label">Teoria</div><div class="callout-body">La condizione di <strong>g-stallo</strong> alla velocità $1{,}3\,V_S$ corrisponde a un punto
+sul ramo della parabola di stallo del diagramma di manovra: il velivolo vola alla
+velocità $V = 1{,}3\,V_S$ con il $C_L = C_{L,\max}$ (bordo della parabola). Il
+fattore di carico in tale condizione è:
+$$n = \left(\frac{V}{V_S}\right)^2 = (1{,}3)^2 = \mathbf{1{,}69}$$
+La struttura alare è sollecitata a flessione e taglio da una forza aerodinamica
+<em>amplificata</em> del fattore $n$ rispetto al volo livellato.</div></aside>
+
+<h3 id="carichi-strutturali">Carichi strutturali</h3>
+
+<p>La portanza totale in questa condizione vale: $$L = n \cdot W = 1{,}69 \times 10\,791 = 18\,237\,\mathrm{N}$$ Per simetria, ciascuna semiala regge la metà: $$L_{\mathrm{semi}} = L/2 = 9\,118\,\mathrm{N}$$</p>
+
+<p class="para-head"><strong>Distribuzione del carico.</strong></p>
+Si adotta l'ipotesi di <strong>distribuzione uniforme</strong> del carico aerodinamico lungo
+la semiala (ipotesi conservativa e ammissibile per ala rettangolare a bassa
+rastremazione):
+$$q = \frac{L_{\mathrm{semi}}}{b/2}
+    = \frac{9\,118}{5{,}48}
+    = 1\,664\,\mathrm{N/m}
+  \quad\left(b = \sqrt{\AR \cdot S} = \sqrt{7{,}5 \times 16} = 10{,}95\,\mathrm{m}\right)$$
+
+<h3 id="taglio-e-momento-flettente-allincastro-radice">Taglio e momento flettente all'incastro (radice)</h3>
+
+<dl><dt>Taglio massimo $T$:</dt><dd>il taglio è massimo alla radice ed è uguale alla
+    portanza totale della semiala:
+    $$T = L_{\mathrm{semi}} = \mathbf{9\,118\,\mathrm{N}}
+      \label{eq:2019_taglio}$$</dd><dt>Momento flettente massimo $M_f$:</dt><dd>con distribuzione uniforme, il momento
+    all'incastro è:
+    $$M_f = q \cdot \frac{(b/2)^2}{2}
+        = 1\,664 \times \frac{(5{,}48)^2}{2}
+        = \mathbf{24\,970\,\mathrm{N{\cdot}m}}
+      \label{eq:2019_momento}$$</dd></dl>
+
+<aside class="callout box-avviso"><div class="callout-label">Attenzione</div><div class="callout-body"><strong>Riduzione con la distribuzione ellittica.</strong>
+Se si adotta una distribuzione semiellitica (più realistica per ali non troppo rastremate),
+il momento si riduce di un fattore $\pi/4 \approx 0{,}785$:
+$M_{f,\mathrm{ell}} = 24\,970 \times \pi/4 \approx 19\,610\,\mathrm{N{\cdot}m}$.
+Per gli esami di stato la distribuzione uniforme è quella canonica (conservativa).</div></aside>
+
+<h3 id="tensioni-nella-sezione-di-radice">Tensioni nella sezione di radice</h3>
+
+<p>Il longherone anteriore assorbe la quota principale del momento flettente. Assumendo per il profilo NACA 2412 un'altezza al 25% della corda pari a $h \approx 0{,}12\,c = 0{,}12 \times (S/b) = 0{,}12 \times 1{,}46 = 0{,}175\,\mathrm{m}$ e una sezione rettangolare di larghezza $b_s$ da determinare:</p>
+
+<p class="para-head"><strong>Tensione di flessione (verifica).</strong></p>
+Il modulo resistente richiesto per $\sigma_{\mathrm{amm}} = 60\,\mathrm{N/mm}^2$
+(legno) o $100\,\mathrm{N/mm}^2$ (composito) è:
+$$\begin{aligned}W_s = \frac{M_f}{\sigma_{\mathrm{amm}}}
+  \quad\Rightarrow\quad
+  b_s = \frac{6\,M_f}{\sigma_{\mathrm{amm}}\,h^2}\end{aligned}$$
+Per legno ($\sigma = 60\,\mathrm{N/mm}^2$, $h = 175\,\mathrm{mm}$):
+$$b_s = \frac{6 \times 24{,}970 \times 10^6}{60 \times 175^2} = 81{,}4\,\mathrm{mm}$$
+
+<aside class="callout box-risultati"><div class="callout-label">Risultati</div><div class="callout-body"><strong>Sollecitazioni all'incastro della semiala in condizione di g-stallo a $1{,}3\,V_S$:</strong>
+$$n = 1{,}69, \quad T = 9{,}118\,\mathrm{kN}, \quad M_f = 24{,}97\,\mathrm{kN{\cdot}m}$$
+La sollecitazione dominante è la <strong>flessione</strong>: dimensiona la sezione delle
+solette del longherone. Il taglio è secondario (verifica di solito non dimensionante).</div></aside>
+
+<h2 id="cnd-magnetoscopico-procedura-di-applicazione">CND magnetoscopico: procedura di applicazione</h2>
+
+<div class="quesito"><span class="quesito-num">Quesito 4</span><span class="quesito-text">Descrivere la procedura di applicazione del CND magnetoscopico.</span></div>
+
+<aside class="callout box-teoria"><div class="callout-label">Teoria</div><div class="callout-body">Il <strong>controllo non distruttivo magnetoscopico</strong> (MT — <em>Magnetic Particle Testing</em>)
+è un metodo di ispezione che sfrutta le proprietà magnetiche dei materiali ferromagnetici
+(acciaio, ghisa, alcune leghe di nichel) per rilevare difetti superficiali e subsuperficiali
+(cricche, inclusioni, porosità, laminazioni).
+<strong>Limite fondamentale:</strong> applicabile <em>esclusivamente</em> a materiali ferromagnetici;
+non funziona su alluminio, titanio, rame, compositi.</div></aside>
+
+<h3 id="principio-fisico">Principio fisico</h3>
+
+<p>Un materiale ferromagnetico sottoposto a un campo magnetico esterno $\mathbf{H}$ si magnetizza sviluppando un flusso magnetico $\mathbf{B} = \mu_r \mu_0 \mathbf{H}$. Dove il materiale è continuo e omogeneo, le linee di flusso scorrono indisturbate. In presenza di un <strong>difetto</strong> (cricca, vuoto, inclusione non ferromagnetica) il flusso deve aggirare la discontinuità: poiché la permeabilità del difetto è molto inferiore a quella del metallo, le linee di flusso emergono nella superficie del pezzo ai bordi del difetto, formando dei <strong>poli locali</strong> (<em>flux leakage</em>). Le particelle magnetiche applicate vengono attratte verso questi poli per il gradiente di campo e si addensano a formare un'<strong>indicazione visibile</strong> del difetto.</p>
+
+<h3 id="classificazione-dei-difetti-rilevabili">Classificazione dei difetti rilevabili</h3>
+
+<ul><li><strong>Difetti superficiali:</strong> rilevati con la massima sensibilità; anche
+    cricche molto strette ($< 1\,\mu\mathrm{m}$ di apertura) producono indicazioni chiare.</li><li><strong>Difetti subsuperficiali:</strong> rilevabili fino a $\sim\!6$–$8\,\mathrm{mm}$
+    di profondità (con campo magnetico continuo); la sensibilità diminuisce con la
+    profondità.</li><li><strong>Non rilevabili:</strong> difetti molto profondi, difetti paralleli alle linee
+    di forza del campo (il campo deve essere approssimativamente perpendicolare
+    al difetto per generare il massimo flux leakage).</li></ul>
+
+<h3 id="procedura-di-ispezione">Procedura di ispezione</h3>
+
+<p>La procedura si articola in sei fasi standard (EN ISO 9934-1, AMS 2641):</p>
+
+<ol><li><strong>Pulizia e preparazione della superficie.</strong>
+    Rimozione di grasso, vernice, ossidazioni superficiali con solvente o spazzolatura.
+    La superficie deve essere pulita per consentire una buona visibilità delle
+    indicazioni. Su superfici scure si applica uno strato sottile ($15$–$25\,\mu\mathrm{m}$)
+    di vernice bianca (<em>contrast aid paint</em>) che aumenta il contrasto delle
+    particelle magnetiche nere.</li><li><strong>Magnetizzazione del pezzo.</strong>
+    Il campo magnetico viene indotto nel componente con uno dei seguenti metodi:
+    <dl></dl></li><li><strong>Applicazione delle particelle magnetiche.</strong>
+    <dl></dl>
+    Le particelle si applicano <em>durante la magnetizzazione</em> (metodo
+    <em>continuous</em>) per massima sensibilità, oppure subito dopo la rimozione
+    del campo (<em>residual method</em>) per materiali ad alta ritenzione magnetica.</li><li><strong>Ispezione e interpretazione.</strong>
+    La superficie è esaminata visivamente:
+    <ul><li>sotto <strong>luce UV</strong> (360–400 nm, lampada Wood) per indicazioni
+        fluorescenti; ambiente oscurato obbligatorio (illuminazione $< 20\,\mathrm{lux}$,
+        irradianza UV $> 1000\,\mu\mathrm{W/cm}^2$);</li><li>sotto <strong>luce bianca</strong> ($> 500\,\mathrm{lux}$) per particelle colorate.</li></ul>
+    Le indicazioni si classificano in: rilevanti (cricche vere), non rilevanti
+    (cambiamenti di sezione, bordi, giunti) e false (eccesso di particelle).
+    Solo le indicazioni rilevanti richiedono valutazione.</li><li><strong>Valutazione e documentazione.</strong>
+    Le indicazioni rilevanti sono misurate (lunghezza, orientamento, posizione)
+    e confrontate con i criteri di accettazione del manuale tecnico applicabile
+    (AMM, SRM, MIL-STD-1907). La documentazione fotografica è obbligatoria per
+    le indicazioni borderline. Il pezzo è dichiarato conforme, da riparare
+    o da sostituire.</li><li><strong>Smagnetizzazione e pulizia finale.</strong>
+    Dopo l'ispezione il pezzo deve essere <strong>demagnetizzato</strong> con una bobina
+    alimentata da corrente alternata decrescente (o passando il pezzo attraverso
+    una bobina di AC allontanandolo progressivamente). Un campo residuo superiore
+    a $0{,}3\,\mathrm{mT}$ (EN ISO 9934-1) può disturbare strumenti di bordo o
+    attrarre trucioli durante le lavorazioni. La superficie viene infine pulita
+    per rimuovere i residui delle particelle.</li></ol>
+
+<aside class="callout box-esempio"><div class="callout-label">Esempio</div><div class="callout-body"><strong>Applicazione aeronautica tipica: ispezione bulloni in acciaio.</strong>
+I bulloni strutturali in acciaio 4130 o 4340 (es.\ connessioni ala-fusoliera, alberi
+di trasmissione degli elicotteri) vengono ispezionati con la tecnica wet fluorescente,
+yoke magnetico AC. La corrente AC ha il vantaggio di concentrare il campo in superficie
+(<em>skin effect</em>), massimizzando la sensibilità per i difetti superficiali. I criteri
+di accettazione (es.\ MIL-STD-1907 Grado B) prescrivono che nessuna indicazione lineare
+superiore a 1{,}6 mm sia accettabile sui bulloni di categoria Flight-Critical.</div></aside>
+
+<div class="table-wrap">
+
+<table><tr><td>Metodo CND</td><td>Difetti rilevabili</td><td>Materiali</td></tr>
+<tr><td>Magnetoscopico (MT)</td><td>Superficiali + subsuperficiali</td><td>Solo ferromagnetici</td></tr>
+<tr><td>Liquidi penetranti (PT)</td><td>Solo superficiali aperti</td><td>Tutti i non porosi</td></tr>
+<tr><td>Ultrasuoni (UT)</td><td>Superficiali + profondi</td><td>Quasi tutti</td></tr>
+<tr><td>Correnti indotte (ET)</td><td>Superficiali + sub-sup.</td><td>Conduttori elettrici</td></tr>
+<tr><td>Radiografia (RT)</td><td>Volumetrici + superficiali</td><td>Quasi tutti</td></tr></table>
+<figcaption>Confronto tra i principali metodi CND aeronautici.</figcaption>
+</div>
+
+<aside class="callout box-risultati"><div class="callout-label">Risultati</div><div class="callout-body"><strong>Concetti-chiave:</strong>
+<ul><li>Principio: flux leakage ai bordi dei difetti attraggono le particelle ferro-
+    magnetiche. Solo materiali ferromagnetici (acciaio); non per alluminio o compositi.</li><li>Sensibilità massima quando il campo è <em>perpendicolare</em> al difetto:
+    necessario ispezionare con almeno due direzioni di campo ortogonali.</li><li>Sei fasi: pulizia → magnetizzazione (yoke, head shot, bobina) → applicazione
+    particelle (wet/dry, fluorescente/colorata) → ispezione (UV o bianca) →
+    documentazione → demagnetizzazione.</li><li>Campo residuo ammissibile dopo smagnetizzazione: $\le 0{,}3\,\mathrm{mT}$.</li><li>Metodo più sensibile ai difetti superficiali dopo i liquidi penetranti;
+    unico metodo (assieme agli ultrasuoni) che rileva difetti subsuperficiali.</li></ul></div></aside>
+</div>
+<nav class="exam-pagination">
+<a href="2018-suppletiva.html" class="">
+<span class="label">Precedente</span>
+<span class="title">2018 · Suppletiva</span>
+</a>
+<a href="2023.html" class="next">
+<span class="label">Successivo</span>
+<span class="title">2023 </span>
+</a>
+</nav>
+</article>
+<aside class="exam-aside">
+<div class="exam-aside-inner">
+<div class="toc-label">In questa pagina</div>
+<ul class="toc-list"><li><a href="#diagramma-di-inviluppo-di-volo"><span class="toc-num">1</span>Diagramma di inviluppo di volo</a></li>
+<li><a href="#impianto-combustibile-del-velivolo"><span class="toc-num">2</span>Impianto combustibile del velivolo</a></li>
+<li><a href="#sollecitazione-del-longherone-in-condizione-di-g-s"><span class="toc-num">3</span>Sollecitazione del longherone in condizione di g-stallo a \texorpdfstring{$1{,}3\,V_S$</a></li>
+<li><a href="#cnd-magnetoscopico-procedura-di-applicazione"><span class="toc-num">4</span>CND magnetoscopico: procedura di applicazione</a></li></ul>
+</div>
+</aside>
+</div>
+</main>
+<footer class="site-footer">
+<div class="site-footer-inner">
+<p>Prof. Ing. Raucci Biagio · ITIS E. Majorana, Cassino · A.S. 2025/26</p>
+<p class="credit">Costruzioni Aeronautiche · Classe A038</p>
+</div>
+</footer>
+<script src="../assets/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#1d3557">
+<meta name="description" content="Esame di Stato 2025">
+<title>Esame di Stato 2025 · Esami Costruzioni Aeronautiche</title>
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" integrity="sha384-nB0miv6/jRmo5UMMR1wu3Gz6NLsoTkbqJghGIsx//Rlm+ZU03BU6SQNC66uf4l5+" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" integrity="sha384-7zkQWkzuo3B5mTepMUcHkMB5jZaolc2xDwL6VFqjFALcbeS9Ggm/Yr2r3Dy4lfFg" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous" onload="renderMathInElement(document.body, {delimiters: [{left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}], throwOnError: false, macros: { '\\AR': '\\mathrm{AR}' } });"></script>
+</head>
+<body>
+<header class="site-header">
+<div class="site-header-inner">
+<a href="../index.html" class="brand">
+<span class="brand-mark">Esami</span>
+<span class="brand-sub">Costruzioni Aeronautiche · A038</span>
+</a>
+<nav class="site-nav">
+<a href="../index.html" >Indice</a>
+<a href="https://github.com" rel="noopener">GitHub</a>
+<a href="https://www.raucci.net" rel="noopener">Blog personale</a>
+</nav>
+</div>
+</header>
+
+<main class="container">
+<div class="exam-page">
+<article class="exam-article-wrap">
+<header class="exam-header">
+<a href="../index.html" class="exam-back">Tutte le prove</a>
+<div class="exam-eyebrow"><span>2025</span><span class="dot">·</span><span>Ordinaria</span></div>
+<h1 class="exam-title">Esame di Stato 2025</h1>
+<p class="exam-deck">Esame di Stato 2025</p>
+</header>
+<div class="exam-article">
+<p>La prova del 2025 si articola in una <em>Prima parte</em> dedicata al dimensionamento di un motoelica con struttura alare bilongherone a sezione rettangolare cava, e in una <em>Seconda parte</em> comprendente quattro quesiti, fra i quali il candidato deve sceglierne due. In quest'opuscoletto, per completezza didattica, vengono trattati tutti e quattro: il primo è una prova non distruttiva (CND con liquidi penetranti), il secondo un esercizio numerico di virata corretta a $C_L$ costante, il terzo l'analisi del funzionamento del motore turbofan, e il quarto un'organizzazione della manutenzione di secondo livello. Le risposte fanno riferimento al velivolo della Prima parte: motoelica con $W_{TO} = 5000\,\mathrm{N}$, apertura alare <span class="unit">11&nbsp;m</span>, ala trapezoidale (corda alla radice <span class="unit">1,4&nbsp;m</span>, all'estremità <span class="unit">1,1&nbsp;m</span>), profilo NACA 0010, $n_{lim} = 4{,}4$ (categoria Utility CS-23).</p>
+
+<h2 id="controllo-cnd-con-liquidi-penetranti">Controllo CND con liquidi penetranti</h2>
+
+<div class="quesito"><span class="quesito-num">Quesito 1</span><span class="quesito-text">Descrivere dettagliatamente il controllo CND eseguito con liquidi penetranti.</span></div>
+
+<p>Il <em>Controllo Non Distruttivo</em> (CND, in inglese NDT) con liquidi penetranti è una delle PND più diffuse in campo aeronautico, in quanto permette di rilevare <em>discontinuità superficiali aperte</em> (cricche, porosità, ripiegature) su qualsiasi materiale non poroso, con un'apparecchiatura economica e una procedura applicabile anche <em>in situ</em> sul velivolo.</p>
+
+<aside class="callout box-teoria"><div class="callout-label">Teoria</div><div class="callout-body">Il principio fisico è quello della <strong>capillarità</strong>: un liquido a bassa tensione superficiale, applicato sulla superficie del pezzo, penetra spontaneamente all'interno di ogni discontinuità aperta e ne resta intrappolato. Una successiva applicazione di un <em>rivelatore</em> polverulento "estrae" il liquido per capillarità inversa, rendendo la discontinuità visibile a occhio nudo. È applicabile a qualsiasi materiale non poroso (leghe leggere, acciai, titanio, ceramiche, vetri, plastiche).</div></aside>
+
+<h3 id="apparecchiatura-e-materiali">Apparecchiatura e materiali</h3>
+
+<ul><li><em>sgrassante/detergente</em> per la pulizia preliminare;</li><li><em>liquido penetrante</em> a contrasto cromatico (rosso) o fluorescente;</li><li><em>rimuovente</em> (acqua, solvente o emulsificante);</li><li><em>rivelatore</em> (polvere bianca a base di talco);</li><li>lampada di Wood (UV) per i penetranti fluorescenti;</li><li>attrezzatura di pulizia finale e materiali di documentazione.</li></ul>
+
+<h3 id="procedimento-operativo">Procedimento operativo</h3>
+
+<p>Il controllo si articola nelle sei fasi schematizzate nella figura seguente, identiche a quelle descritte in dettaglio al paragrafo <span class="ref">§sec:20xx-cap7-q4</span> del Capitolo <span class="ref">§cap:esame20xx</span>.</p>
+
+<figure class="block-figure"><img class="technical-figure" src="../assets/figures/2025-fig-01.png" alt="Figura tecnica 1 — 2025" loading="lazy">
+<figcaption>Sequenza delle sei fasi del controllo CND con liquidi penetranti.</figcaption></figure>
+
+<p class="para-head"><strong>Fase 1 — Pulizia preliminare.</strong></p>
+La superficie viene sgrassata con solvente. Una pulizia inadeguata è la causa più frequente di falsi negativi.
+
+<p class="para-head"><strong>Fase 2 — Applicazione del penetrante.</strong></p>
+Per immersione, spruzzo o pennellatura. Tempo di permanenza tipico: 15–30&nbsp;min, durante il quale la capillarità fa penetrare il liquido nelle discontinuità.
+
+<p class="para-head"><strong>Fase 3 — Rimozione dell'eccesso.</strong></p>
+Eseguita in modo da rimuovere il solo penetrante superficiale, lasciando intatto quello intrappolato nelle cricche.
+
+<p class="para-head"><strong>Fase 4 — Applicazione del rivelatore.</strong></p>
+Strato sottile e uniforme di polvere bianca o sospensione spray. Per capillarità inversa il penetrante intrappolato risale in superficie generando un'<em>indicazione</em> visibile, di forma e dimensioni amplificate. Tempo di azione: 5–15&nbsp;min.
+
+<p class="para-head"><strong>Fase 5 — Ispezione.</strong></p>
+Con luce visibile (<span class="unit">1000&nbsp;lx</span>) per i penetranti rossi, con lampada di Wood in cabina oscurata per i fluorescenti. Le indicazioni vengono classificate per forma:
+<ul><li><em>lineari</em> (lunghezza $\ge 3 \times$ larghezza): cricche, ripiegature;</li><li><em>rotondeggianti</em>: porosità, soffiature;</li><li><em>diffuse</em>: difetti generalizzati o problemi di pulizia.</li></ul>
+
+<p class="para-head"><strong>Fase 6 — Pulizia finale.</strong></p>
+Rimozione di ogni residuo di rivelatore e penetrante, che potrebbero innescare corrosione. Si redige il rapporto di prova con identificativo del pezzo, prodotti utilizzati, indicazioni rilevate (con fotografie) e giudizio di accettabilità.
+
+<h3 id="caso-applicativo-sul-velivolo-della-prima-parte">Caso applicativo sul velivolo della Prima parte</h3>
+
+<p>Per il motoelica della Prima parte, una zona critica per il controllo con liquidi penetranti è l'<strong>attacco della semiala alla fusoliera</strong>: in particolare i <em>fittings</em> di attacco dei longheroni, che concentrano i carichi di flessione (con $n_{lim} = 4{,}4$ in categoria Utility) e sono soggetti a fatica per il numero elevato di cicli decollo-atterraggio. Un'ispezione PT ogni 500 ore di volo permette di intercettare l'innesco di cricche di fatica prima che si propaghino fino a dimensioni critiche.</p>
+
+<aside class="callout box-risultati"><div class="callout-label">Risultati</div><div class="callout-body"><strong>Concetti-chiave da ricordare:</strong>
+<ul><li>Le PND con liquidi penetranti rilevano difetti <em>aperti in superficie</em> su qualsiasi materiale non poroso.</li><li>Procedimento: pulizia $\to$ penetrazione $\to$ rimozione $\to$ rivelazione $\to$ ispezione $\to$ pulizia finale.</li><li>Vantaggi: economicità, alta sensibilità per cricche di fatica, applicabilità in situ.</li><li>Limiti: rileva solo difetti superficiali, richiede pulizia accurata, non quantifica la profondità.</li><li>Per dettagli completi su materiali, tempi, tabella vantaggi/limiti e contestualizzazione manutentiva, si rimanda al paragrafo <span class="ref">§sec:20xx-cap7-q4</span>.</li></ul></div></aside>
+
+<h2 id="virata-corretta-a-costante-tempo-di-inversione-e-c">Virata corretta a $C_L$ costante: tempo di inversione e consumo</h2>
+
+<div class="quesito"><span class="quesito-num">Quesito 2</span><span class="quesito-text">Il motoelica di cui sopra esegue una virata a $C_L$ costante dopo un tratto in VROU (volo rettilineo orizzontale uniforme) a velocità di crociera, con angolo di bank $30°$; determinare il tempo per invertire la rotta e il consumo di carburante.</span></div>
+
+<aside class="callout box-teoria"><div class="callout-label">Teoria</div><div class="callout-body">La <strong>virata corretta</strong> è una manovra in cui il velivolo percorre una traiettoria orizzontale circolare a quota costante. L'inclinazione laterale (<em>bank</em>) di un angolo $\theta$ produce una componente orizzontale della portanza che funge da <em>forza centripeta</em> mantenendo il velivolo sulla traiettoria curva. La condizione di equilibrio nel piano verticale impone $L\cos\theta = W$, da cui $L = W/\cos\theta = n\,W$, ove $n = 1/\cos\theta$ è il <em>fattore di carico</em> subito dalla struttura.
+
+<p>In una virata <em>a $C_L$ costante</em> (i.e.\ ad assetto invariato rispetto al VROU precedente), la portanza aggiuntiva richiesta si ottiene aumentando la velocità: $V_v = V_{VROU} \cdot \sqrt{n}$.</div></aside></p>
+
+<h3 id="dati-di-partenza-e-ipotesi">Dati di partenza e ipotesi</h3>
+
+<aside class="callout box-ipotesi"><div class="callout-label">Ipotesi e dati</div><div class="callout-body"><strong>Dati dal velivolo della Prima parte</strong>
+<ul><li>Peso al decollo: $W = 5000\,\mathrm{N}$</li><li>Apertura alare: $b = 11\,\mathrm{m}$</li><li>Corda alla radice: $c_r = 1{,}4\,\mathrm{m}$; corda all'estremità: $c_t = 1{,}1\,\mathrm{m}$</li><li>Superficie alare: $S = \dfrac{b(c_r + c_t)}{2} = \dfrac{11 \cdot (1{,}4 + 1{,}1)}{2} = 13{,}75\,\mathrm{msquared}$</li><li>Profilo NACA 0010, $n_{lim} = 4{,}4$</li></ul>
+<strong>Ipotesi aggiuntive (motoelica tipico ULM/turismo leggero)</strong>
+<ul><li>Velocità di crociera in VROU: $V_{VROU} = 160\,\mathrm{km/h} \approx 44{,}4\,\mathrm{m/s}$</li><li>Quota di crociera: livello del mare ($\rho_0 = 1{,}225\,\mathrm{kg/mcubed}$)</li><li>Potenza motore in crociera: $P_{cr} = 50\,\mathrm{kW}$ (motoelica tipico per $W_{TO} \approx 500\,\mathrm{kg}$)</li><li>Consumo specifico al freno: $c_{sf} = 0{,}28\,\mathrm{kg/kW/h}$</li><li>Densità avgas: $\rho_c = 0{,}72\,\mathrm{kg/L}$</li><li>Angolo di bank: $\theta = 30°$</li></ul></div></aside>
+
+<h3 id="analisi-della-virata">Analisi della virata</h3>
+
+<p class="para-head"><strong>Passo 1 — Fattore di carico.</strong></p>
+$$n = \frac{1}{\cos\theta} = \frac{1}{\cos 30°} = \frac{1}{0{,}866} \approx 1{,}155$$
+Il valore $n = 1{,}155$ è ben al di sotto di $n_{lim} = 4{,}4$: la virata è strutturalmente sicura.
+
+<p class="para-head"><strong>Passo 2 — Velocità di virata.</strong></p>
+A $C_L$ costante (assetto invariato) la portanza, che deve aumentare di un fattore $n$, si ottiene aumentando la velocità nel rapporto $\sqrt{n}$:
+$$V_v = V_{VROU} \cdot \sqrt{n} = 44{,}4 \cdot \sqrt{1{,}155} \approx 47{,}7\,\mathrm{m/s} \quad (172\,\mathrm{km/h})$$
+
+<p class="para-head"><strong>Passo 3 — Raggio di virata.</strong></p>
+Dalla relazione fra velocità, raggio e angolo di bank ($\frac{V_v^2}{g\,r} = \tan\theta$):
+$$r = \frac{V_v^2}{g \cdot \tan\theta} = \frac{47{,}7^2}{9{,}81 \cdot \tan 30°} = \frac{2275{,}3}{9{,}81 \cdot 0{,}5774} \approx 401{,}7\,\mathrm{m}$$
+
+<p class="para-head"><strong>Passo 4 — Velocità angolare e tempo per invertire la rotta.</strong></p>
+La velocità angolare (<em>rateo di virata</em>) è:
+$$\omega = \frac{V_v}{r} = \frac{47{,}7}{401{,}7} \approx 0{,}1188\,\mathrm{radian/s}$$
+Per invertire la rotta il velivolo deve descrivere un angolo di $\pi$ rad (<span class="unit">180&nbsp;°</span>):
+$$\boxed{\,t_{180} = \frac{\pi}{\omega} = \frac{\pi}{0{,}1188} \approx 26{,}5\,\mathrm{s}\,}$$
+
+<h3 id="calcolo-del-consumo-di-carburante">Calcolo del consumo di carburante</h3>
+
+<p class="para-head"><strong>Passo 5 — Potenza in virata.</strong></p>
+In virata corretta a $C_L$ costante la velocità aumenta da $V_{VROU}$ a $V_v = V_{VROU}\sqrt{n}$. La resistenza aerodinamica $D = qSC_D$ aumenta in proporzione a $V^2$, quindi di un fattore $n$. La potenza necessaria $P_n = D \cdot V$ aumenta di un fattore $n \cdot \sqrt{n} = n^{3/2}$:
+$$P_v = P_{cr} \cdot n^{3/2} = 50 \cdot 1{,}155^{3/2} = 50 \cdot 1{,}241 \approx 62{,}1\,\mathrm{kW}$$
+
+<p class="para-head"><strong>Passo 6 — Consumo orario in virata.</strong></p>
+$$\dot{m}_c = c_{sf} \cdot P_v = 0{,}28 \cdot 62{,}1 \approx 17{,}4\,\mathrm{kg/h}$$
+
+<p class="para-head"><strong>Passo 7 — Consumo per la manovra di inversione.</strong></p>
+$$m_c = \dot{m}_c \cdot t_{180} = 17{,}4 \cdot \frac{26{,}5}{3600}$$
+$$\boxed{\,m_c \approx 0{,}128\,\mathrm{kg} \quad (128\,\mathrm{g}) \quad\text{ovvero}\quad V_c \approx 0{,}18\,\mathrm{L}\,}$$
+
+<h3 id="sintesi-visuale-della-virata">Sintesi visuale della virata</h3>
+
+<figure class="block-figure"><img class="technical-figure" src="../assets/figures/2025-fig-02.png" alt="Figura tecnica 2 — 2025" loading="lazy">
+<figcaption>Geometria della virata di inversione di rotta: il velivolo descrive una semicirconferenza di raggio $r$ a velocità $V_v$, impiegando $t_{180}$ a invertire la direzione di volo.</figcaption></figure>
+
+<aside class="callout box-avviso"><div class="callout-label">Attenzione</div><div class="callout-body"><strong>Verifica di consistenza.</strong> Il bank di <span class="unit">30&nbsp;°</span> è una virata moderata, tipica delle manovre standard non acrobatiche; il fattore di carico $n = 1{,}155$ è inferiore al limite della categoria Normal ($n_{lim,N} = 3{,}8$), figurarsi della Utility ($4{,}4$). Il raggio di <span class="unit">400&nbsp;m</span> e il tempo di <span class="unit">26,5&nbsp;s</span> per un'inversione di rotta sono valori plausibili per un motoelica leggero in crociera. Il consumo di carburante per la manovra è trascurabile rispetto all'autonomia totale (circa lo <span class="unit">0,1&nbsp;%</span> del carburante imbarcato per un volo di <span class="unit">2&nbsp;h</span>), come ci si aspetta da una manovra di breve durata.</div></aside>
+
+<aside class="callout box-risultati"><div class="callout-label">Risultati</div><div class="callout-body"><strong>Concetti-chiave da ricordare:</strong>
+<ul><li>In virata corretta: $n = 1/\cos\theta$ e $V_v = V_{VROU}\sqrt{n}$ (a $C_L$ costante).</li><li>Raggio: $r = V_v^2 / (g\tan\theta)$; rateo di virata: $\omega = V_v/r$.</li><li>Tempo per inversione di rotta: $t_{180} = \pi/\omega$.</li><li>Potenza in virata: $P_v = P_{VROU} \cdot n^{3/2}$ (aumento per maggior $V$ e $D$).</li><li>Per il caso esaminato: $t_{180} \approx 26{,}5\,\mathrm{s}$, $m_c \approx 128\,\mathrm{g}$.</li></ul></div></aside>
+
+<h2 id="funzionamento-del-motore-turbofan">Funzionamento del motore turbofan</h2>
+
+<div class="quesito"><span class="quesito-num">Quesito 3</span><span class="quesito-text">Illustrare e descrivere il funzionamento di un motore turbofan.</span></div>
+
+<aside class="callout box-teoria"><div class="callout-label">Teoria</div><div class="callout-body">Il <strong>turbofan</strong> è la tipologia di propulsore aeronautico di gran lunga più diffusa per i velivoli da trasporto subsonici e transonici (Boeing 737, Airbus A320, ecc.). Esso rappresenta un'evoluzione del turbogetto semplice, ottenuta accoppiando alla turbina principale una <em>ventola</em> (<em>fan</em>) di grande diametro che elabora una portata d'aria <em>secondaria</em> aggiuntiva, parallela e coassiale a quella che attraversa il nocciolo del motore (portata <em>primaria</em>). Tutti i turbofan funzionano sul <strong>ciclo di Brayton-Joule</strong> (turbogas), costituito da quattro trasformazioni: compressione adiabatica, combustione isobara, espansione adiabatica, scarico isobaro all'ambiente.</div></aside>
+
+<h3 id="architettura-del-motore">Architettura del motore</h3>
+
+<p>Il turbofan è organizzato in due flussi d'aria coassiali:</p>
+
+<dl><dt>Flusso primario (caldo)</dt><dd>L'aria entra nel <em>compressore</em> (di bassa e alta pressione, multistadio assiale), viene compressa fino a $p_2 \approx 30$–$50$ volte la pressione atmosferica, attraversa la <em>camera di combustione</em> dove brucia con il combustibile (cherosene Jet A-1) raggiungendo temperature di $1500\,\mathrm{K}$–$1800\,\mathrm{K}$, espande in turbina (alta e bassa pressione) generando la potenza meccanica per azionare compressore e fan, infine si scarica nell'<em>ugello</em> primario producendo una piccola spinta residua.</dd><dt>Flusso secondario (freddo)</dt><dd>Una grande portata d'aria viene aspirata e accelerata dal <em>fan</em>, una ventola di grande diametro posta all'imbocco del motore, e fluisce esternamente al nocciolo (<em>bypass duct</em>) verso un proprio <em>ugello secondario</em> (o si miscela con il flusso primario in un <em>mixer</em>). Questa è la sorgente di gran lunga prevalente della spinta complessiva (60–85% nei turbofan moderni).</dd></dl>
+
+<h3 id="le-cinque-stazioni-del-ciclo">Le cinque stazioni del ciclo</h3>
+
+<figure class="block-figure"><img class="technical-figure" src="../assets/figures/2025-fig-03.png" alt="Figura tecnica 3 — 2025" loading="lazy">
+<figcaption>Schema del motore turbofan. Il flusso secondario (in verde) viene accelerato dal fan e produce la maggior parte della spinta. Il flusso primario (in rosso/arancio) attraversa compressore, camera di combustione e turbina; quest'ultima fornisce potenza al fan e al compressore tramite l'albero. Le stazioni numerate (0, 2, 3, 4, 5, 9) sono i punti tipici di analisi del ciclo termodinamico.</figcaption></figure>
+
+<p>Le stazioni convenzionali del ciclo sono: <ul><li><strong>Stazione 0</strong>: condizioni atmosferiche indisturbate (a monte del motore);</li><li><strong>Stazione 2</strong>: ingresso compressore (dopo presa d'aria e fan);</li><li><strong>Stazione 3</strong>: uscita compressore = ingresso camera di combustione;</li><li><strong>Stazione 4</strong>: uscita camera = ingresso turbina (temperatura massima del ciclo);</li><li><strong>Stazione 5</strong>: uscita turbina = ingresso ugello primario;</li><li><strong>Stazione 9</strong>: uscita ugello (getto).</li></ul></p>
+
+<h3>Il rapporto di by-pass (<em>Bypass Ratio</h3>, BPR)</em>
+
+<p>Il parametro fondamentale che caratterizza un turbofan è il <strong>rapporto di by-pass</strong>, definito come: $$\mathit{BPR} = \frac{\dot{m}_{a,\text{secondaria}}}{\dot{m}_{a,\text{primaria}}}$$ ovvero il rapporto fra la portata d'aria che attraversa il <em>bypass duct</em> e quella che attraversa il nocciolo. Si distinguono tre famiglie di turbofan:</p>
+
+<div class="table-wrap">
+
+<table><tr><td><strong>Tipologia</strong></td><td><strong>BPR</strong></td><td><strong>Caratteristiche</strong></td><td><strong>Esempi</strong></td></tr>
+<tr><td>Low-bypass</td><td>0{,}3–2</td><td>Postcombustore frequente; getto ad alta velocità; alte prestazioni a velocità elevate.</td><td>Eurofighter (EJ200), F-16 (F100)</td></tr>
+<tr><td>Medium-bypass</td><td>2–5</td><td>Architettura mista; primi turbofan civili.</td><td>Concorde (Olympus), Boeing 707 (JT3D)</td></tr>
+<tr><td>High-bypass</td><td>5–12</td><td>Massimo rendimento propulsivo subsonico; maggior parte degli airliner moderni.</td><td>A320 (CFM56), 747 (CF6), 787 (Trent 1000)</td></tr>
+<tr><td>Ultra-high-bypass</td><td>$> 12$</td><td>Tendenza più recente; geared turbofan con riduttore.</td><td>A220 (PW1500G), A320neo (LEAP-1A)</td></tr></table>
+<figcaption>Famiglie di turbofan in base al rapporto di by-pass.</figcaption>
+</div>
+
+<h3 id="vantaggi-del-turbofan-rispetto-al-turbogetto-sempl">Vantaggi del turbofan rispetto al turbogetto semplice</h3>
+
+<p>Il turbofan è diventato lo standard dei velivoli da trasporto perché, rispetto al turbogetto semplice, offre vantaggi decisivi:</p>
+
+<ul><li><strong>Maggior rendimento propulsivo</strong>: il rendimento propulsivo $\eta_p = 2V_0/(u_e + V_0)$ è massimo quando la velocità del getto $u_e$ è poco superiore alla velocità di volo $V_0$. Il turbofan, accelerando moderatamente una grande portata d'aria, raggiunge $\eta_p \approx 0{,}65$–$0{,}75$, contro lo $0{,}40$–$0{,}50$ tipico del turbogetto.</li><li><strong>Consumo specifico inferiore</strong>: come conseguenza del maggior rendimento propulsivo, il consumo orario per unità di spinta (TSFC, <em>Thrust Specific Fuel Consumption</em>) è di circa il 30–40% più basso rispetto al turbogetto.</li><li><strong>Rumorosità ridotta</strong>: il flusso secondario, a velocità più bassa, abbassa l'intensità del rumore del getto (proporzionale alla potenza ottava della velocità del getto). Inoltre il flusso freddo <em>schiacchera</em> il getto caldo riducendone la turbolenza.</li><li><strong>Migliori prestazioni di salita e decollo</strong>: a basse velocità il turbofan fornisce maggior spinta del turbogetto pari potenza, perché il fan è efficace anche a bassa velocità.</li></ul>
+
+<h3 id="limiti-del-turbofan">Limiti del turbofan</h3>
+
+<ul><li><strong>Velocità di volo subsonica</strong>: oltre $M \approx 0{,}9$ il rendimento del fan crolla per la formazione di onde d'urto sulle pale. I velivoli supersonici utilizzano turbofan a basso BPR con postcombustore, oppure turbogetti puri.</li><li><strong>Diametro frontale elevato</strong>: il fan di grandi dimensioni richiede ampi nacelle che aumentano la resistenza aerodinamica. Sui velivoli a doppio motore questo è un compromesso accettabile per i benefici sui consumi.</li><li><strong>Complessità meccanica</strong>: l'asse a doppio o triplo flusso, i sistemi di controllo del fan e (nei <em>geared turbofan</em>) il riduttore aggiungono peso e costi di manutenzione.</li></ul>
+
+<aside class="callout box-esempio"><div class="callout-label">Esempio</div><div class="callout-body"><strong>Il CFM56 e il LEAP-1A.</strong> Il CFM International CFM56, equipaggiamento standard di Boeing 737NG e Airbus A320 "classico", ha BPR $= 5{,}5$ e fornisce circa <span class="unit">120&nbsp;kN</span> di spinta. Il suo successore LEAP-1A (Airbus A320neo) raggiunge BPR $= 11$ con un fan di <span class="unit">1,98&nbsp;m</span> di diametro, riducendo i consumi del <span class="unit">15&nbsp;%</span>. La famiglia Pratt &amp; Whitney PW1000G (<em>geared turbofan</em>, con riduttore epicicloidale fra turbina LP e fan) raggiunge BPR $= 12{,}5$ con ulteriori riduzioni del rumore e del consumo.</div></aside>
+
+<aside class="callout box-risultati"><div class="callout-label">Risultati</div><div class="callout-body"><strong>Concetti-chiave da ricordare:</strong>
+<ul><li>Il turbofan opera sul ciclo Brayton con due flussi d'aria coassiali: primario (caldo, attraversa il nocciolo) e secondario (freddo, attraversa il bypass).</li><li>Il fan è la sorgente principale di spinta nei turbofan high-bypass: produce 60–85% della spinta totale.</li><li>Il rapporto di by-pass (BPR) è il parametro caratteristico: low-bypass per militari, high-bypass per civili moderni.</li><li>Vantaggi: maggior rendimento propulsivo, minor consumo, minor rumore, migliori prestazioni a basse velocità.</li><li>Limite: velocità subsonica, diametro frontale, complessità meccanica.</li></ul></div></aside>
+
+<h2 id="manutenzione-di-2-livello-organizzazione-personale">Manutenzione di 2° livello: organizzazione, personale, tasks e tempi</h2>
+
+<div class="quesito"><span class="quesito-num">Quesito 4</span><span class="quesito-text">Facendo le dovute ipotesi di partenza, ipotizzare una possibile struttura organizzativa per una manutenzione di 2° livello, indicando il personale necessario, la qualifica, i tasks manutentivi necessari e i tempi per effettuarli.</span></div>
+
+<aside class="callout box-teoria"><div class="callout-label">Teoria</div><div class="callout-body">La manutenzione aeronautica è organizzata su <strong>quattro livelli gerarchici</strong>, dal più semplice (eseguibile in pista a velivolo pronto al volo) al più complesso (revisione completa presso la ditta costruttrice). Il <strong>secondo livello</strong> corrisponde alle operazioni eseguite <em>in hangar nella base operativa</em>, quando il velivolo è fermo a fine giornata o in revisione programmata: comprende sostituzione di componenti che richiedono smontaggio e rimontaggio di limitato impegno di attrezzatura, prove funzionali sui sistemi di bordo e ispezioni programmate dell'A-check e del B-check.</div></aside>
+
+<h3 id="ipotesi-di-partenza">Ipotesi di partenza</h3>
+
+<aside class="callout box-ipotesi"><div class="callout-label">Ipotesi e dati</div><div class="callout-body"><strong>Scenario operativo</strong>
+<ul><li>Operatore: scuola di volo / aeroclub con flotta di 4 motoelica del tipo descritto nella Prima parte (W$_{TO} \approx 500\,\mathrm{kg}$, motore alternativo).</li><li>Localizzazione: base operativa con hangar attrezzato.</li><li>Approvazione: organizzazione di manutenzione <strong>Part-145</strong> oppure <strong>Part-CAO</strong> (Combined Airworthiness Organisation), regolamentata da EASA, con privilegio per velivoli non complessi.</li><li>Volume di lavoro: $\sim$2000 ore di volo/anno totali, ovvero $\sim$500 ore per velivolo.</li><li>Tipo di intervento target: <em>ispezione 100h</em> (analoga ad A-check) e <em>annual inspection</em> (analoga a B-check).</li></ul></div></aside>
+
+<h3 id="organizzazione-del-personale">Organizzazione del personale</h3>
+
+<p>L'organizzazione minima di un'officina Part-145 di secondo livello prevede le seguenti figure professionali, con qualifiche attestate da <strong>licenza Part-66</strong> (per il personale tecnico) e da approvazioni interne all'organizzazione (per i ruoli gestionali).</p>
+
+<div class="table-wrap">
+
+<table><tr><td>lcXc@{}}
+
+<p><strong>Ruolo</strong></td><td><strong>Qualifica</strong></td><td><strong>Compiti principali</strong></td><td><strong>N. unità</strong></td></tr> <tr><td>Accountable Manager</td><td>—</td><td>Responsabile legale dell'organizzazione verso ENAC/EASA.</td><td>1</td></tr> <tr><td>Quality Manager</td><td>Esperienza Part-145</td><td>Audit interni, monitoraggio conformità ai regolamenti, gestione SMS.</td><td>1</td></tr> <tr><td>Maintenance Manager</td><td>Part-66 + esperienza</td><td>Pianificazione interventi, supervisione tecnica, allocazione risorse.</td><td>1</td></tr> <tr><td>Tecnico certificatore</td><td><strong>Part-66 cat. B1.2</strong> (motoelica) e B2 (avionica)</td><td>Esegue manutenzione, ispeziona, firma il rilascio (CRS, <em>Certificate of Release to Service</em>) al termine dell'intervento.</td><td>2</td></tr> <tr><td>Tecnico ausiliario</td><td><strong>Part-66 cat. A</strong></td><td>Esegue task semplici sotto supervisione (sostituzione olio, filtri, candele); non firma il CRS.</td><td>1</td></tr> <tr><td>Magazziniere</td><td>—</td><td>Gestione parti di ricambio, tracciabilità (<em>form 1</em> EASA), inventario.</td><td>1</td></tr></table> <figcaption>Organizzazione minima di un'officina di manutenzione di 2° livello per la flotta ipotizzata.</figcaption> </div></p>
+
+<h3 id="categorie-di-licenza-part-66">Categorie di licenza Part-66</h3>
+
+<p>La licenza Part-66 attesta le competenze tecniche del personale di manutenzione ed è articolata in quattro categorie:</p>
+
+<dl><dt>Categoria A</dt><dd>Manutenzione di linea minore e correzione di anomalie semplici. Non firma il CRS per ispezioni complete.</dd><dt>Categoria B1</dt><dd>Manutenzione strutturale, motori, sistemi meccanici, elettrici. Sottocategorie: B1.1 (turbomotori), <strong>B1.2 (motori alternativi)</strong>, B1.3 (rotor), B1.4 (alianti).</dd><dt>Categoria B2</dt><dd>Avionica (sistemi elettrici/elettronici).</dd><dt>Categoria C</dt><dd>Manutenzione di base (interventi maggiori in hangar). Per certificare un C-check è necessaria la qualifica C, che richiede una significativa esperienza pregressa.</dd></dl>
+
+<p>Per la flotta ipotizzata (motoelica leggeri) la qualifica appropriata per i tecnici certificatori è <strong>B1.2 + B2</strong> combinata.</p>
+
+<h3 id="tasks-manutentivi-e-tempi">Tasks manutentivi e tempi</h3>
+
+<p>L'<em>ispezione 100 ore</em> è il riferimento tipico della manutenzione di 2° livello sui velivoli da turismo e si articola nei task elencati nella tabella seguente. I tempi sono espressi in <em>ore-uomo</em> (<em>man-hours</em>) e fanno riferimento a un singolo velivolo della classe ipotizzata.</p>
+
+<div class="table-wrap">
+
+<p>\setlength{\tabcolsep}{4pt} <table><tr><td>>{\arraybackslash}p{0.4cm}p{1.5cm}X>{\arraybackslash}p{0.85cm}>{\arraybackslash}p{1.55cm}@{}}</p>
+
+<p><strong>N.</strong></td><td><strong>Sistema</strong></td><td><strong>Task manutentivi</strong></td><td><strong>Tempo</strong></td><td><strong>Qualifica</strong></td></tr> <tr><td>1</td><td>Doc.</td><td>Verifica giornale di bordo, libretti, ARC; pianificazione intervento.</td><td>0,5 h</td><td>B1.2</td></tr> <tr><td>2</td><td>Cellula</td><td>Lavaggio esterno, ispezione visiva di rivetti, lamiere, parabrezza, vernice.</td><td>2,0 h</td><td>A</td></tr> <tr><td>3</td><td>Cellula</td><td>Apertura pannelli ispettivi, controllo serraggio bulloni di forza.</td><td>1,5 h</td><td>B1.2</td></tr> <tr><td>4</td><td>Motore</td><td>Sostituzione olio (drenaggio, filtro, riempimento).</td><td>1,0 h</td><td>A / B1.2</td></tr> <tr><td>5</td><td>Motore</td><td>Controllo compressione cilindri (tutti e 4) con compression tester.</td><td>1,5 h</td><td>B1.2</td></tr> <tr><td>6</td><td>Motore</td><td>Ispezione e sostituzione candele, magneti (se previsto).</td><td>1,5 h</td><td>B1.2</td></tr> <tr><td>7</td><td>Motore</td><td>Ispezione filtri aria e benzina, gascolator, drain valves.</td><td>0,5 h</td><td>A</td></tr> <tr><td>8</td><td>Elica</td><td>Ispezione bordi pale per nicks/cricche, controllo serraggio mozzo, lubrificazione.</td><td>1,0 h</td><td>B1.2</td></tr> <tr><td>9</td><td>Carrello</td><td>Controllo pressione ammortizzatori, freni, pneumatici; lubrificazione perni.</td><td>1,5 h</td><td>B1.2</td></tr> <tr><td>10</td><td>Comandi di volo</td><td>Ispezione cavi, pulegge, tensioni; prova escursione.</td><td>1,5 h</td><td>B1.2</td></tr> <tr><td>11</td><td>Imp.\ elettrico</td><td>Controllo batteria, tensione di carica, alternatore, fusibili, CB.</td><td>1,0 h</td><td>B2</td></tr> <tr><td>12</td><td>Avionica</td><td>BIT degli strumenti, prova radio VHF, transponder, GPS.</td><td>1,0 h</td><td>B2</td></tr> <tr><td>13</td><td>Imp.\ combust.</td><td>Controllo serbatoi, sfiati, sonde di livello, drain water.</td><td>1,0 h</td><td>B1.2</td></tr> <tr><td>14</td><td>PND</td><td>Ispezione PT su attacchi longheroni e perni di cerniera.</td><td>2,0 h</td><td>B1.2 + liv.\ II</td></tr> <tr><td>15</td><td>Prove finali</td><td>Ground run-up motore, prova magneti, lettura parametri, prove pre-flight.</td><td>1,0 h</td><td>B1.2</td></tr> <tr><td>16</td><td>Doc.</td><td>Compilazione rapporti, aggiornamento libretti, firma CRS.</td><td>1,0 h</td><td>B1.2</td></tr> <tr><td>\multicolumn{3}{r}{<strong>Totale ore-uomo</strong>}</td><td><strong>19,0</strong></td><td></td></tr></table> <figcaption>Tasks dell'ispezione 100 ore con tempi indicativi (in ore-uomo) e qualifiche richieste.</figcaption> </div></p>
+
+<p class="para-head"><strong>Distribuzione del lavoro nel tempo solare.</strong></p>
+Con l'organizzazione descritta (2 tecnici certificatori + 1 ausiliario operanti in parallelo), le 19 ore-uomo si distribuiscono in circa \textbf{1{,}5–2 giorni lavorativi}. Il velivolo può quindi essere riconsegnato in servizio entro 48 ore dalla presa in carico, salvo necessità di parti di ricambio non a magazzino.
+
+<h3 id="schema-organizzativo">Schema organizzativo</h3>
+
+<figure class="block-figure"><img class="technical-figure" src="../assets/figures/2025-fig-04.png" alt="Figura tecnica 4 — 2025" loading="lazy">
+<figcaption>Organigramma dell'officina di manutenzione di 2° livello. Le linee continue rappresentano le linee gerarchiche, le linee tratteggiate i flussi di servizio (parti di ricambio, supervisione qualità).</figcaption></figure>
+
+<h3 id="documentazione-di-output">Documentazione di output</h3>
+
+<p>Al termine dell'intervento, l'organizzazione produce: <ul><li><strong>CRS</strong> (<em>Certificate of Release to Service</em>): firma del tecnico certificatore che attesta la riconsegna in servizio del velivolo.</li><li><strong>Work Report</strong>: dettaglio dei task eseguiti, parti sostituite (con numero seriale), ore-uomo impiegate, prove eseguite.</li><li><strong>Aggiornamento del libretto del velivolo</strong> e dei libretti dei componenti tracciati (motore, elica).</li><li><strong>Notifica</strong> al CAMO (gestore dell'aeronavigabilità continua) per l'aggiornamento del programma di manutenzione del velivolo.</li></ul></p>
+
+<aside class="callout box-esempio"><div class="callout-label">Esempio</div><div class="callout-body"><strong>Caso reale: aeroclub italiano.</strong> Un aeroclub con flotta di 6 motoelica (Cessna 152 e PA-28) tipicamente impiega: 1 <em>Accountable Manager</em> (spesso il presidente dell'associazione), 1 <em>Maintenance Manager</em> (capo officina), 2–3 <em>tecnici certificatori</em> B1.2, 1 <em>ausiliario</em>. Il volume tipico è di 20–30 ispezioni 100h all'anno, più la correttiva. La struttura è approvata Part-CAO (Combined Airworthiness Organisation), regolamento UE 2019/1383, che combina i privilegi di CAMO + Part-145 ma è limitato ai velivoli non complessi (MTOW $\le 2730\,\mathrm{kg}$, $\le 19$ posti, no propulsione a turbina).</div></aside>
+
+<aside class="callout box-risultati"><div class="callout-label">Risultati</div><div class="callout-body"><strong>Concetti-chiave da ricordare:</strong>
+<ul><li>La manutenzione aeronautica si articola su 4 livelli; il <em>2° livello</em> è in hangar nella base operativa.</li><li>Le organizzazioni di manutenzione sono regolate da <strong>Part-145</strong> (o Part-CAO per velivoli non complessi).</li><li>Il personale di linea richiede licenza <strong>Part-66</strong> (categoria A, B1, B2 o C) in funzione del task.</li><li>Per una flotta di 4 motoelica, l'organizzazione minima è: 1 Accountable Manager, 1 QM, 1 MM, 2 tecnici B1.2/B2, 1 ausiliario A, 1 magazziniere.</li><li>L'ispezione 100h richiede tipicamente 19 ore-uomo, distribuibili in 1{,}5–2 giorni lavorativi.</li><li>Output: CRS firmato, work report, aggiornamento libretti, notifica al CAMO.</li></ul></div></aside>
+</div>
+<nav class="exam-pagination">
+<a href="2024.html" class="">
+<span class="label">Precedente</span>
+<span class="title">2024 </span>
+</a>
+<a href="2025-suppletiva.html" class="next">
+<span class="label">Successivo</span>
+<span class="title">2025 · Suppletiva</span>
+</a>
+</nav>
+</article>
+<aside class="exam-aside">
+<div class="exam-aside-inner">
+<div class="toc-label">In questa pagina</div>
+<ul class="toc-list"><li><a href="#controllo-cnd-con-liquidi-penetranti"><span class="toc-num">1</span>Controllo CND con liquidi penetranti</a></li>
+<li><a href="#virata-corretta-a-costante-tempo-di-inversione-e-c"><span class="toc-num">2</span>Virata corretta a $C_L$ costante: tempo di inversione e consumo</a></li>
+<li><a href="#funzionamento-del-motore-turbofan"><span class="toc-num">3</span>Funzionamento del motore turbofan</a></li>
+<li><a href="#manutenzione-di-2-livello-organizzazione-personale"><span class="toc-num">4</span>Manutenzione di 2° livello: organizzazione, personale, tasks e tempi</a></li></ul>
+</div>
+</aside>
+</div>
+</main>
+<footer class="site-footer">
+<div class="site-footer-inner">
+<p>Prof. Ing. Raucci Biagio · ITIS E. Majorana, Cassino · A.S. 2025/26</p>
+<p class="credit">Costruzioni Aeronautiche · Classe A038</p>
+</div>
+</footer>
+<script src="../assets/script.js"></script>
+</body>
+</html>

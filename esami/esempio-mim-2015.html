@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#1d3557">
+<meta name="description" content="Traccia ministeriale di esempio (MIM)">
+<title>Esempio di Prova MIM — Anno 2015 · Esami Costruzioni Aeronautiche</title>
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" integrity="sha384-nB0miv6/jRmo5UMMR1wu3Gz6NLsoTkbqJghGIsx//Rlm+ZU03BU6SQNC66uf4l5+" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" integrity="sha384-7zkQWkzuo3B5mTepMUcHkMB5jZaolc2xDwL6VFqjFALcbeS9Ggm/Yr2r3Dy4lfFg" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous" onload="renderMathInElement(document.body, {delimiters: [{left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}], throwOnError: false, macros: { '\\AR': '\\mathrm{AR}' } });"></script>
+</head>
+<body>
+<header class="site-header">
+<div class="site-header-inner">
+<a href="../index.html" class="brand">
+<span class="brand-mark">Esami</span>
+<span class="brand-sub">Costruzioni Aeronautiche · A038</span>
+</a>
+<nav class="site-nav">
+<a href="../index.html" >Indice</a>
+<a href="https://github.com" rel="noopener">GitHub</a>
+<a href="https://www.raucci.net" rel="noopener">Blog personale</a>
+</nav>
+</div>
+</header>
+
+<main class="container">
+<div class="exam-page">
+<article class="exam-article-wrap">
+<header class="exam-header">
+<a href="../index.html" class="exam-back">Tutte le prove</a>
+<div class="exam-eyebrow"><span>2015</span><span class="dot">·</span><span>Esempio MIM</span></div>
+<h1 class="exam-title">Esempio di Prova MIM — Anno 2015</h1>
+<p class="exam-deck">Traccia ministeriale di esempio (MIM)</p>
+</header>
+<div class="exam-article">
+<p>Il presente capitolo è dedicato alla traccia di <strong>esempio</strong> pubblicata nel 2015 dal Ministero dell'Istruzione e del Merito (MIM) per la disciplina A038 — <em>Struttura, Costruzione, Sistemi e Impianti del Mezzo Aereo</em> — nell'ambito dell'indirizzo ITCT Costruzioni Aeronautiche. Trattandosi di una prova esemplificativa (non di una sessione d'esame reale), non è associata ad un anno scolastico specifico; il documento ministeriale originale riporta la dicitura generica "Esempio di prova".</p>
+
+<p>La traccia si concentra su tre tematiche complementari: la <em>scelta motoristica</em> con relativo dimensionamento del serbatoio in funzione di un'autonomia assegnata, l'<em>inquadramento normativo</em> che presiede alla certificazione del velivolo, e l'esecuzione di una <em>prova non distruttiva</em> a supporto delle attività di manutenzione e collaudo. Il quesito 1 della stessa prova (omesso da questo opuscoletto in quanto di natura prettamente numerica) richiede di descrivere e dimensionare di massima il velivolo di riferimento: nelle risposte che seguono si farà pertanto riferimento a un <em>velivolo da turismo monomotore a quattro posti</em> di massa massima al decollo dell'ordine di <span class="unit">1100&nbsp;kg</span>, configurazione tipica di un velivolo simile al Cessna 172 o al Piper PA-28.</p>
+
+<h2 id="motorizzazione-e-dimensionamento-del-serbatoio-com">Motorizzazione e dimensionamento del serbatoio combustibile</h2>
+
+<div class="quesito"><span class="quesito-num">Quesito 2</span><span class="quesito-text">Illustrare una possibile motorizzazione e dimensionare di massima il serbatoio combustibile per garantire un'autonomia di volo di almeno 3 ore.</span></div>
+
+<aside class="callout box-teoria"><div class="callout-label">Teoria</div><div class="callout-body">La scelta della motorizzazione di un velivolo da turismo segue un percorso logico che parte dalle prestazioni richieste (velocità di crociera, quota operativa, autonomia, tasso di salita) e individua, fra le motorizzazioni commerciali disponibili, quella che soddisfa la <em>potenza necessaria al volo livellato</em> con un opportuno margine. Il dimensionamento del serbatoio discende poi direttamente dal <em>consumo specifico</em> del motore prescelto, dalla potenza media erogata in crociera e dall'autonomia richiesta, comprensiva delle riserve regolamentari.</div></aside>
+
+<h3 id="scelta-della-motorizzazione">Scelta della motorizzazione</h3>
+
+<p>Per un velivolo da turismo a quattro posti della classe ipotizzata, la motorizzazione standard nel mercato dell'aviazione generale è il <strong>motore alternativo a quattro tempi a cilindri contrapposti</strong> (<em>flat engine</em>, configurazione boxer), raffreddato ad aria, alimentato a benzina avio (<em>avgas</em> <span class="unit">100&nbsp;LL</span>). Le ragioni di questa scelta sono molteplici:</p>
+
+<ul><li>ottimo rapporto potenza/peso ($0{,}5$–$0{,}6\,\mathrm{kW/kg}$) e affidabilità consolidata;</li><li>architettura piatta che riduce la sezione frontale della gondola motore;</li><li>costo di acquisto e di manutenzione contenuto rispetto alle turbomacchine;</li><li>disponibilità capillare di avgas negli aeroporti dell'aviazione generale;</li><li>efficienza di crociera significativamente superiore a quella di un turbomotore di pari potenza nel campo delle basse-medie potenze ($\le 300\,\mathrm{hp}$).</li></ul>
+
+<p>Una scelta tipica è il <strong>Lycoming O-360-A4M</strong>, un quattro cilindri boxer da <span class="unit">5,9&nbsp;L</span> di cilindrata che eroga una potenza nominale al decollo di <span class="unit">180&nbsp;hp</span> (corrispondenti a circa <span class="unit">134&nbsp;kW</span>) a $2700\,\mathrm{rpm}$. Questo motore equipaggia, con piccole varianti, il Piper PA-28 <em>Cherokee 180</em>, il Mooney M20 e numerosi altri velivoli della stessa classe.</p>
+
+<aside class="callout box-ipotesi"><div class="callout-label">Ipotesi e dati</div><div class="callout-body"><strong>Dati di riferimento per il dimensionamento</strong>
+<ul><li>Potenza nominale al decollo: $P_{\max} = 134\,\mathrm{kW}$ ($180\,\mathrm{hp}$)</li><li>Frazione di potenza in crociera economica: $\eta_P = 0{,}75$</li><li>Consumo specifico al freno (BSFC) in crociera: $c_{sf} = 0{,}26\,\mathrm{kg/kW/h}$</li><li>Densità dell'avgas <span class="unit">100&nbsp;LL</span> a $15\,\mathrm{°}\mathrm{C}$: $\rho_c = 0{,}72\,\mathrm{kg/L}$</li><li>Autonomia operativa richiesta: $t_{op} = 3\,\mathrm{h}$</li><li>Riserva regolamentare (volo VFR diurno, CS-23): $t_{ris} = 0{,}5\,\mathrm{h}$</li></ul></div></aside>
+
+<h3 id="procedimento-di-dimensionamento">Procedimento di dimensionamento</h3>
+
+<p class="para-head"><strong>Passo 1 — Potenza media in crociera.</strong></p> Si assume che il velivolo voli in crociera economica al <span class="unit">75&nbsp;%</span> della potenza massima:
+$$P_c = \eta_P \cdot P_{\max} = 0{,}75 \cdot 134 \approx 100{,}5\,\mathrm{kW}$$
+
+<p class="para-head"><strong>Passo 2 — Consumo orario di combustibile.</strong></p> Per la definizione stessa di consumo specifico al freno, la portata massica oraria di combustibile vale:
+$$\dot{m}_c = c_{sf} \cdot P_c = 0{,}26 \cdot 100{,}5 \approx 26{,}1\,\mathrm{kg/h}$$
+
+<p class="para-head"><strong>Passo 3 — Tempo di volo totale.</strong></p> L'autonomia operativa di <span class="unit">3&nbsp;h</span> deve essere maggiorata della riserva regolamentare:
+$$t_{tot} = t_{op} + t_{ris} = 3{,}0 + 0{,}5 = 3{,}5\,\mathrm{h}$$
+
+<p class="para-head"><strong>Passo 4 — Massa di combustibile imbarcato.</strong></p> Per garantire l'autonomia richiesta:
+$$m_c = \dot{m}_c \cdot t_{tot} = 26{,}1 \cdot 3{,}5 \approx 91{,}4\,\mathrm{kg}$$
+
+<p class="para-head"><strong>Passo 5 — Volume del serbatoio.</strong></p> Dalla densità dell'avgas:
+$$V_c = \frac{m_c}{\rho_c} = \frac{91{,}4}{0{,}72} \approx 127\,\mathrm{L}$$
+
+<p>Considerando un <em>coefficiente di non utilizzabilità</em> del <span class="unit">3&nbsp;%</span> (combustibile residuo non aspirabile dalle pompe per ragioni di assetto e per la posizione delle prese), il volume geometrico del serbatoio deve essere maggiorato: $$V_{geom} = \frac{V_c}{0{,}97} \approx 131\,\mathrm{L} \quad \rightarrow \quad \boxed{V_{geom} \approx 130\,\mathrm{L}}$$</p>
+
+<h3 id="soluzione-costruttiva-proposta">Soluzione costruttiva proposta</h3>
+
+<p>Il volume calcolato si ripartisce in modo simmetrico in <strong>due serbatoi alari integrali</strong> da <span class="unit">65&nbsp;L</span> ciascuno, ricavati nel cassone alare fra i due longheroni in prossimità della radice. La soluzione integrale presenta numerosi vantaggi: <ul><li>posiziona il baricentro del combustibile in prossimità del baricentro del velivolo, minimizzando le variazioni di centraggio durante il volo;</li><li>collocando le masse vicino alla radice riduce i momenti flettenti d'estremità;</li><li>utilizza un volume strutturalmente disponibile riducendo l'ingombro nella fusoliera;</li><li>realizza un effetto di <em>wing relief</em> sul momento flettente alla radice grazie alla distribuzione di peso interno all'ala.</li></ul></p>
+
+<p>L'impianto è completato da: prese e sfiati con valvole di non ritorno, indicatori di livello capacitivi, una pompa elettrica di ausilio (per avviamento e fasi critiche) in parallelo alla pompa meccanica trascinata dal motore, un selettore di alimentazione <span class="sf">LEFT</span>/<span class="sf">BOTH</span>/<span class="sf">RIGHT</span>/<span class="sf">OFF</span> accessibile al pilota, e un filtro decantatore (<em>gascolator</em>) nel punto più basso del circuito per la separazione di acqua e impurità.</p>
+
+<aside class="callout box-esempio"><div class="callout-label">Esempio</div><div class="callout-body"><strong>Verifica di consistenza con i velivoli reali.</strong> Il Piper PA-28-180 <em>Cherokee Archer</em> ha una capacità totale di combustibile di <span class="unit">182&nbsp;L</span> (48 galloni USA), corrispondente a un'autonomia teorica di circa <span class="unit">5&nbsp;h</span>. Il Cessna 172N (motore Lycoming O-320 da <span class="unit">160&nbsp;hp</span>) ha una capacità di <span class="unit">159&nbsp;L</span> per circa <span class="unit">4,5&nbsp;h</span>. Il valore di <span class="unit">130&nbsp;L</span> qui ottenuto, dimensionato sull'autonomia minima richiesta dalla traccia, è dunque coerente con le capacità reali dei velivoli della stessa classe ridotte alla missione tipo qui considerata.</div></aside>
+
+<aside class="callout box-risultati"><div class="callout-label">Risultati</div><div class="callout-body"><strong>Concetti-chiave da ricordare:</strong>
+<ul><li>La motorizzazione tipica per velivoli da turismo è il motore alternativo a quattro tempi boxer alimentato ad avgas <span class="unit">100&nbsp;LL</span>.</li><li>La potenza necessaria si dimensiona sul <span class="unit">75&nbsp;%</span> del massimo (crociera economica).</li><li>Il dimensionamento del serbatoio si ottiene da: $V_c = \dfrac{c_{sf} \cdot P_c \cdot t_{tot}}{\rho_c}$.</li><li>È sempre necessario maggiorare il volume calcolato per la riserva regolamentare e per la frazione non utilizzabile.</li><li>I serbatoi alari integrali rappresentano la soluzione tipica per ragioni di centraggio, peso e <em>wing relief</em>.</li></ul></div></aside>
+
+<h2 id="caratteristiche-del-velivolo-e-norme-di-certificaz">Caratteristiche del velivolo e norme di certificazione</h2>
+
+<div class="quesito"><span class="quesito-num">Quesito 3</span><span class="quesito-text">Illustrare brevemente le caratteristiche del velivolo e le norme che ne consentono la certificazione.</span></div>
+
+<aside class="callout box-teoria"><div class="callout-label">Teoria</div><div class="callout-body">La <strong>certificazione</strong> è il processo formale mediante il quale un'autorità aeronautica riconosce la conformità di un aeromobile, di un suo componente o di un'organizzazione di progettazione, produzione o manutenzione, ai requisiti di <em>aeronavigabilità</em> stabiliti dalle norme tecniche di riferimento. In Italia e nei paesi dell'Unione Europea l'autorità di riferimento è l'<strong>EASA</strong> (European Union Aviation Safety Agency), che ha sostituito i precedenti enti nazionali (in Italia il <em>Registro Aeronautico Italiano</em>, RAI, oggi confluito in <em>ENAC</em>); in ambito statunitense l'autorità è la <strong>FAA</strong> (Federal Aviation Administration).</div></aside>
+
+<h3 id="caratteristiche-del-velivolo">Caratteristiche del velivolo</h3>
+
+<p>Il velivolo dimensionato nei quesiti precedenti possiede le caratteristiche sintetizzate nella tabella seguente, tipiche di un <em>aeroplano da turismo monomotore in categoria Normal</em>.</p>
+
+<div class="table-wrap">
+
+<table><tr><td><strong>Caratteristica</strong></td><td><strong>Valore tipico</strong></td><td><strong>Riferimento</strong></td></tr>
+<tr><td>Massa massima al decollo (MTOW)</td><td>$\sim1100\,\mathrm{kg}$</td><td>$< 5670\,\mathrm{kg}$ $\to$ CS-23</td></tr>
+<tr><td>Numero di posti</td><td>4 (1 pilota + 3 passeggeri)</td><td>$\le 9$ + pilota in CS-23 Normal</td></tr>
+<tr><td>Tipo di propulsione</td><td>Monomotore alternativo, elica</td><td>Velivolo da turismo</td></tr>
+<tr><td>Potenza installata</td><td><span class="unit">180&nbsp;hp</span> ($134\,\mathrm{kW}$)</td><td>Lycoming O-360</td></tr>
+<tr><td>Configurazione alare</td><td>Monoplano ad ala bassa o alta, a sbalzo</td><td>Tipica di GA</td></tr>
+<tr><td>Carrello</td><td>Tricicolo fisso o retrattile</td><td>Optional in funzione della categoria</td></tr>
+<tr><td>Velocità di crociera</td><td>$\sim$<span class="unit">220&nbsp;km/h</span> (<span class="unit">120&nbsp;kt</span>)</td><td>VFR/IFR diurno</td></tr>
+<tr><td>Velocità di stallo $V_S$</td><td>$\sim$<span class="unit">100&nbsp;km/h</span> (<span class="unit">55&nbsp;kt</span>)</td><td>Limitata da CS-23.49</td></tr>
+<tr><td>Quota massima operativa</td><td>$\sim$<span class="unit">4000&nbsp;m</span> (<span class="unit">13000&nbsp;ft</span>)</td><td>Senza pressurizzazione</td></tr>
+<tr><td>Autonomia</td><td>$\ge 3\,\mathrm{h}$ (operativa)</td><td>Da specifica di progetto</td></tr>
+<tr><td>Categoria di certificazione</td><td>Normal</td><td>CS-23 Amendment 5</td></tr>
+<tr><td>Fattore di carico limite</td><td>$n_{lim} = +3{,}8 / -1{,}5$</td><td>CS-23.337</td></tr></table>
+<figcaption>Caratteristiche di sintesi del velivolo da turismo a quattro posti.</figcaption>
+</div>
+
+<h3 id="quadro-normativo-della-certificazione">Quadro normativo della certificazione</h3>
+
+<p>Le specifiche di certificazione (<em>Certification Specifications</em>, CS) emanate da EASA derivano dal Regolamento (UE) n. 748/2012, denominato <strong>Part-21</strong> "Airworthiness and Environmental Certification". La famiglia delle CS è articolata per tipologia di aeromobile, come riportato nella tabella seguente.</p>
+
+<div class="table-wrap">
+
+<table><tr><td><strong>Norma</strong></td><td><strong>Equivalente FAA</strong></td><td><strong>Tipologia di aeromobile</strong></td></tr>
+<tr><td>CS-LSA</td><td>ASTM F2245</td><td>Velivoli da diporto sportivo (<em>Light Sport Aeroplanes</em>), MTOW $\le 600\,\mathrm{kg}$</td></tr>
+<tr><td>CS-VLA</td><td>—</td><td>Velivoli leggerissimi (<em>Very Light Aeroplanes</em>), MTOW $\le 750\,\mathrm{kg}$</td></tr>
+<tr><td>CS-22</td><td>—</td><td>Alianti e motoalianti, MTOW $\le 750\,\mathrm{kg}$</td></tr>
+<tr><td><strong>CS-23</strong></td><td>FAR Part 23</td><td>Aeroplani in categoria Normal, Utility, Acrobatic e Commuter</td></tr>
+<tr><td>CS-25</td><td>FAR Part 25</td><td>Grandi aeroplani da trasporto</td></tr>
+<tr><td>CS-27 / CS-29</td><td>FAR Part 27/29</td><td>Piccoli/grandi aerogiri (elicotteri)</td></tr>
+<tr><td>CS-E</td><td>FAR Part 33</td><td>Motori aeronautici</td></tr>
+<tr><td>CS-P</td><td>FAR Part 35</td><td>Eliche</td></tr></table>
+<figcaption>Famiglia delle Certification Specifications EASA e corrispondenze FAA.</figcaption>
+</div>
+
+<p>Il velivolo del nostro caso, avendo MTOW inferiore a <span class="unit">8618&nbsp;kg</span> (<span class="unit">19000&nbsp;lb</span>) e meno di 19 passeggeri, ricade integralmente sotto la <strong>CS-23 Amendment 5</strong> del 31 marzo 2017, che ha riorganizzato la classificazione precedente facendo confluire nella categoria <em>Normal</em> le tipologie precedenti Normal/Utility/Acrobatic/Commuter, con livelli di certificazione differenziati in base alle prestazioni richieste.</p>
+
+<h3 id="categorie-di-certificazione-impostazione-tradizion">Categorie di certificazione (impostazione tradizionale, CS-23 Amdt. 4)</h3>
+
+<p>Pur con la riorganizzazione del 2017, la classificazione storica rimane utile dal punto di vista didattico per comprendere lo <em>spettro operativo</em> ammesso da ciascuna categoria.</p>
+
+<dl><dt>Categoria Normal ($\mathbf{N}$)</dt><dd>Operazioni di volo non acrobatiche; comprende stalli (esclusi quelli accelerati), otto lenti, <em>chandelles</em> e virate con angolo di sbandamento inferiore a $60°$. Fattore di carico limite: $+3{,}8 / -1{,}5$.</dd><dt>Categoria Utility ($\mathbf{U}$)</dt><dd>Aggiunge alle manovre della Normal le viti, le otto lenti, le virate con sbandamento fino a $90°$ e i <em>loop</em> positivi. Fattore di carico limite: $+4{,}4 / -1{,}76$.</dd><dt>Categoria Acrobatic ($\mathbf{A}$)</dt><dd>Nessuna limitazione alle manovre se non quelle derivanti dalle prove di volo di certificazione. Fattore di carico limite: $+6{,}0 / -3{,}0$.</dd><dt>Categoria Commuter ($\mathbf{C}$)</dt><dd>Velivoli da trasporto regionale plurimotori a elica fino a 19 passeggeri; volo normale, stalli (esclusi accelerati) e virate con sbandamento $< 60°$. Fattore di carico limite: $+3{,}8 / -1{,}5$.</dd></dl>
+
+<h3 id="processo-di-certificazione">Processo di certificazione</h3>
+
+<p>L'iter di certificazione di un nuovo aeromobile si articola nelle seguenti fasi:</p>
+
+<ol><li><strong>Type Certificate (TC)</strong>: certificato di tipo rilasciato dall'autorità (EASA/FAA) al costruttore, attesta che il <em>progetto</em> dell'aeromobile soddisfa i requisiti applicabili. Richiede la presentazione di una completa <em>Type Certification Data Sheet</em> (TCDS) con disegni, calcoli, prove di laboratorio e prove di volo.</li><li><strong>Production Certificate (PC)</strong>: certificato di produzione rilasciato all'organizzazione manifatturiera, attesta che essa è in grado di realizzare in serie l'aeromobile in conformità al TC.</li><li><strong>Certificate of Airworthiness (C of A)</strong>: certificato di navigabilità individuale, rilasciato per ogni esemplare prodotto, attesta che il singolo velivolo è conforme al tipo certificato e si trova in condizione di volo sicuro.</li><li><strong>Continuous Airworthiness</strong>: il mantenimento dell'aeronavigabilità nel tempo è regolato dalla <strong>Part-M</strong> (organizzazioni CAMO, <em>Continuous Airworthiness Management Organization</em>), dalla <strong>Part-145</strong> (manutenzione), dalla <strong>Part-66</strong> (licenze del personale di manutenzione) e dalla <strong>Part-147</strong> (scuole di formazione del personale).</li></ol>
+
+<aside class="callout box-avviso"><div class="callout-label">Attenzione</div><div class="callout-body">Il <strong>coefficiente di sicurezza</strong> prescritto dalla CS-23 al §303 vale $k = 1{,}5$: il <em>carico ultimo</em> (di robustezza) è ottenuto moltiplicando il <em>carico limite</em> (di contingenza) per tale coefficiente. La struttura deve sopportare il carico limite <em>senza deformazioni permanenti</em> e il carico ultimo <em>senza collassare per almeno 3 secondi</em> (CS-23.305).</div></aside>
+
+<aside class="callout box-risultati"><div class="callout-label">Risultati</div><div class="callout-body"><strong>Concetti-chiave da ricordare:</strong>
+<ul><li>La certificazione è il processo che attesta la conformità ai requisiti di aeronavigabilità.</li><li>Le autorità di riferimento sono EASA (Europa) e FAA (USA), con ENAC come braccio operativo italiano.</li><li>I velivoli da turismo con MTOW $< 8618\,\mathrm{kg}$ rientrano nella CS-23 (FAR Part 23).</li><li>Le quattro categorie storiche sono: Normal, Utility, Acrobatic, Commuter, distinte per fattore di carico e manovre ammesse.</li><li>Il processo di certificazione si articola in: Type Certificate, Production Certificate e Certificate of Airworthiness, con il successivo mantenimento dell'aeronavigabilità (Part-M, Part-145, Part-66, Part-147).</li></ul></div></aside>
+
+<h2 id="procedimento-di-una-prova-non-distruttiva">Procedimento di una prova non distruttiva</h2>
+
+<div class="quesito"><span class="quesito-num">Quesito 4</span><span class="quesito-text">Descrivere il procedimento di una prova non distruttiva utilizzata in campo aeronautico.</span></div>
+
+<aside class="callout box-teoria"><div class="callout-label">Teoria</div><div class="callout-body">Le <strong>Prove Non Distruttive</strong> (PND, in inglese <em>Non-Destructive Testing</em>, NDT) sono l'insieme delle tecniche di ispezione che consentono di rilevare difetti, discontinuità o degradi in un manufatto <em>senza alterarne in alcun modo l'integrità o la funzionalità</em>. In campo aeronautico esse rivestono un ruolo strategico: sono lo strumento che permette di applicare le filosofie progettuali <em>fail-safe</em> e <em>damage tolerance</em>, consentendo di individuare le cricche di fatica prima che raggiungano dimensioni critiche e quindi di programmare gli interventi di sostituzione o riparazione in modo tempestivo. Il loro impiego è prescritto sia in fase di <em>accettazione</em> dei materiali e dei semilavorati (controlli sui rivetti, sulle saldature, sui forgiati), sia durante la <em>produzione</em> (controllo dei pezzi prodotti), sia nelle ispezioni periodiche di <em>manutenzione</em> programmata.</div></aside>
+
+<h3 id="panoramica-delle-principali-pnd">Panoramica delle principali PND</h3>
+
+<p>Le PND più diffuse in ambito aeronautico, classificate per tipologia di difetto rilevabile e di materiale ispezionabile, sono riassunte nella tabella seguente.</p>
+
+<div class="table-wrap">
+
+<table><tr><td><strong>Sigla</strong></td><td><strong>Metodo</strong></td><td><strong>Caratteristiche e impieghi</strong></td></tr>
+<tr><td>VT</td><td>Esame visivo</td><td>Difetti superficiali macroscopici; richiede solo strumenti ottici (lenti, endoscopi).</td></tr>
+<tr><td>PT</td><td>Liquidi penetranti</td><td>Difetti superficiali aperti su materiali non porosi; metodo capillare.</td></tr>
+<tr><td>MT</td><td>Particelle magnetiche</td><td>Difetti superficiali e sub-superficiali su materiali ferromagnetici; metodo magnetico.</td></tr>
+<tr><td>ET</td><td>Correnti indotte (<em>eddy current</em>)</td><td>Difetti superficiali e sub-superficiali su materiali conduttori; molto usato in manutenzione (cricche sotto verniciatura, attorno ai fori dei rivetti).</td></tr>
+<tr><td>UT</td><td>Ultrasuoni</td><td>Difetti interni in materiali metallici e compositi; misura di spessori residui (corrosione interna).</td></tr>
+<tr><td>RT</td><td>Radiografia (raggi X o $\gamma$)</td><td>Difetti interni in saldature, fusioni, strutture sandwich; richiede protezione per il personale.</td></tr>
+<tr><td>TT</td><td>Termografia attiva</td><td>Distacchi (<em>disbond</em>) e delaminazioni in compositi; analisi del calore disperso.</td></tr>
+<tr><td>AE</td><td>Emissione acustica</td><td>Monitoraggio in tempo reale durante prove di carico; rileva la propagazione di cricche attive.</td></tr></table>
+<figcaption>Principali Prove Non Distruttive utilizzate in campo aeronautico.</figcaption>
+</div>
+
+<h3 id="procedimento-dettagliato-lesame-con-liquidi-penetr">Procedimento dettagliato: l'esame con liquidi penetranti (PT)</h3>
+
+<p>Fra le tecniche elencate, il <strong>controllo con liquidi penetranti</strong> è la PND più semplice da eseguire ed è quella che meglio si presta a una descrizione procedurale completa. Si fonda sul <em>principio della capillarità</em>: un liquido a bassa tensione superficiale, applicato sulla superficie del pezzo, penetra spontaneamente all'interno di eventuali discontinuità aperte (cricche, porosità, ripiegature) e ne resta intrappolato. Una successiva applicazione di un rivelatore polverulento "estrae" il liquido per capillarità inversa, rendendo la discontinuità visibile a occhio nudo. È applicabile a qualsiasi materiale non poroso (leghe leggere, acciai, titanio, ceramiche, vetri, plastiche).</p>
+
+<p class="para-head"><strong>Apparecchiatura e materiali necessari.</strong></p>
+<ul><li><em>Sgrassante/detergente</em> per la pulizia preliminare;</li><li><em>liquido penetrante</em> (a contrasto cromatico, di solito rosso, oppure fluorescente);</li><li><em>rimuovente</em> (acqua, solvente o emulsificante secondo il tipo di penetrante);</li><li><em>rivelatore</em> (polvere bianca a base di talco, applicata a secco, in sospensione acquosa o in spray);</li><li>lampada di Wood (luce ultravioletta) nel caso di penetranti fluorescenti;</li><li>attrezzatura di pulizia finale.</li></ul>
+
+<p class="para-head"><strong>Procedimento.</strong></p> Il controllo si articola in sei fasi, schematizzate nella figura seguente e descritte nel dettaglio.
+
+<figure class="block-figure"><img class="technical-figure" src="../assets/figures/esempio-mim-2015-fig-01.png" alt="Figura tecnica 1 — esempio-mim-2015" loading="lazy">
+<figcaption>Sequenza delle fasi del controllo con liquidi penetranti.</figcaption></figure>
+
+<p class="para-head"><strong>Fase 1 — Pulizia preliminare (<em>pre-cleaning</em>).</strong></p>
+La superficie del pezzo deve essere accuratamente sgrassata e ripulita da olio, vernice, ossidi e residui di lavorazione che potrebbero ostruire le discontinuità impedendone la penetrazione. Si utilizzano solventi adeguati o, nei casi più difficili, decapaggi chimici. Una pulizia inadeguata è la causa più frequente di falsi negativi in questa tipologia di prova.
+
+<p class="para-head"><strong>Fase 2 — Applicazione del penetrante.</strong></p>
+Il liquido penetrante si applica per immersione, spruzzo o pennellatura, garantendo la copertura completa della superficie da ispezionare. Il pezzo viene quindi lasciato a riposo per un <strong>tempo di permanenza</strong> ($t_p$) di 15–30&nbsp;min, durante il quale la capillarità fa sì che il liquido si insinui all'interno di ogni discontinuità aperta sulla superficie. Il tempo varia in funzione del materiale, della tipologia di difetto cercato e della temperatura ambiente.
+
+<p class="para-head"><strong>Fase 3 — Rimozione dell'eccesso.</strong></p>
+Il penetrante in eccesso che resta sulla superficie viene rimosso accuratamente. La modalità dipende dal tipo di penetrante:
+<ul><li><em>lavabili in acqua</em>: rimozione diretta con getto d'acqua a bassa pressione;</li><li><em>post-emulsificabili</em>: si applica preventivamente un emulsificante che rende lavabile il penetrante;</li><li><em>rimovibili a solvente</em>: si utilizza una salvietta inumidita con solvente, mai applicato direttamente sulla superficie.</li></ul>
+È fondamentale rimuovere il solo eccesso superficiale senza estrarre il penetrante intrappolato nelle cricche.
+
+<p class="para-head"><strong>Fase 4 — Applicazione del rivelatore.</strong></p>
+Si applica uno strato sottile e uniforme di rivelatore (polvere bianca o sospensione spray). Per capillarità inversa, il penetrante intrappolato nelle discontinuità migra dall'interno verso la superficie attraverso il rivelatore, generando una <em>indicazione</em> visibile, di forma e dimensioni amplificate rispetto al difetto reale. Il rivelatore si lascia agire per 5–15&nbsp;min.
+
+<p class="para-head"><strong>Fase 5 — Ispezione.</strong></p>
+L'ispezione si esegue con <em>luce visibile</em> (<span class="unit">1000&nbsp;lx</span>) per i penetranti a contrasto cromatico (rossi su sfondo bianco), o con lampada di Wood in cabina oscurata per i penetranti fluorescenti (sensibilità superiore). Le indicazioni rilevate vengono classificate per forma:
+<ul><li>indicazioni <em>lineari</em> (lunghezza $\ge 3 \times$ larghezza): cricche, ripiegature, mancanze di penetrazione nelle saldature;</li><li>indicazioni <em>rotondeggianti</em>: porosità, soffiature;</li><li>indicazioni <em>diffuse</em>: difetti generalizzati o problemi di pulizia.</li></ul>
+Ciascuna indicazione viene documentata, fotografata e ricondotta al difetto reale tramite la dimensione, la posizione e il confronto con i criteri di accettabilità della specifica tecnica applicabile.
+
+<p class="para-head"><strong>Fase 6 — Pulizia finale (<em>post-cleaning</em>).</strong></p>
+Al termine dell'ispezione il pezzo viene accuratamente ripulito da ogni residuo di rivelatore e penetrante, che potrebbero altrimenti innescare fenomeni corrosivi durante il successivo esercizio. Si procede infine alla <em>redazione del rapporto di prova</em>, che riporta: identificativo del pezzo, prodotti utilizzati, tempi di permanenza, indicazioni rilevate (con fotografie), giudizio di accettabilità.
+
+<h3 id="vantaggi-e-limiti-della-prova-ai-liquidi-penetrant">Vantaggi e limiti della prova ai liquidi penetranti</h3>
+
+<div class="table-wrap">
+
+<table><tr><td><strong>Vantaggi</strong></td><td><strong>Limiti</strong></td></tr>
+<tr><td>Applicabile a qualsiasi materiale non poroso (metalli, leghe, ceramiche, plastiche, vetri).</td><td>Rileva solo difetti <em>aperti in superficie</em>: i difetti interni o sub-superficiali sfuggono completamente.</td></tr>
+<tr><td>Costo dell'attrezzatura molto contenuto.</td><td>La superficie deve essere accuratamente pulita; i pezzi verniciati richiedono sverniciatura preliminare.</td></tr>
+<tr><td>Procedura semplice, applicabile in officina e a bordo del velivolo.</td><td>I tempi di esecuzione (totale $\ge 30\,\mathrm{min}$ per pezzo) sono incompatibili con controlli rapidi su grandi volumi.</td></tr>
+<tr><td>Eccellente sensibilità per cricche di fatica, anche di pochi $\mu$m.</td><td>I prodotti chimici impiegati richiedono dispositivi di protezione individuale e gestione come rifiuti speciali.</td></tr>
+<tr><td>Indicazioni interpretabili visivamente senza strumentazione complessa.</td><td>Non quantifica la profondità del difetto (richiede prove complementari, ad es.\ ultrasuoni).</td></tr></table>
+<figcaption>Vantaggi e limiti del controllo con liquidi penetranti.</figcaption>
+</div>
+
+<aside class="callout box-esempio"><div class="callout-label">Esempio</div><div class="callout-body"><strong>Applicazione tipica in aviazione generale.</strong> Nei programmi di manutenzione dei velivoli da turismo, il controllo con liquidi penetranti è prescritto periodicamente sui <em>punti critici</em> della struttura: zone di attacco dei longheroni alla fusoliera, attacchi del carrello, perni di cerniera delle superfici mobili, raccordi delle gambe ammortizzatori. Su un velivolo come il Piper PA-28 il manuale di manutenzione prescrive l'ispezione PT del cosiddetto <em>wing spar attachment fitting</em> ogni 1000 ore di volo, in seguito ad alcuni casi storici di propagazione di cricche di fatica in tale zona. Per i difetti interni o sub-superficiali (corrosione del rivestimento, distacchi nei pannelli sandwich del rivestimento) si ricorre invece a ultrasuoni o termografia.</div></aside>
+
+<aside class="callout box-risultati"><div class="callout-label">Risultati</div><div class="callout-body"><strong>Concetti-chiave da ricordare:</strong>
+<ul><li>Le PND consentono di ispezionare strutture senza alterarne l'integrità: sono il presupposto operativo delle filosofie <em>fail-safe</em> e <em>damage tolerance</em>.</li><li>Le tecniche principali sono: VT, PT, MT, ET, UT, RT, oltre a TT e AE.</li><li>Il controllo con liquidi penetranti rileva difetti superficiali aperti su qualsiasi materiale non poroso, sfruttando il principio della capillarità.</li><li>Il procedimento si articola in 6 fasi: pulizia, applicazione del penetrante, rimozione dell'eccesso, applicazione del rivelatore, ispezione, pulizia finale.</li><li>Vantaggi: semplicità, economicità, alta sensibilità per cricche di fatica. Limiti: rileva solo difetti aperti in superficie e richiede pulizia accurata.</li></ul></div></aside>
+</div>
+<nav class="exam-pagination">
+<a href="2015.html" class="">
+<span class="label">Precedente</span>
+<span class="title">2015 </span>
+</a>
+<a href="2016.html" class="next">
+<span class="label">Successivo</span>
+<span class="title">2016 </span>
+</a>
+</nav>
+</article>
+<aside class="exam-aside">
+<div class="exam-aside-inner">
+<div class="toc-label">In questa pagina</div>
+<ul class="toc-list"><li><a href="#motorizzazione-e-dimensionamento-del-serbatoio-com"><span class="toc-num">1</span>Motorizzazione e dimensionamento del serbatoio combustibile</a></li>
+<li><a href="#caratteristiche-del-velivolo-e-norme-di-certificaz"><span class="toc-num">2</span>Caratteristiche del velivolo e norme di certificazione</a></li>
+<li><a href="#procedimento-di-una-prova-non-distruttiva"><span class="toc-num">3</span>Procedimento di una prova non distruttiva</a></li></ul>
+</div>
+</aside>
+</div>
+</main>
+<footer class="site-footer">
+<div class="site-footer-inner">
+<p>Prof. Ing. Raucci Biagio · ITIS E. Majorana, Cassino · A.S. 2025/26</p>
+<p class="credit">Costruzioni Aeronautiche · Classe A038</p>
+</div>
+</footer>
+<script src="../assets/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#1d3557">
+<meta name="description" content="Autonomia oraria · Pressurizzazione · Stabilità longitudinale · Volo librato">
+<title>Esame di Stato 2018 — sessione suppletiva · Esami Costruzioni Aeronautiche</title>
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" integrity="sha384-nB0miv6/jRmo5UMMR1wu3Gz6NLsoTkbqJghGIsx//Rlm+ZU03BU6SQNC66uf4l5+" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" integrity="sha384-7zkQWkzuo3B5mTepMUcHkMB5jZaolc2xDwL6VFqjFALcbeS9Ggm/Yr2r3Dy4lfFg" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous" onload="renderMathInElement(document.body, {delimiters: [{left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}], throwOnError: false, macros: { '\\AR': '\\mathrm{AR}' } });"></script>
+</head>
+<body>
+<header class="site-header">
+<div class="site-header-inner">
+<a href="../index.html" class="brand">
+<span class="brand-mark">Esami</span>
+<span class="brand-sub">Costruzioni Aeronautiche · A038</span>
+</a>
+<nav class="site-nav">
+<a href="../index.html" >Indice</a>
+<a href="https://github.com" rel="noopener">GitHub</a>
+<a href="https://www.raucci.net" rel="noopener">Blog personale</a>
+</nav>
+</div>
+</header>
+
+<main class="container">
+<div class="exam-page">
+<article class="exam-article-wrap">
+<header class="exam-header">
+<a href="../index.html" class="exam-back">Tutte le prove</a>
+<div class="exam-eyebrow"><span>2018</span><span class="dot">·</span><span>Suppletiva</span></div>
+<h1 class="exam-title">Esame di Stato 2018 — sessione suppletiva</h1>
+<p class="exam-deck">Autonomia oraria · Pressurizzazione · Stabilità longitudinale · Volo librato</p>
+</header>
+<div class="exam-article">
+<p>La prova della sessione suppletiva 2018 (codice I241, denominazione antecedente all'attuale A038) propone quattro quesiti che spaziano dalla meccanica del volo alla propulsione, dalla stabilità longitudinale all'aerodinamica del volo librato. Il primo quesito è di tipo numerico e fa riferimento al velivolo turboelica dimensionato nella Prima Parte; nel presente fascicolo si risolve adottando dati rappresentativi di tale categoria di velivolo.</p>
+
+<h2 id="massima-autonomia-oraria-alla-quota-di-17-500-ft">Massima autonomia oraria alla quota di 17 500 ft</h2>
+
+<div class="quesito"><span class="quesito-num">Quesito 1</span><span class="quesito-text">Calcolare la massima autonomia oraria per il velivolo in esame, ipotizzando
+un consumo specifico $c_s = 0{,}28\,\mathrm{kg/kWh}$ alla quota di 17 500 ft.</span></div>
+
+<aside class="callout box-ipotesi"><div class="callout-label">Ipotesi e dati</div><div class="callout-body"><strong>Dati assunti (velivolo turboelica da trasporto regionale):</strong>
+$$W = 49\,050\,\mathrm{N},\quad S = 20\,\mathrm{m}^2,\quad \AR = 9,\quad
+  e = 0{,}85,\quad C_{D0} = 0{,}025,\quad m_{\mathrm{carb}} = 800\,\mathrm{kg}$$
+<strong>Dato assegnato dalla traccia:</strong> $c_s = 0{,}28\,\mathrm{kg/kWh}$.</div></aside>
+
+<h3 id="atmosfera-isa-a-17-500ft">Atmosfera ISA a 17 500 ft</h3>
+
+<p>$17\,500\,\mathrm{ft} = 5334\,\mathrm{m}$. Con le leggi dell'Atmosfera Standard Internazionale (troposfera, gradiente $a = 6{,}5\,\mathrm{K/km}$): $$\begin{aligned}T_{5334} &= 288{,}15 - 0{,}0065 \times 5334 = 253{,}5\,\mathrm{K} \\
+  \rho_{5334} &= \rho_0 \left(\frac{T}{T_0}\right)^{\frac{g}{aR}-1}
+    = 1{,}225 \times \left(\frac{253{,}5}{288{,}15}\right)^{4{,}256}
+    = \mathbf{0{,}710\,\mathrm{kg/m}^3} \quad
+    \left(\sigma = \frac{\rho}{\rho_0} = 0{,}580\right)\end{aligned}$$</p>
+
+<h3 id="condizione-di-massima-autonomia-oraria">Condizione di massima autonomia oraria</h3>
+
+<aside class="callout box-teoria"><div class="callout-label">Teoria</div><div class="callout-body">L'autonomia oraria è massima quando la potenza meccanica necessaria al volo livellato è
+<em>minima</em>. Questa condizione corrisponde all'assetto che massimizza
+$E\sqrt{C_L}$, ovvero:
+$$C_{L,\mathrm{MP}} = \sqrt{\frac{3\,C_{D0}}{k}},
+  \qquad C_{D,\mathrm{MP}} = 4\,C_{D0},
+  \qquad E_{\mathrm{MP}} = \frac{C_{L,\mathrm{MP}}}{C_{D,\mathrm{MP}}}
+  \label{eq:2018s_mp}$$
+La relazione $C_{D,\mathrm{MP}} = 4\,C_{D0}$ si ricava notando che in tale assetto
+$C_{L,\mathrm{MP}}^2 = 3\,C_{D0}/k$, quindi
+$C_{D,\mathrm{MP}} = C_{D0} + k\,(3\,C_{D0}/k) = 4\,C_{D0}$.</div></aside>
+
+<p>Coefficiente di resistenza indotta: $$k = \frac{1}{\pi\,\AR\,e} = \frac{1}{\pi \times 9 \times 0{,}85} = 0{,}0416$$</p>
+
+<p>Dalla <span class="ref">(eq:2018s_mp)</span>: $$\begin{aligned}C_{L,\mathrm{MP}} &= \sqrt{\frac{3 \times 0{,}025}{0{,}0416}} = \mathbf{1{,}343} \\
+  C_{D,\mathrm{MP}} &= 4 \times 0{,}025 = \mathbf{0{,}100} \\
+  E_{\mathrm{MP}} &= \frac{1{,}343}{0{,}100} = \mathbf{13{,}43}\end{aligned}$$</p>
+
+<h3 id="calcolo-della-potenza-minima-a-quota">Calcolo della potenza minima a quota</h3>
+
+<p>Velocità di volo corrispondente a $C_{L,\mathrm{MP}}$ alla quota assegnata: $$V_{\mathrm{MP}} = \sqrt{\frac{2\,W}{\rho_{z}\,S\,C_{L,\mathrm{MP}}}}
+    = \sqrt{\frac{2 \times 49\,050}{0{,}710 \times 20 \times 1{,}343}}
+    = \mathbf{71{,}8\,\mathrm{m/s}} = 258\,\mathrm{km/h}$$</p>
+
+<p>Resistenza e potenza minima: $$\begin{aligned}D_{\mathrm{MP}} &= \frac{W}{E_{\mathrm{MP}}} = \frac{49\,050}{13{,}43}
+    = 3\,652\,\mathrm{N} \\
+  \Pi_{\min} &= D_{\mathrm{MP}} \cdot V_{\mathrm{MP}} = 3\,652 \times 71{,}8
+    = 262\,000\,\mathrm{W} = \mathbf{262\,\mathrm{kW}}\end{aligned}$$</p>
+
+<aside class="callout box-avviso"><div class="callout-label">Attenzione</div><div class="callout-body"><strong>Effetto della quota sulla potenza minima.</strong>
+Poiché $V_{\mathrm{MP}} \propto 1/\sqrt{\rho_z}$, la potenza minima cresce al crescere
+della quota secondo:
+$$\Pi_{\min}(z) = \Pi_{\min,0} / \sqrt{\sigma} = 199{,}5 / \sqrt{0{,}580}
+    = 199{,}5 / 0{,}761 = 262\,\mathrm{kW}$$
+A quota più alta la stessa portanza richiede velocità maggiore e quindi potenza
+maggiore: questo <em>riduce</em> l'autonomia oraria rispetto al volo a bassa quota.</div></aside>
+
+<h3 id="autonomia-oraria-massima">Autonomia oraria massima</h3>
+
+<p>Il consumo istantaneo di carburante è: $\dot{m}_{\mathrm{carb}} = c_s \times \Pi_{\min} = 0{,}28 \mathrm{kg/kWh} \times 262 \mathrm{kW} = 73{,}4 \mathrm{kg/h}$.</p>
+
+<p>L'autonomia oraria massima vale: $$\boxed{t_{\max} = \frac{m_{\mathrm{carb}}}{c_s \cdot \Pi_{\min}}
+    = \frac{800}{0{,}28 \times 262} = \mathbf{10{,}9\,\mathrm{h}} \approx 11\,\mathrm{ore}}$$</p>
+
+<aside class="callout box-risultati"><div class="callout-label">Risultati</div><div class="callout-body">Assetto di massima autonomia: $C_{L,\mathrm{MP}} = 1{,}343$, $E_{\mathrm{MP}} = 13{,}4$.
+Velocità: $V_{\mathrm{MP}} = 71{,}8\,\mathrm{m/s}$ (258 km/h) a 17 500 ft.
+Potenza minima: $\Pi_{\min} = 262\,\mathrm{kW}$.
+<strong>Autonomia oraria massima: $t = 10{,}9\,\mathrm{h}$</strong> (con $m_{\mathrm{carb}} = 800\,\mathrm{kg}$).</div></aside>
+
+<h2 id="impianto-di-pressurizzazione-e-condizionamento">Impianto di pressurizzazione e condizionamento</h2>
+
+<div class="quesito"><span class="quesito-num">Quesito 2</span><span class="quesito-text">Il candidato illustri le funzioni svolte dall'impianto di pressurizzazione
+e condizionamento in un moderno velivolo da trasporto commerciale.</span></div>
+
+<aside class="callout box-teoria"><div class="callout-label">Teoria</div><div class="callout-body">L'<strong>Environmental Control System</strong> (ECS, capitolo ATA 21) è il sistema che garantisce
+all'interno della cabina e del cockpit un ambiente fisiologicamente sicuro e confortevole,
+indipendentemente dalle condizioni esterne di pressione, temperatura e umidità. Le tre
+funzioni principali sono: <em>pressurizzazione</em>, <em>condizionamento termico</em> e
+<em>ricambio e purificazione dell'aria</em>.</div></aside>
+
+<h3 id="perché-pressurizzare">Perché pressurizzare</h3>
+
+<p>Alla quota tipica di crociera dei velivoli di linea ($10\,000$–$12\,000\,\mathrm{m}$) la pressione atmosferica scende a circa $\frac{1}{4}$ del valore al suolo, rendendo la pressione parziale di ossigeno insufficiente alla sopravvivenza senza maschere. L'ECS mantiene la cabina a una <strong>quota cabina</strong> di circa $2400\,\mathrm{m}$ ($p_{\mathrm{cab}} \approx 75\,\mathrm{kPa}$), con una pressione differenziale strutturale: $$\Delta p = p_{\mathrm{cab}} - p_{\mathrm{ext}} \approx 75 - 20 = 55\,\mathrm{kPa}
+  \quad (\approx 8\,\mathrm{psi})$$ La fusoliera è dimensionata su questo $\Delta p$ con fattore di sicurezza $k = 1{,}5$.</p>
+
+<h3 id="generazione-dellaria-bleed-air">Generazione dell'aria: bleed air</h3>
+
+<p>Sui velivoli a turbomotore l'aria compressa viene prelevata direttamente dal compressore del motore a due stadi distinti: <ul><li>spillamento a <strong>bassa pressione</strong> (8°–10° stadio): sempre aperto, fornisce la portata di base; l'aria è a $\sim 200\,{}^{\circ}\mathrm{C}$.</li><li>spillamento ad <strong>alta pressione</strong> (14°–16° stadio): aperto solo quando il motore è a basso regime (piste, avvicinamento); l'aria è a $\sim 400\,{}^{\circ}\mathrm{C}$.</li></ul> I velivoli di nuova generazione come il Boeing 787 adottano un sistema <em>no-bleed</em>: l'aria non è spillata dai motori ma compressa da compressori elettrici dedicati, alimentati dai generatori del motore. Questo migliora l'efficienza propulsiva e la qualità dell'aria (nessun rischio di contaminazione da idrocarburi).</p>
+
+<h3 id="il-ciclo-di-condizionamento-acm-bootstrap">Il ciclo di condizionamento: ACM Bootstrap</h3>
+
+<p>L'aria spillata ad alta temperatura viene trattata dall'<strong>Air Conditioning Module</strong> (ACM) prima di essere immessa in cabina, secondo il ciclo <em>bootstrap</em>:</p>
+
+<ol><li><strong>Pre-raffreddamento:</strong> l'aria calda del compressore ($\sim 300\,{}^{\circ}\mathrm{C}$)
+    passa attraverso uno scambiatore di calore aria–aria (ram air heat exchanger),
+    raffreddandosi fino a $\sim 80\,{}^{\circ}\mathrm{C}$.</li><li><strong>Seconda compressione:</strong> un compressore ausiliario (ACM compressor) porta
+    ulteriormente la pressione, riscaldando leggermente l'aria.</li><li><strong>Secondo scambiatore:</strong> l'aria compressa viene nuovamente raffreddata
+    dal ram air.</li><li><strong>Espansione in turbina ACM:</strong> la turbina espande l'aria,
+    raffreddandola a $\sim -20\,{}^{\circ}\mathrm{C}$. Il lavoro estratto aziona il
+    compressore ausiliario (accoppiamento sull'asse con la turbina) e il fan del
+    ram air.</li><li><strong>Miscelazione:</strong> l'aria fredda è miscelata con aria calda di bypass
+    (elettrovalvola di cortocircuito) per raggiungere la temperatura di cabina
+    desiderata ($18$–$24\,{}^{\circ}\mathrm{C}$).</li></ol>
+
+<figure class="block-figure">
+
+<img class="technical-figure" src="../assets/figures/2018-suppletiva-fig-01.png" alt="Figura tecnica 1 — 2018-suppletiva" loading="lazy">
+<figcaption>Schema del ciclo bootstrap (ACM) per il condizionamento della cabina.</figcaption>
+</figure>
+
+<h3 id="regolazione-della-pressurizzazione">Regolazione della pressurizzazione</h3>
+
+<p>La pressione in cabina è controllata dalle <strong>valvole di efflusso</strong> (outflow valves), che scaricano aria verso l'esterno. Riducendo la sezione di efflusso si aumenta la pressione cabina; allargandola si diminuisce. La centralina elettronica (cabin pressure controller) regola la posizione delle valvole per seguire la legge di pressurizzazione programmata (quota cabina $\le 2400\,\mathrm{m}$ indipendentemente dalla quota effettiva).</p>
+
+<p>Valvole accessorie: <ul><li><strong>Valvola di sovrapressione:</strong> si apre automaticamente se $\Delta p$ supera il valore strutturale limite ($\sim 8\,\mathrm{psi}$), scaricando l'eccesso.</li><li><strong>Valvola anti-vuoto:</strong> si apre se $p_{\mathrm{ext}} > p_{\mathrm{cab}}$ (discesa brusca non corretta), per evitare compressione della fusoliera.</li><li><strong>Valvola di sicurezza di emergenza:</strong> scarica completamente la cabina a comando del pilota per equalizzare la pressione prima di aprire le porte.</li></ul></p>
+
+<h3 id="ricambio-dellaria-e-qualità">Ricambio dell'aria e qualità</h3>
+
+<p>L'aria in cabina è rinnovata continuamente (tasso di rinnovo: $\ge 0{,}25\,\mathrm{kg/min}$ per passeggero, standard IATA). Circa il 50% dell'aria è ricircolata attraverso filtri HEPA (<em>High Efficiency Particulate Air</em>, efficienza $> 99{,}97\%$ per particelle $> 0{,}3\,\mu\mathrm{m}$) per ridurre il consumo di bleed air. La concentrazione di $\mathrm{CO_2}$ è mantenuta $< 0{,}5\%$ in volume.</p>
+
+<aside class="callout box-risultati"><div class="callout-label">Risultati</div><div class="callout-body"><strong>Concetti-chiave dell'ECS:</strong>
+<ul><li>Quota cabina $\approx 2400\,\mathrm{m}$ ($75\,\mathrm{kPa}$);
+    $\Delta p_{\mathrm{strutturale}} \approx 55\,\mathrm{kPa}$.</li><li>Bleed air da 8°–16° stadio del compressore; no-bleed (B787) per efficienza.</li><li>Ciclo bootstrap: 2 scambiatori + compressore ACM + turbina ACM.</li><li>Regolazione tramite outflow valves; valvole di sicurezza differenziali.</li><li>Ricambio aria $\ge 0{,}25\,\mathrm{kg/min}$ per passeggero; filtri HEPA al 50%.</li></ul></div></aside>
+
+<h2 id="piano-orizzontale-di-coda-equilibrio-e-stabilità-l">Piano orizzontale di coda: equilibrio e stabilità longitudinale</h2>
+
+<div class="quesito"><span class="quesito-num">Quesito 3</span><span class="quesito-text">Considerando un velivolo di architettura classica, il candidato illustri le
+funzioni svolte dal piano orizzontale di coda dal punto di vista dell'equilibrio e
+della stabilità longitudinale dell'aeroplano.</span></div>
+
+<aside class="callout box-teoria"><div class="callout-label">Teoria</div><div class="callout-body">In un velivolo ad <strong>architettura classica</strong> (ala anteriore + piano di coda orizzontale
+posteriore), l'ala genera la quasi totalità della portanza ma non è da sola in grado di
+garantire né l'<em>equilibrio</em> al beccheggio né la <em>stabilità</em> longitudinale.
+Il piano di coda orizzontale (<strong>stabilizzatore</strong> + <strong>equilibratore</strong>) assolve
+entrambe queste funzioni.</div></aside>
+
+<h3 id="funzione-di-equilibrio">Funzione di equilibrio</h3>
+
+<p>L'ala e la fusoliera generano complessivamente una portanza $L_w$ applicata nel <strong>fuoco</strong> (centro aerodinamico del velivolo parziale, a circa il 25% della corda media). In generale il fuoco non coincide con il <strong>baricentro</strong> $G$: ne deriva un momento squilibrante al beccheggio $M_y \ne 0$.</p>
+
+<p class="para-head"><strong>Caso a: baricentro avanzato rispetto al fuoco.</strong></p>
+Il peso $W$ applicato in $G$ crea rispetto al fuoco un momento <em>a picchiare</em>
+(antiorario). Il piano di coda deve generare una forza <strong>deportante verso il basso</strong>
+$L_t < 0$ per equilibrare: $L_w - |L_t| = W$ e $L_w \cdot x_F = |L_t| \cdot l_t$
+(dove $l_t$ è il braccio del piano di coda rispetto al fuoco).
+
+<p class="para-head"><strong>Caso b: baricentro arretrato.</strong></p>
+Il momento risultante è <em>a cabrare</em>. Il piano di coda deve generare una forza
+<strong>portante verso l'alto</strong> $L_t > 0$ per equilibrare.
+
+<p>L'equilibratore (parte mobile del piano di coda) consente al pilota di variare la forza $L_t$ modificando la curvatura del profilo: deflettendo l'equilibratore verso il basso si aumenta la portanza del piano di coda (cabrata); verso l'alto si riduce (picchiata).</p>
+
+<h3 id="funzione-di-stabilità-longitudinale">Funzione di stabilità longitudinale</h3>
+
+<p>Un velivolo è <strong>stabile longitudinalmente</strong> se, dopo una perturbazione dell'incidenza $\Delta\alpha$, nasce un momento aerodinamico che tende a riportare $\alpha$ al valore di equilibrio. La condizione matematica è: $$\frac{\partial M_y}{\partial \alpha} < 0
+  \qquad \Leftrightarrow \qquad
+  C_{m\alpha} < 0
+  \label{eq:2018s_stab}$$</p>
+
+<p class="para-head"><strong>Ruolo del piano di coda.</strong></p>
+Un aumento di $\alpha$ del velivolo intero produce (per l'ala e la fusoliera) un aumento
+di $L_w$ applicato al fuoco, e quindi un momento <em>destabilizzante</em> a cabrare
+(se il fuoco è avanzato al baricentro). Il piano di coda, essendo solidale alla fusoliera
+e molto arretrato rispetto al baricentro, avverte lo stesso aumento di incidenza e genera
+un <em>incremento di forza $\Delta L_t$</em> che produce un momento <strong>stabilizzante
+a picchiare</strong> con braccio $l_t$ grande.
+
+<p>Per valori tipici il contributo stabilizzante del piano di coda è: $$\Delta C_{m,t} = -a_t \cdot \frac{S_t\,l_t}{S\,bar{c}} \cdot \Delta\alpha
+  \quad < 0 \qquad \text{(stabilizzante)}$$ dove $a_t = \partial C_{L,t}/\partial\alpha_t$ è la pendenza della curva di portanza del piano di coda e $S_t$ la sua superficie.</p>
+
+<p>La condizione di stabilità complessiva del velivolo richiede che il <strong>baricentro sia avanzato rispetto al punto neutro</strong>: $$G \text{ avanzato rispetto a } N
+  \quad \Leftrightarrow \quad
+  \bar{x}_G < \bar{x}_N$$ Il margine di stabilità $m_s = \bar{x}_N - \bar{x}_G > 0$ (espresso come frazione della corda media) misura il "margine di sicurezza" longitudinale. Valori tipici: $m_s = 0{,}05$–$0{,}15$ per velivoli da trasporto.</p>
+
+<figure class="block-figure">
+
+<img class="technical-figure" src="../assets/figures/2018-suppletiva-fig-02.png" alt="Figura tecnica 2 — 2018-suppletiva" loading="lazy">
+<figcaption>Schema delle forze sul velivolo classico (baricentro avanzato).
+  Il piano di coda genera $L_t < 0$ per equilibrare; il margine $m_s = \bar{x}_N - \bar{x}_G > 0$
+  garantisce stabilità longitudinale.</figcaption>
+</figure>
+
+<h3 id="configurazioni-speciali">Configurazioni speciali</h3>
+
+<p class="para-head"><strong>Stabilatore (<em>all-moving tail</em>).</strong></p>
+L'intera superficie orizzontale è mobile (nessuna parte fissa). Offre maggiore efficienza
+di controllo per velivoli ad alta velocità dove l'efficacia dell'equilibratore declina
+per effetti di comprimibilità. Tipico dei velivoli militari supersonici.
+
+<p class="para-head"><strong>Canard.</strong></p>
+Il piano di coda è posizionato anteriormente all'ala (<em>canard</em> o "anatra"). In
+questo caso la forza del piano anteriore è sempre portante, riducendo il carico
+sull'ala e migliorando le prestazioni. Tuttavia la stabilità longitudinale è più difficile
+da garantire: il baricentro deve essere arretrato rispetto al fuoco alare.
+
+<aside class="callout box-risultati"><div class="callout-label">Risultati</div><div class="callout-body"><strong>Concetti-chiave:</strong>
+<ul><li>Equilibrio: il piano di coda genera una forza (portante o deportante)
+    per annullare il momento risultante ala+fusoliera.</li><li>Stabilità: $C_{m\alpha} < 0$ richiede $G$ avanzato rispetto al punto neutro $N$;
+    il piano di coda contribuisce con un momento stabilizzante proporzionale a $l_t$.</li><li>L'equilibratore (parte mobile) consente la manovrabilità in beccheggio.</li><li>Margine di stabilità: $m_s = \bar{x}_N - \bar{x}_G$, tipicamente 5–15% di $bar{c}$.</li></ul></div></aside>
+
+<h2 id="volo-librato-condizioni-per-la-salita-di-quota-in-">Volo librato: condizioni per la salita di quota in un aliante</h2>
+
+<div class="quesito"><span class="quesito-num">Quesito 4</span><span class="quesito-text">Volo librato: il candidato individui le condizioni necessarie perché un
+velivolo possa salire di quota, corredando la risposta con un esempio numerico
+riferito ad un aliante.</span></div>
+
+<aside class="callout box-teoria"><div class="callout-label">Teoria</div><div class="callout-body">Un <strong>aliante</strong> (veleggiatore) è un aeromobile privo di propulsore proprio. In aria
+ferma è soggetto esclusivamente a discesa: la componente verticale della sua velocità
+rispetto all'aria è sempre negativa (velocità discensionale $W_{\mathrm{sink}} > 0$).
+La <strong>salita di quota</strong> è tuttavia possibile se l'aliante si trova in una corrente
+d'aria con componente verticale <em>ascendente</em> $V_{\mathrm{asc}}$ superiore alla
+velocità discensionale minima del veleggiatore.</div></aside>
+
+<h3 id="condizione-necessaria-per-la-salita">Condizione necessaria per la salita</h3>
+
+<p>Sia $W_{\mathrm{sink}}$ la velocità di abbassamento del veleggiatore rispetto all'aria (sempre positiva, diretta verso il basso) e $V_{\mathrm{asc}}$ la velocità verticale ascendente della massa d'aria (termica). La velocità verticale del veleggiatore rispetto al suolo vale: $$W_{\mathrm{volo}} = V_{\mathrm{asc}} - W_{\mathrm{sink}}$$ La condizione per la <strong>salita</strong> è: $$\boxed{V_{\mathrm{asc}} > W_{\mathrm{sink}}}$$ ovvero la corrente ascendente deve avere componente verticale superiore alla velocità discensionale del veleggiatore. La condizione ottimale è quella in cui $W_{\mathrm{sink}}$ è <strong>minima</strong> (assetto di <em>minima velocità discensionale</em>).</p>
+
+<h3 id="assetto-di-minima-velocità-discensionale">Assetto di minima velocità discensionale</h3>
+
+<p>In volo librato la velocità discensionale è: $$W_{\mathrm{sink}} = V \sin\beta \approx V \cdot \frac{1}{E}
+  \quad \Rightarrow \quad
+  W_{\mathrm{sink}} = \frac{V}{E} = \frac{D \cdot V}{L} \approx \frac{\Pi_n}{W}$$ Il minimo di $W_{\mathrm{sink}}$ corrisponde al minimo di $\Pi_n/W$, cioè al minimo della <strong>potenza necessaria</strong>: stessa condizione della massima autonomia oraria. L'assetto è quello che massimizza $E\sqrt{C_L}$: $$C_{L,\mathrm{sink\,min}} = \sqrt{\frac{3\,C_{D0}}{k}}, \qquad
+  W_{\mathrm{sink,min}} = \frac{\Pi_{n,\min}}{W}$$</p>
+
+<h3 id="le-termiche">Le termiche</h3>
+
+<p>Le principali sorgenti di correnti ascendenti sfruttate dai veleggiatori sono: <dl><dt>Termiche convettive:</dt><dd>l'aria si riscalda sul terreno (asfalto, terreno scuro, pendii soleggiati), diventa meno densa e sale sotto forma di colonne o bolle d'aria calda. La velocità tipica è $2$–$8\,\mathrm{m/s}$; si estendono fino alla tropopausa nei casi più intensi.</dd><dt>Onde orografiche:</dt><dd>il vento supera un rilievo montuoso e genera onde stazionarie sottovento. I rotor cloud e lenticular clouds segnalano le posizioni. Velocità ascendenti fino a $10\,\mathrm{m/s}$; altezze di $15\,000$–$25\,000\,\mathrm{m}$ nei casi eccezionali.</dd><dt>Correnti di pendio:</dt><dd>il vento soffia contro un pendio e viene deviato verso l'alto; sfruttabili solo nelle vicinanze del rilievo.</dd></dl></p>
+
+<h3 id="esempio-numerico-aliante-moderno">Esempio numerico: aliante moderno</h3>
+
+<aside class="callout box-esempio"><div class="callout-label">Esempio</div><div class="callout-body"><strong>Aliante: Schleicher ASK-21 (biposto da addestramento).</strong>
+Dati: $W = 600\,\mathrm{kg} \times 9{,}81 = 5886\,\mathrm{N}$;
+$S = 17{,}95\,\mathrm{m}^2$; $\AR = 17$; $C_{D0} = 0{,}0095$; $e = 0{,}90$.
+$$k = \frac{1}{\pi \times 17 \times 0{,}90} = 0{,}02085$$
+Assetto di minima velocità discensionale ($\rho_0 = 1{,}225\,\mathrm{kg/m}^3$, SL):
+$$C_{L,\mathrm{sink}} = \sqrt{\frac{3 \times 0{,}0095}{0{,}02085}} = 1{,}168;
+  \quad C_{D} = 4 \times 0{,}0095 = 0{,}038;
+  \quad E = \frac{1{,}168}{0{,}038} = 30{,}7$$
+$$V_{\mathrm{sink}} = \sqrt{\frac{2 \times 5886}{1{,}225 \times 17{,}95 \times 1{,}168}}
+    = 22{,}8\,\mathrm{m/s}$$
+$$W_{\mathrm{sink,min}} = \frac{V}{E} = \frac{22{,}8}{30{,}7} = 0{,}74\,\mathrm{m/s}$$
+<strong>Conclusione:</strong> per guadagnare quota è sufficiente una termica con
+$V_{\mathrm{asc}} > 0{,}74\,\mathrm{m/s}$.
+Nelle condizioni meteorologiche favorevoli (termiche a $3$–$5\,\mathrm{m/s}$),
+la velocità ascensionale netta rispetto al suolo è:
+$W_{\mathrm{volo}} = 4 - 0{,}74 \approx 3{,}3\,\mathrm{m/s}$.</div></aside>
+
+<p class="para-head"><strong>Odografa del moto in aria non immobile.</strong></p>
+Graficamente, la condizione di salita si visualizza sull'odografa: traslando
+l'intera curva verso l'alto di $V_{\mathrm{asc}}$ (vettore velocità aria), la
+nuova odografa supera l'asse delle ascisse se $V_{\mathrm{asc}} > W_{\mathrm{sink,min}}$.
+Il punto di intersezione dell'odografa traslata con l'asse orizzontale indica
+l'assetto ottimale per la risalita alla massima velocità verticale.
+
+<aside class="callout box-risultati"><div class="callout-label">Risultati</div><div class="callout-body"><strong>Concetti-chiave:</strong>
+<ul><li>Condizione necessaria: $V_{\mathrm{asc}} > W_{\mathrm{sink}}$; il veleggiatore
+    sfrutta correnti ascendenti (termiche, onde orografiche, correnti di pendio).</li><li>La velocità discensionale minima si ha all'assetto di minima potenza
+    ($C_{L,\mathrm{sink}} = \sqrt{3\,C_{D0}/k}$), stesso assetto della massima autonomia.</li><li>L'aliante ASK-21 ha $W_{\mathrm{sink,min}} \approx 0{,}74\,\mathrm{m/s}$;
+    basta una termica debole ($> 0{,}7\,\mathrm{m/s}$) per guadagnare quota.</li><li>Un $\AR$ elevato ($17$–$30$ per gli alianti) riduce $k$ e $C_{D0}$,
+    abbassando $W_{\mathrm{sink,min}}$ e aumentando $E_{\max}$: la chiave delle
+    prestazioni di veleggiamento.</li></ul></div></aside>
+</div>
+<nav class="exam-pagination">
+<a href="2018.html" class="">
+<span class="label">Precedente</span>
+<span class="title">2018 </span>
+</a>
+<a href="2019.html" class="next">
+<span class="label">Successivo</span>
+<span class="title">2019 </span>
+</a>
+</nav>
+</article>
+<aside class="exam-aside">
+<div class="exam-aside-inner">
+<div class="toc-label">In questa pagina</div>
+<ul class="toc-list"><li><a href="#massima-autonomia-oraria-alla-quota-di-17-500-ft"><span class="toc-num">1</span>Massima autonomia oraria alla quota di 17 500 ft</a></li>
+<li><a href="#impianto-di-pressurizzazione-e-condizionamento"><span class="toc-num">2</span>Impianto di pressurizzazione e condizionamento</a></li>
+<li><a href="#piano-orizzontale-di-coda-equilibrio-e-stabilità-l"><span class="toc-num">3</span>Piano orizzontale di coda: equilibrio e stabilità longitudinale</a></li>
+<li><a href="#volo-librato-condizioni-per-la-salita-di-quota-in-"><span class="toc-num">4</span>Volo librato: condizioni per la salita di quota in un aliante</a></li></ul>
+</div>
+</aside>
+</div>
+</main>
+<footer class="site-footer">
+<div class="site-footer-inner">
+<p>Prof. Ing. Raucci Biagio · ITIS E. Majorana, Cassino · A.S. 2025/26</p>
+<p class="credit">Costruzioni Aeronautiche · Classe A038</p>
+</div>
+</footer>
+<script src="../assets/script.js"></script>
+</body>
+</html>

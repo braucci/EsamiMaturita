@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#1d3557">
+<meta name="description" content="Aliante · Materiali per costruzioni aeronautiche · Strumentazione">
+<title>Esame di Stato 2016 · Esami Costruzioni Aeronautiche</title>
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" integrity="sha384-nB0miv6/jRmo5UMMR1wu3Gz6NLsoTkbqJghGIsx//Rlm+ZU03BU6SQNC66uf4l5+" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" integrity="sha384-7zkQWkzuo3B5mTepMUcHkMB5jZaolc2xDwL6VFqjFALcbeS9Ggm/Yr2r3Dy4lfFg" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous" onload="renderMathInElement(document.body, {delimiters: [{left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}], throwOnError: false, macros: { '\\AR': '\\mathrm{AR}' } });"></script>
+</head>
+<body>
+<header class="site-header">
+<div class="site-header-inner">
+<a href="../index.html" class="brand">
+<span class="brand-mark">Esami</span>
+<span class="brand-sub">Costruzioni Aeronautiche · A038</span>
+</a>
+<nav class="site-nav">
+<a href="../index.html" >Indice</a>
+<a href="https://github.com" rel="noopener">GitHub</a>
+<a href="https://www.raucci.net" rel="noopener">Blog personale</a>
+</nav>
+</div>
+</header>
+
+<main class="container">
+<div class="exam-page">
+<article class="exam-article-wrap">
+<header class="exam-header">
+<a href="../index.html" class="exam-back">Tutte le prove</a>
+<div class="exam-eyebrow"><span>2016</span><span class="dot">·</span><span>Ordinaria</span></div>
+<h1 class="exam-title">Esame di Stato 2016</h1>
+<p class="exam-deck">Aliante · Materiali per costruzioni aeronautiche · Strumentazione</p>
+</header>
+<div class="exam-article">
+<p>La prova del 2016, nella sua <em>Seconda Parte</em>, propone quattro quesiti che attraversano in maniera complementare quattro grandi aree del programma: la <em>diagnostica strutturale</em> mediante prove non distruttive, le <em>prestazioni di volo</em> con il calcolo del consumo di combustibile su una tratta assegnata, gli <em>impianti di bordo</em> con particolare riferimento alla pressurizzazione, e infine la <em>costruzione della semiala</em> con l'analisi delle funzioni di tutti gli elementi che la compongono. I quesiti 2 e 4 fanno esplicito riferimento al "velivolo della prima parte", ossia all'aeromobile per il quale, nel quesito 1 della prima parte, si è eseguito il dimensionamento di massima. Per coerenza con quanto svolto nel capitolo successivo di questo opuscoletto, nelle risposte che seguono il velivolo di riferimento è un <em>monomotore da turismo a quattro posti</em> di MTOW $\approx 1100\,\mathrm{kg}$ con motore Lycoming O-360 da <span class="unit">180&nbsp;hp</span>.</p>
+
+<h2 id="prova-non-distruttiva-su-un-componente-strutturale">Prova non distruttiva su un componente strutturale: il controllo a ultrasuoni</h2>
+
+<div class="quesito"><span class="quesito-num">Quesito 1</span><span class="quesito-text">Descrivere una prova non distruttiva eseguita su un componente strutturale di velivolo.</span></div>
+
+<aside class="callout box-teoria"><div class="callout-label">Teoria</div><div class="callout-body">Le <strong>Prove Non Distruttive</strong> (PND, in inglese <em>Non-Destructive Testing</em>, NDT) sono l'insieme delle tecniche di ispezione che consentono di rilevare difetti, discontinuità o degradi in un manufatto <em>senza alterarne in alcun modo l'integrità o la funzionalità</em>. Sono lo strumento operativo che permette di applicare le filosofie progettuali <em>fail-safe</em> e <em>damage tolerance</em>, individuando le cricche di fatica prima che raggiungano dimensioni critiche. Fra le diverse tecniche disponibili, il <strong>controllo a ultrasuoni</strong> (UT, <em>Ultrasonic Testing</em>) è il metodo di elezione per l'ispezione di componenti strutturali metallici di forte spessore — come i longheroni delle ali e i pannelli di rivestimento — in quanto è in grado di rilevare difetti <em>interni</em> non rilevabili da metodi superficiali quali liquidi penetranti o particelle magnetiche.</div></aside>
+
+<h3 id="principio-fisico-del-controllo-a-ultrasuoni">Principio fisico del controllo a ultrasuoni</h3>
+
+<p>Gli ultrasuoni sono onde elastiche di compressione/dilatazione a frequenza superiore alla soglia di udibilità umana ($> 20\,\mathrm{kHz}$); nelle applicazioni aeronautiche si utilizzano frequenze comprese fra <span class="unit">0,5&nbsp;MHz</span> e <span class="unit">25&nbsp;MHz</span>. Il principio fisico è il seguente: un fascio di ultrasuoni, generato da un <em>trasduttore piezoelettrico</em>, viene inviato all'interno del materiale; quando l'onda incontra un'interfaccia (la superficie opposta del pezzo, oppure un difetto interno) viene parzialmente <em>riflessa</em> e parzialmente <em>trasmessa</em>, secondo le leggi dell'acustica. Il fascio riflesso (<em>eco</em>) ritorna al trasduttore, che lo riconverte in segnale elettrico; misurando il <em>tempo di volo</em> (<em>time-of-flight</em>) trascorso fra l'emissione e la ricezione e conoscendo la velocità del suono nel materiale ($v$), si determina la profondità del riflettore: $$d = \frac{v \cdot t}{2}$$ ove il fattore $1/2$ tiene conto del fatto che l'onda percorre due volte la distanza (andata e ritorno). Per le leghe di alluminio aeronautiche $v \approx 6300\,\mathrm{m/s}$.</p>
+
+<h3 id="apparecchiatura-necessaria">Apparecchiatura necessaria</h3>
+
+<p>L'apparato strumentale per un controllo a ultrasuoni è costituito da:</p>
+
+<ul><li><strong>Trasduttore piezoelettrico</strong> (sonda): generalmente in titanato di bario o in PZT (piombo-zirconato-titanato), che si comporta sia da emettitore (sotto eccitazione elettrica genera onde meccaniche) sia da ricevitore (sotto sollecitazione meccanica genera segnale elettrico);</li><li><strong>liquido di accoppiamento</strong> (<em>couplant</em>): gel acquoso o olio sintetico interposto fra sonda e pezzo per garantire la continuità acustica eliminando l'aria nell'interfaccia, che altrimenti rifletterebbe il fascio;</li><li><strong>generatore di impulsi e ricevitore amplificato</strong> con visualizzatore;</li><li><strong>oscilloscopio</strong> o <strong>display A-scan</strong> che rappresenta in ascissa il tempo (proporzionale alla profondità) e in ordinata l'ampiezza dell'eco;</li><li><strong>blocchi di taratura</strong> di riferimento, contenenti difetti artificiali calibrati di geometria e dimensioni note, utilizzati per la calibrazione dell'apparecchiatura prima di ogni controllo.</li></ul>
+
+<h3 id="procedimento-operativo">Procedimento operativo</h3>
+
+<p>Si suppone di voler ispezionare un <strong>longherone alare</strong> in lega 2024-T3 a sezione a doppio T, per ricercare eventuali cricche di fatica nelle solette o nell'anima.</p>
+
+<p class="para-head"><strong>Passo 1 — Pulizia e preparazione della superficie.</strong></p>
+La superficie del componente nella zona di scansione viene pulita da olio, grasso, vernice scrostata e ossidi superficiali, e levigata se necessario per garantire un buon contatto acustico fra la sonda e il pezzo.
+
+<p class="para-head"><strong>Passo 2 — Calibrazione dell'apparecchiatura.</strong></p>
+Si esegue la calibrazione su un blocco campione dello stesso materiale del pezzo, di spessore e geometria noti, contenente riflettori artificiali calibrati (fori a fondo piatto, intagli a V). Si regolano:
+<ul><li>la <em>velocità del suono</em> nel materiale (<span class="unit">6300&nbsp;m/s</span> per la lega 2024);</li><li>la <em>base dei tempi</em> dell'oscilloscopio in modo che lo schermo copra l'intero spessore del pezzo;</li><li>il <em>guadagno</em> (<em>gain</em>) in modo che il riflettore di riferimento più piccolo dia un'eco di altezza nota (tipicamente <span class="unit">80&nbsp;%</span> dello schermo).</li></ul>
+
+<p class="para-head"><strong>Passo 3 — Applicazione del couplant.</strong></p>
+Sulla superficie da scansionare si applica un sottile strato uniforme di gel di accoppiamento, sufficiente a riempire ogni microrugosità interfacciale.
+
+<p class="para-head"><strong>Passo 4 — Scansione.</strong></p>
+La sonda viene fatta scorrere sulla superficie del pezzo seguendo una griglia regolare (<em>raster scan</em>), con velocità di traslazione costante e leggera pressione di contatto. Sullo schermo dell'oscilloscopio si osservano simultaneamente:
+<ul><li>l'<em>eco di partenza</em> (<em>initial pulse</em>, IP), generata dall'interfaccia sonda-pezzo, sempre presente all'origine dell'asse dei tempi;</li><li>l'<em>eco di fondo</em> (<em>back-wall echo</em>, BWE), generata dalla superficie opposta del pezzo, posizionata a un tempo proporzionale al doppio dello spessore.</li></ul>
+In assenza di difetti, fra IP e BWE il segnale è piatto (zona nota come <em>cammino libero</em>). La presenza di un'eco intermedia, posizionata in un punto qualsiasi del cammino libero, segnala un <em>difetto interno</em>.
+
+<p class="para-head"><strong>Passo 5 — Interpretazione e localizzazione dei difetti.</strong></p>
+Ogni eco di difetto rilevata viene caratterizzata in:
+<ul><li><em>posizione</em>: misurata dal tempo di volo, fornisce la profondità $d = v \cdot t / 2$;</li><li><em>ampiezza</em>: confrontata con quella del riflettore di taratura, fornisce la dimensione equivalente del difetto;</li><li><em>estensione</em>: ricavata muovendo la sonda lungo le tre direzioni e annotando il perimetro entro cui l'eco persiste, fornisce la geometria del difetto.</li></ul>
+Si nota inoltre che, in presenza di un difetto significativo, l'eco di fondo si abbassa o scompare completamente perché parte dell'energia del fascio è stata riflessa anticipatamente dal difetto stesso.
+
+<p class="para-head"><strong>Passo 6 — Documentazione.</strong></p>
+Le indicazioni rilevate vengono mappate sul disegno del componente con coordinate $(x, y, z)$, fotografate e annotate in un <em>rapporto di prova</em> che riporta: identificativo del pezzo, sonda utilizzata (frequenza, diametro), couplant, parametri di calibrazione, indicazioni rilevate, giudizio di accettabilità rispetto ai criteri della specifica tecnica applicabile.
+
+<h3 id="schema-operativo">Schema operativo</h3>
+
+<figure class="block-figure"><img class="technical-figure" src="../assets/figures/2016-fig-01.png" alt="Figura tecnica 1 — 2016" loading="lazy">
+<figcaption>Principio del controllo a ultrasuoni e visualizzazione del segnale (A-scan): l'eco di partenza (IP, verde), l'eco di fondo (BWE, blu) e l'eco intermedia generata dalla cricca interna (rosso).</figcaption></figure>
+
+<h3 id="vantaggi-e-limiti">Vantaggi e limiti</h3>
+
+<div class="table-wrap">
+
+<table><tr><td><strong>Vantaggi</strong></td><td><strong>Limiti</strong></td></tr>
+<tr><td>Rileva difetti <em>interni</em>, non solo superficiali, anche a grande profondità ($> 100\,\mathrm{mm}$).</td><td>Necessario il <em>couplant</em>: superfici scabrose, ossidate o verniciate richiedono preparazione.</td></tr>
+<tr><td>Localizza la posizione del difetto in profondità con precisione.</td><td>Difficoltà nell'ispezione di geometrie complesse o di piccolo spessore.</td></tr>
+<tr><td>Applicabile a tutti i materiali metallici e a molti compositi.</td><td>Richiede operatori certificati (livello II o III secondo EN ISO 9712) e interpretazione esperta.</td></tr>
+<tr><td>Strumentazione portatile, applicabile in officina e <em>in situ</em> sul velivolo.</td><td>Difetti orientati parallelamente al fascio (lamellari) possono sfuggire alla rilevazione.</td></tr>
+<tr><td>Consente la misura di spessori residui (utile per valutare la corrosione interna).</td><td>Interpretazione del segnale richiede esperienza per distinguere echi reali da artefatti.</td></tr></table>
+<figcaption>Vantaggi e limiti del controllo a ultrasuoni.</figcaption>
+</div>
+
+<aside class="callout box-esempio"><div class="callout-label">Esempio</div><div class="callout-body"><strong>Applicazione tipica.</strong> Nei programmi di manutenzione strutturale dei velivoli di linea (Boeing 737, Airbus A320), il controllo a ultrasuoni è prescritto periodicamente sui longheroni alari nella zona di attacco alla fusoliera, dove storicamente si concentrano cricche di fatica per effetto dei cicli di flessione. Le ispezioni vengono eseguite ad esempio nelle visite di livello <em>C-check</em> (ogni 20–24 mesi) e <em>D-check</em> (ogni 6–10 anni). Sui pannelli di rivestimento sandwich con anima a nido d'ape, gli ultrasuoni vengono utilizzati per rilevare <em>disbond</em> (distacchi) fra la pelle esterna e l'anima, che si manifestano come zone di assenza dell'eco di fondo.</div></aside>
+
+<aside class="callout box-risultati"><div class="callout-label">Risultati</div><div class="callout-body"><strong>Concetti-chiave da ricordare:</strong>
+<ul><li>Il controllo a ultrasuoni rileva difetti <em>interni</em> sfruttando la riflessione di onde elastiche ad alta frequenza ($0{,}5\,\mathrm{}$–$25\,\mathrm{MHz}$) sulle interfacce.</li><li>L'apparato comprende: trasduttore piezoelettrico, couplant, generatore-ricevitore, oscilloscopio A-scan e blocchi di taratura.</li><li>La profondità del difetto si calcola dal tempo di volo: $d = v \cdot t / 2$.</li><li>Procedimento: pulizia $\to$ calibrazione $\to$ couplant $\to$ scansione $\to$ interpretazione $\to$ rapporto.</li><li>Vantaggi: rileva difetti interni a grande profondità, localizza con precisione, è portatile e applicabile sul velivolo.</li><li>Limiti: richiede couplant, operatori certificati, e geometrie favorevoli al fascio.</li></ul></div></aside>
+
+<h2 id="calcolo-del-consumo-per-una-tratta-di-450-km-a-800">Calcolo del consumo per una tratta di 450 km a 8000 ft</h2>
+
+<div class="quesito"><span class="quesito-num">Quesito 2</span><span class="quesito-text">Calcolare il consumo di carburante per percorrere 450 km alla velocità di crociera a quota 8000 ft dell'aeromobile della prima parte.</span></div>
+
+<aside class="callout box-teoria"><div class="callout-label">Teoria</div><div class="callout-body">Il consumo di carburante per una tratta assegnata si calcola come prodotto del <em>consumo orario</em> ($\dot{m}_c$) per il <em>tempo di volo</em> ($t$). Il consumo orario, a sua volta, è il prodotto del <em>consumo specifico al freno</em> del motore ($c_{sf}$) per la <em>potenza erogata in crociera</em> ($P_c$). Il tempo di volo si ottiene come rapporto fra la distanza da percorrere e la <em>velocità vera</em> (TAS, <em>True Airspeed</em>) alla quota di crociera, che è maggiore della velocità indicata (IAS) per effetto della rarefazione dell'aria.</div></aside>
+
+<h3 id="caratteristiche-atmosferiche-alla-quota-di-crocier">Caratteristiche atmosferiche alla quota di crociera</h3>
+
+<p>La quota di volo assegnata, $h = 8000\,\mathrm{ft}$, corrisponde a $h \approx 2438\,\mathrm{m}$ in atmosfera standard ICAO. A questa quota, le caratteristiche dell'aria sono:</p>
+
+<aside class="callout box-ipotesi"><div class="callout-label">Ipotesi e dati</div><div class="callout-body"><strong>Atmosfera Standard ICAO a 8000 ft (2438 m)</strong>
+<ul><li>Pressione: $p = 75{,}26\,\mathrm{kPa}$ (<span class="unit">0,7426&nbsp;atm</span>)</li><li>Temperatura: $T = 272{,}3\,\mathrm{K}$ (-<span class="unit">0,8&nbsp;°</span>C)</li><li>Densità: $\rho = 0{,}9629\,\mathrm{kg/mcubed}$</li><li>Rapporto di densità: $\sigma = \rho/\rho_0 = 0{,}9629/1{,}2250 = 0{,}7860$</li><li>$\sqrt{\sigma} = 0{,}8866$</li></ul>
+ove $\rho_0 = 1{,}225\,\mathrm{kg/mcubed}$ è la densità dell'aria al livello del mare in atmosfera standard.</div></aside>
+
+<h3 id="velocità-vera-alla-quota-di-crociera">Velocità vera alla quota di crociera</h3>
+
+<p>Per il velivolo di riferimento (Cessna 172 / Piper PA-28 con motore Lycoming O-360 da <span class="unit">180&nbsp;hp</span>), la <em>velocità indicata di crociera economica</em> (IAS) al <span class="unit">75&nbsp;%</span> di potenza è dell'ordine di: $$V_{IAS} \approx 120\,\mathrm{kt} = 222\,\mathrm{km/h}$$ La velocità vera (TAS) si ricava dalla relazione fondamentale: $$V_{TAS} = \frac{V_{IAS}}{\sqrt{\sigma}}$$ Sostituendo: $$V_{TAS} = \frac{222}{0{,}8866} \approx 250\,\mathrm{km/h} \quad (135\,\mathrm{kt})$$</p>
+
+<h3 id="tempo-di-volo">Tempo di volo</h3>
+
+<p>Per percorrere la distanza $D = 450\,\mathrm{km}$ alla velocità vera $V_{TAS}$: $$t = \frac{D}{V_{TAS}} = \frac{450}{250} = 1{,}80\,\mathrm{h} \quad (1\,\mathrm{h}\,48\,\mathrm{min})$$</p>
+
+<h3 id="calcolo-del-consumo-di-combustibile">Calcolo del consumo di combustibile</h3>
+
+<p class="para-head"><strong>Potenza in crociera.</strong></p> Al <span class="unit">75&nbsp;%</span> della potenza massima (<span class="unit">134&nbsp;kW</span>):
+$$P_c = 0{,}75 \cdot P_{\max} = 0{,}75 \cdot 134 = 100{,}5\,\mathrm{kW}$$
+
+<p class="para-head"><strong>Consumo orario.</strong></p> Con consumo specifico al freno tipico per motori boxer aspirati ($c_{sf} = 0{,}26\,\mathrm{kg/kW/h}$):
+$$\dot{m}_c = c_{sf} \cdot P_c = 0{,}26 \cdot 100{,}5 \approx 26{,}1\,\mathrm{kg/h}$$
+
+<p class="para-head"><strong>Massa di combustibile per la tratta.</strong></p>
+$$\boxed{\,m_c = \dot{m}_c \cdot t = 26{,}1 \cdot 1{,}80 \approx 47\,\mathrm{kg}\,}$$
+
+<p class="para-head"><strong>Volume di combustibile.</strong></p> Considerando la densità dell'avgas <span class="unit">100&nbsp;LL</span> a $15\,\mathrm{°}\mathrm{C}$ ($\rho_c = 0{,}72\,\mathrm{kg/L}$):
+$$\boxed{\,V_c = \frac{m_c}{\rho_c} = \frac{47}{0{,}72} \approx 65\,\mathrm{L}\,}$$
+
+<h3 id="sintesi-della-catena-di-calcolo">Sintesi della catena di calcolo</h3>
+
+<figure class="block-figure"><img class="technical-figure" src="../assets/figures/2016-fig-02.png" alt="Figura tecnica 2 — 2016" loading="lazy">
+<figcaption>Catena di calcolo del consumo di combustibile per la tratta assegnata: in giallo i dati di input, in blu i calcoli intermedi, in verde il risultato finale.</figcaption></figure>
+
+<aside class="callout box-avviso"><div class="callout-label">Attenzione</div><div class="callout-body"><strong>Verifica dimensionale e di consistenza.</strong> I <span class="unit">47&nbsp;kg</span> di combustibile rappresentano poco più del <span class="unit">4&nbsp;%</span> della MTOW del velivolo (<span class="unit">1100&nbsp;kg</span>), valore del tutto compatibile con le specifiche di una tratta di poco meno di due ore di volo. Il volume di <span class="unit">65&nbsp;L</span> è circa la metà della capacità totale del serbatoio dimensionato nel capitolo successivo per un'autonomia di tre ore (<span class="unit">130&nbsp;L</span>): i due valori sono dunque coerenti, dato che la tratta di <span class="unit">1,8&nbsp;h</span> è poco più della metà delle <span class="unit">3,5&nbsp;h</span> di autonomia totale. Su un Cessna 172 reale, il consumo dichiarato in crociera al <span class="unit">75&nbsp;%</span> è di <span class="unit">8,5&nbsp;galloni/h</span> (<span class="unit">32&nbsp;L/h</span>); il nostro valore di $26{,}1\,\mathrm{kgh}/0{,}72\,\mathrm{kgL} \approx 36{,}3\,\mathrm{L/h}$ è leggermente superiore, dato che abbiamo utilizzato un motore O-360 (<span class="unit">180&nbsp;hp</span>) anziché l'O-320 (<span class="unit">160&nbsp;hp</span>) del Cessna.</div></aside>
+
+<aside class="callout box-risultati"><div class="callout-label">Risultati</div><div class="callout-body"><strong>Concetti-chiave da ricordare:</strong>
+<ul><li>La velocità vera in quota è maggiore della velocità indicata: $V_{TAS} = V_{IAS}/\sqrt{\sigma}$.</li><li>Il tempo di volo è $t = D/V_{TAS}$.</li><li>Il consumo orario è $\dot{m}_c = c_{sf} \cdot P_c$, ove $P_c$ è la potenza in crociera (tipicamente <span class="unit">75&nbsp;%</span> di $P_{\max}$).</li><li>La massa di combustibile per la tratta è $m_c = \dot{m}_c \cdot t$.</li><li>Per la tratta di <span class="unit">450&nbsp;km</span> a <span class="unit">8000&nbsp;ft</span> sul velivolo di riferimento: $m_c \approx 47\,\mathrm{kg}$ ($V_c \approx 65\,\mathrm{L}$).</li></ul></div></aside>
+
+<h2 id="impianto-di-pressurizzazione-di-un-velivolo-commer">Impianto di pressurizzazione di un velivolo commerciale</h2>
+
+<div class="quesito"><span class="quesito-num">Quesito 3</span><span class="quesito-text">Descrivere l'impianto di pressurizzazione di un velivolo commerciale per il trasporto passeggeri.</span></div>
+
+<aside class="callout box-teoria"><div class="callout-label">Teoria</div><div class="callout-body">La quota di crociera dei velivoli da trasporto commerciali si colloca tipicamente nella fascia 10000–12000&nbsp;m (33000–40000&nbsp;ft), dove l'aria è troppo rarefatta per la respirazione e la temperatura esterna scende a $-50\,\mathrm{°}\mathrm{C}$ o meno. L'<strong>impianto di pressurizzazione</strong> ha la funzione di mantenere all'interno della cabina pressione, temperatura, umidità e composizione chimica dell'aria entro i limiti compatibili con la sopravvivenza e il comfort dei passeggeri, simulando le condizioni ambientali di una quota molto più bassa — la cosiddetta <strong>quota cabina</strong> (<em>cabin altitude</em>).</div></aside>
+
+<h3 id="filosofia-di-pressurizzazione">Filosofia di pressurizzazione</h3>
+
+<p>Per ragioni strutturali (peso della fusoliera) ed economiche (consumo di aria spillata), la pressione interna non viene mantenuta costante al valore del livello del mare per tutta la durata del volo: si stabilisce un <em>compromesso</em> fra il comfort dei passeggeri e il dimensionamento della fusoliera. La filosofia tipica per i velivoli da trasporto è la seguente:</p>
+
+<ul><li>da 0&nbsp;\mathrm{} a circa <span class="unit">2500&nbsp;m</span> (<span class="unit">8000&nbsp;ft</span>) la pressione interna eguaglia quella esterna (<em>fase di non pressurizzazione</em>);</li><li>da <span class="unit">2500&nbsp;m</span> a circa <span class="unit">8000&nbsp;m</span> la pressione interna viene mantenuta costante al valore corrispondente a <span class="unit">2500&nbsp;m</span> (<span class="unit">765&nbsp;hectoPa</span>) — è la <em>fase isobarica</em>;</li><li>oltre <span class="unit">8000&nbsp;m</span> si mantiene costante il <em>differenziale di pressione</em> $\Delta p = p_{cab} - p_{ext}$ al valore massimo strutturale, e la pressione cabina diminuisce con la stessa legge di quella esterna.</li></ul>
+
+<p>Il valore standard del differenziale di pressione massimo per un velivolo da trasporto passeggeri è $\Delta p_{\max} \approx 7{,}5\,\mathrm{psi}$ ($\approx 52\,\mathrm{kPa}$), che corrisponde alla differenza fra la pressione a <span class="unit">11000&nbsp;m</span> (limite superiore della quota di volo) e quella a <span class="unit">2400&nbsp;m</span> (massima quota cabina). La struttura della fusoliera viene dimensionata su questo valore, con un opportuno coefficiente di sicurezza ($\sim 1{,}33$ secondo le FAR/CS-25).</p>
+
+<h3 id="architettura-dellimpianto">Architettura dell'impianto</h3>
+
+<p>L'impianto di pressurizzazione è strutturalmente integrato con l'<em>impianto pneumatico</em> e l'<em>impianto di condizionamento</em>, dei quali costituisce un'estensione. I componenti principali sono:</p>
+
+<dl><dt>Sorgente di aria compressa (<em>bleed air</em>)</dt><dd>L'aria viene prelevata dagli stadi intermedi del compressore dei motori (turbofan) tipicamente ad alta temperatura ($\sim 200\,\mathrm{°}\mathrm{C}$) e pressione ($\sim 30\,\mathrm{psi}$). In emergenza o a terra, la sorgente è l'APU. Una <em>bleed valve</em> controllata elettronicamente regola la portata.</dd><dt>Pre-cooler</dt><dd>Scambiatore di calore aria-aria che raffredda preventivamente l'aria spillata utilizzando come fluido refrigerante l'aria atmosferica catturata dalla presa dinamica della gondola motore.</dd><dt>Pack (<em>Air Conditioning Pack</em>)</dt><dd>Gruppo di condizionamento composto da uno scambiatore di calore primario, un compressore, un secondo scambiatore di calore, una turbina di espansione (<em>air cycle machine</em>, ACM) e un separatore d'acqua. È un ciclo termodinamico inverso che fornisce aria alla giusta temperatura e umidità.</dd><dt>Cabina pressurizzata</dt><dd>È la regione strutturale a tenuta stagna che comprende cockpit, cabina passeggeri, stive cargo e relativi vani di servizio. Il vano carrello anteriore non è pressurizzato.</dd><dt>Outflow Valve (valvola di efflusso)</dt><dd>È il cuore del sistema di regolazione: una valvola a sezione variabile, posta sulla parte posteriore della fusoliera, che scarica aria all'esterno modulando la sezione di passaggio. È la portata di efflusso a determinare la pressione interna a parità di portata in ingresso.</dd><dt>Cabin Pressure Controller (CPC)</dt><dd>Centralina elettronica che, sulla base della quota di volo, della quota cabina pianificata e dei gradienti ammissibili, comanda automaticamente l'apertura e la chiusura della outflow valve.</dd><dt>Positive Pressure Relief Valve</dt><dd>Valvola di sicurezza in sovrapressione: si apre se $\Delta p > \Delta p_{\max}$ per evitare di superare i limiti strutturali.</dd><dt>Negative Pressure Relief Valve</dt><dd>Valvola anti-vuoto: si apre se la pressione esterna supera quella interna (caso possibile in discesa rapida non regolata) per evitare carichi di compressione sulla fusoliera, che sarebbero non previsti dalla progettazione.</dd><dt>Strumentazione di cockpit</dt><dd>Altimetro di cabina (<em>cabin altimeter</em>), variometro di cabina (<em>cabin VSI</em>), indicatore di pressione differenziale (<em>$\Delta p$ indicator</em>), avvisatore acustico-luminoso che si attiva se la quota cabina supera <span class="unit">10000&nbsp;ft</span>.</dd></dl>
+
+<h3 id="schema-funzionale">Schema funzionale</h3>
+
+<figure class="block-figure"><img class="technical-figure" src="../assets/figures/2016-fig-03.png" alt="Figura tecnica 3 — 2016" loading="lazy">
+<figcaption>Schema funzionale dell'impianto di pressurizzazione di un velivolo commerciale. Le linee in blu rappresentano il flusso d'aria, le linee tratteggiate i circuiti di sicurezza (in rosso) e di controllo (in giallo).</figcaption></figure>
+
+<h3 id="andamento-della-pressurizzazione-durante-la-missio">Andamento della pressurizzazione durante la missione</h3>
+
+<p>Durante una tipica missione di volo (decollo, salita, crociera, discesa, atterraggio), la pressione cabina segue un profilo significativamente diverso da quello della pressione esterna, come illustrato dal diagramma seguente.</p>
+
+<figure class="block-figure"><img class="technical-figure" src="../assets/figures/2016-fig-04.png" alt="Figura tecnica 4 — 2016" loading="lazy">
+<figcaption>Andamento qualitativo della quota velivolo (in blu) e della quota cabina (in rosso) durante una tipica missione di volo. In crociera la quota cabina è limitata a $\sim$<span class="unit">2400&nbsp;m</span> per garantire il comfort dei passeggeri; il differenziale di pressione $\Delta p_{\max}$ rappresenta il valore di dimensionamento della fusoliera.</figcaption></figure>
+
+<aside class="callout box-avviso"><div class="callout-label">Attenzione</div><div class="callout-body"><strong>Implicazioni strutturali della pressurizzazione.</strong> Il differenziale $\Delta p$ sollecita la fusoliera a <em>trazione circonferenziale</em>, generando uno stato di sforzo equivalente a quello di un cilindro in pressione. Questa sollecitazione è ciclica (un ciclo di pressurizzazione-depressurizzazione per ogni volo) e produce <strong>fatica</strong> nella struttura. Nel disegno di porte, finestrini, raccordi fra cabina pressurizzata e zone non pressurizzate, ogni dettaglio costruttivo deve essere studiato per minimizzare le concentrazioni di tensione: i drammatici incidenti del de Havilland Comet (anni '50), causati da rotture per fatica innescate sui finestrini quadrangolari, hanno portato all'adozione universale dei <em>finestrini con angoli arrotondati</em> che si vedono ancora oggi su tutti i velivoli da trasporto.</div></aside>
+
+<aside class="callout box-risultati"><div class="callout-label">Risultati</div><div class="callout-body"><strong>Concetti-chiave da ricordare:</strong>
+<ul><li>L'impianto di pressurizzazione mantiene la cabina a una pressione interna superiore a quella esterna, con una <em>quota cabina</em> massima di $\sim2400\,\mathrm{m}$.</li><li>Il differenziale di pressione standard è $\Delta p_{\max} \approx 7{,}5\,\mathrm{psi}$ ($52\,\mathrm{kPa}$).</li><li>L'aria proviene dal <em>bleed</em> dei motori (in volo) o dall'APU (a terra), passa attraverso pre-cooler e <em>pack</em> di condizionamento, e viene immessa in cabina.</li><li>La regolazione della pressione interna avviene modulando l'<em>outflow valve</em> di efflusso tramite il <em>Cabin Pressure Controller</em> (CPC).</li><li>La sicurezza è garantita da valvole di sovrapressione (<em>positive relief</em>) e di anti-vuoto (<em>negative relief</em>).</li><li>La pressurizzazione è una sollecitazione <em>ciclica</em> che genera fatica nella fusoliera, con conseguenze importanti sul disegno strutturale.</li></ul></div></aside>
+
+<h2 id="funzioni-degli-elementi-costruttivi-della-semiala">Funzioni degli elementi costruttivi della semiala</h2>
+
+<div class="quesito"><span class="quesito-num">Quesito 4</span><span class="quesito-text">Descrivere la funzione (strutturale, aerodinamica, funzionale) di tutti gli elementi costruttivi della semiala del velivolo proposto nella prima parte.</span></div>
+
+<aside class="callout box-teoria"><div class="callout-label">Teoria</div><div class="callout-body">La semiala di un velivolo è una struttura complessa nella quale ogni elemento svolge <em>simultaneamente</em> una o più funzioni, classificabili in tre macrocategorie:
+<ul><li><strong>Funzione strutturale:</strong> contribuisce ad assorbire i carichi (flessione, taglio, torsione) e a trasmetterli all'attacco con la fusoliera;</li><li><strong>Funzione aerodinamica:</strong> concorre alla genesi della portanza, al contenimento della resistenza, al controllo del flusso sul profilo;</li><li><strong>Funzione funzionale:</strong> svolge un compito specifico legato all'operatività del velivolo (controllo, ipersostentazione, alloggiamento di impianti, attacchi).</li></ul>
+La quasi totalità degli elementi della semiala assolve a più di una di queste funzioni: l'esempio paradigmatico è il <em>rivestimento</em>, che contemporaneamente delimita il profilo aerodinamico, partecipa alla resistenza strutturale e protegge l'interno dell'ala dagli agenti atmosferici.</div></aside>
+
+<h3 id="schema-di-riferimento-della-semiala">Schema di riferimento della semiala</h3>
+
+<figure class="block-figure"><img class="technical-figure" src="../assets/figures/2016-fig-05.png" alt="Figura tecnica 5 — 2016" loading="lazy">
+<figcaption>Schema della semiala in pianta (vista dall'alto) con i principali elementi costruttivi. Le etichette riportate all'esterno con frecce di richiamo identificano i componenti raggruppati per tipologia.</figcaption></figure>
+
+<h3 id="tabella-riassuntiva-delle-funzioni">Tabella riassuntiva delle funzioni</h3>
+
+<p>Nella tabella seguente sono elencati tutti gli elementi costruttivi della semiala, con l'indicazione delle funzioni svolte: $\bullet$ funzione principale, $\circ$ funzione secondaria.</p>
+
+<div class="table-wrap">
+
+<table><tr><td>lcccX@{}}
+
+<p><strong>Elemento</strong></td><td><strong>Strutt.</strong></td><td><strong>Aerod.</strong></td><td><strong>Funz.</strong></td><td><strong>Note</strong></td></tr> <tr><td>Longherone anteriore</td><td>$\bullet$</td><td>–</td><td>–</td><td>Trave principale, assorbe flessione e taglio.</td></tr> <tr><td>Longherone posteriore</td><td>$\bullet$</td><td>–</td><td>$\circ$</td><td>Anche supporto attacco superfici mobili.</td></tr> <tr><td>Falso longherone</td><td>$\circ$</td><td>–</td><td>$\bullet$</td><td>Supporto attacco alettoni, flap, aerofreni.</td></tr> <tr><td>Centine</td><td>$\bullet$</td><td>$\circ$</td><td>$\circ$</td><td>Mantengono il profilo, ripartiscono i carichi.</td></tr> <tr><td>Correnti</td><td>$\bullet$</td><td>–</td><td>–</td><td>Irrigidiscono il rivestimento, integrano la flessione.</td></tr> <tr><td>Rivestimento (skin)</td><td>$\bullet$</td><td>$\bullet$</td><td>–</td><td>Profilo aerodinamico + flusso di taglio.</td></tr> <tr><td>Bordo d'attacco (D-nose)</td><td>$\circ$</td><td>$\bullet$</td><td>–</td><td>Forma aerodinamica, può alloggiare anti-ice.</td></tr> <tr><td>Bordo d'uscita</td><td>–</td><td>$\bullet$</td><td>$\circ$</td><td>Chiusura aerodinamica, attacco superfici mobili.</td></tr> <tr><td>Alettone</td><td>–</td><td>$\bullet$</td><td>$\bullet$</td><td>Controllo asse di rollio.</td></tr> <tr><td>Flap</td><td>–</td><td>$\bullet$</td><td>$\bullet$</td><td>Ipersostentatore B/U: aumenta $C_{L,\max}$ in atterraggio.</td></tr> <tr><td>Slat (eventuale)</td><td>–</td><td>$\bullet$</td><td>$\bullet$</td><td>Ipersostentatore B/A: ritarda lo stallo.</td></tr> <tr><td>Spoiler / aerofreno</td><td>–</td><td>$\bullet$</td><td>$\bullet$</td><td>Lift dumper a terra, aerofreno in volo.</td></tr> <tr><td>Winglet</td><td>–</td><td>$\bullet$</td><td>–</td><td>Riduce la resistenza indotta.</td></tr> <tr><td>Centine di compartimento</td><td>$\bullet$</td><td>–</td><td>$\bullet$</td><td>Chiudono i serbatoi integrali a tenuta stagna.</td></tr> <tr><td>Attacchi (<em>fittings</em>)</td><td>$\bullet$</td><td>–</td><td>$\bullet$</td><td>Trasmettono i carichi alla fusoliera.</td></tr></table> <figcaption>Funzioni svolte dagli elementi costitutivi della semiala. \mbox{$\bullet$ = principale}, \mbox{$\circ$ = secondaria}.</figcaption> </div></p>
+
+<h3 id="descrizione-dettagliata">Descrizione dettagliata</h3>
+
+<p class="para-head"><strong>Longheroni (anteriore e posteriore).</strong></p>
+Funzione <em>strutturale</em> primaria. Costituiscono la spina dorsale della semiala e sono assimilabili a travi a mensola incastrate in fusoliera. L'<em>anima</em> (lamiera verticale) assorbe le tensioni tangenziali dovute al taglio; le <em>solette</em> (suole estruse di sezione rettangolare o a L) assorbono il momento flettente come coppia di forze: la soletta superiore in compressione, la soletta inferiore in trazione (in volo diritto). Nelle ali bilongherone i due longheroni, insieme al rivestimento, formano il <em>cassone alare</em>, struttura tubolare chiusa molto rigida sia a flessione sia a torsione.
+
+<p class="para-head"><strong>Falso longherone.</strong></p>
+Funzione <em>funzionale</em> primaria. È un longherone secondario, posto verso il bordo d'uscita, che non ha un compito strutturale prevalente ma serve da supporto per gli attacchi delle superfici mobili (alettoni, flap, freni aerodinamici). Nelle ali monolongherone è anche detto "longherone secondario".
+
+<p class="para-head"><strong>Centine.</strong></p>
+Funzione <em>strutturale + aerodinamica + funzionale</em>. Sono gli elementi trasversali, sagomati secondo il profilo aerodinamico, distribuiti lungo l'apertura alare. Svolgono molteplici compiti:
+<ul><li>mantengono la sagoma aerodinamica del profilo, contrastando la deformazione del rivestimento sotto i carichi locali;</li><li>ripartiscono i carichi concentrati (peso del motore, attacchi del carrello, attacchi delle superfici mobili) verso longheroni e correnti;</li><li>collegano fra loro i correnti, evitandone l'instabilità laterale.</li></ul>
+Nelle zone interne delle ali alari integrali (<em>wet wing</em>) le centine sono a tenuta stagna e fungono da paratie di compartimentazione dei serbatoi.
+
+<p class="para-head"><strong>Correnti.</strong></p>
+Funzione <em>strutturale</em> primaria. Sono profilati longitudinali a sezione ridotta (a Z, a C, a L, a T) interposti fra le solette dei longheroni. Hanno due compiti principali:
+<ul><li>integrare la resistenza a flessione delle solette, distribuendo gli sforzi assiali su un'area più ampia;</li><li>irrigidire il rivestimento prevenendone l'instabilità per imbozzamento (<em>skin buckling</em>) sotto i carichi di compressione.</li></ul>
+
+<p class="para-head"><strong>Rivestimento (skin).</strong></p>
+Funzione <em>strutturale + aerodinamica</em>. È la lamiera esterna (in lega di alluminio 2024 placcata o 7075) che riveste l'intera semiala. Quando partecipa attivamente all'assorbimento di taglio, torsione e flessione si dice <em>lavorante</em>; quando svolge solo funzione aerodinamica (di forma) si dice <em>di forma</em>. Le sue funzioni sono:
+<ul><li>creare la barriera fra il flusso in depressione del dorso e quello in sovrappressione del ventre (genesi della portanza);</li><li>assorbire il flusso di taglio dovuto al momento torcente (cassone alare);</li><li>collaborare con i correnti nell'assorbimento della flessione mediante l'<em>area collaborante</em>;</li><li>proteggere l'interno dell'ala dagli agenti atmosferici e dalla corrosione.</li></ul>
+
+<p class="para-head"><strong>Bordo d'attacco (D-nose).</strong></p>
+Funzione <em>aerodinamica</em> primaria, <em>strutturale</em> secondaria. È la parte anteriore del profilo, generalmente di forma a D, smontabile per accedere agli impianti interni. Nelle ali monolongherone è anche l'unica parte resistente a torsione (<em>torsion box anteriore</em>). Frequentemente al suo interno passano le tubazioni dell'impianto antighiaccio (aria calda spillata dal motore) o le resistenze di un sistema antighiaccio elettrico.
+
+<p class="para-head"><strong>Bordo d'uscita.</strong></p>
+Funzione <em>aerodinamica</em> primaria. È la parte posteriore del profilo, di forma affilata, dove le velocità superiore e inferiore si ricongiungono determinando la circolazione e quindi la portanza (condizione di Kutta). Costituisce inoltre la zona di attacco delle superfici mobili.
+
+<p class="para-head"><strong>Alettoni.</strong></p>
+Funzione <em>aerodinamica + funzionale</em>. Sono superfici mobili poste al bordo d'uscita, in prossimità delle estremità alari. Si muovono in modo <em>differenziale</em> (alettone destro su, alettone sinistro giù, e viceversa) per generare un momento di rollio. Vengono posizionati lontano dalla mezzeria per massimizzare il braccio rispetto all'asse di rollio.
+
+<p class="para-head"><strong>Flap (ipersostentatori di bordo d'uscita).</strong></p>
+Funzione <em>aerodinamica + funzionale</em>. Sono superfici mobili al bordo d'uscita, poste nella zona interna della semiala (tra la radice e l'alettone). La loro deflessione verso il basso aumenta la curvatura del profilo e, nei tipi più sofisticati (Fowler, slotted), anche la corda effettiva, incrementando il coefficiente di portanza massimo $C_{L,\max}$ e abbassando la velocità di stallo: ciò consente decolli e atterraggi a velocità inferiori.
+
+<p class="para-head"><strong>Slat o lamelle (ipersostentatori di bordo d'attacco).</strong></p>
+Funzione <em>aerodinamica + funzionale</em>. Sono lamine mobili poste al bordo d'attacco, presenti soprattutto nei velivoli ad alte prestazioni. La loro estensione apre una fessura attraverso cui l'aria del ventre passa al dorso, energizzando lo strato limite e ritardando lo stallo a incidenze elevate.
+
+<p class="para-head"><strong>Spoiler / aerofreni.</strong></p>
+Funzione <em>aerodinamica + funzionale</em>. Sono pannelli mobili dorsali che si sollevano per:
+<ul><li>distruggere la portanza dopo l'atterraggio (<em>lift dumpers</em>), aumentando l'aderenza delle ruote al suolo e consentendo l'uso efficace dei freni;</li><li>aumentare la resistenza in volo per rallentare o scendere senza accelerare (<em>speed brakes</em>);</li><li>assistere gli alettoni nel controllo di rollio ad alta velocità (<em>roll spoilers</em>).</li></ul>
+
+<p class="para-head"><strong>Winglet.</strong></p>
+Funzione <em>aerodinamica</em>. È un'estensione verticale o angolata dell'estremità alare. Sfrutta il flusso longitudinale che si genera all'estremità per via della circolazione attorno al <em>wing tip</em> per produrre una piccola portanza orizzontale e ridurre l'intensità dei vortici di estremità, abbassando così la resistenza indotta. Equivale, in termini di efficienza, a un aumento dell'allungamento alare senza incremento dell'apertura.
+
+<p class="para-head"><strong>Centine di compartimentazione e attacchi.</strong></p>
+Funzione <em>strutturale + funzionale</em>. Sono elementi specializzati: le centine di compartimentazione separano i serbatoi integrali del cassone in vani stagni, evitando il movimento longitudinale del combustibile (<em>sloshing</em>) e permettendo la gestione del centraggio. Gli <em>attacchi</em> (<em>fittings</em>, in lega di alluminio fusa o forgiata, talvolta in acciaio o titanio) sono nodi rinforzati che concentrano e trasmettono i carichi della semiala alla fusoliera, attraverso bulloneria di forza.
+
+<aside class="callout box-esempio"><div class="callout-label">Esempio</div><div class="callout-body"><strong>Sintesi visiva.</strong> L'assieme della semiala può essere immaginato come una grande <em>trave a cassone</em>, dove i longheroni sono le "flange" della trave, il rivestimento ne costituisce le "anime" tubolari (resistente a torsione e taglio), le centine sono le "costole" che mantengono la sagoma e i correnti sono "rinforzi" che aumentano la rigidezza locale del rivestimento. Sopra questa struttura primaria vengono montati gli elementi mobili (flap, alettoni, spoiler, slat) che modificano in tempo reale la configurazione aerodinamica per adattarla alle diverse fasi di volo.</div></aside>
+
+<aside class="callout box-risultati"><div class="callout-label">Risultati</div><div class="callout-body"><strong>Concetti-chiave da ricordare:</strong>
+<ul><li>Ogni elemento della semiala assolve simultaneamente più funzioni (strutturali, aerodinamiche, funzionali).</li><li>I longheroni sono gli elementi strutturali primari (assorbono flessione e taglio); i correnti li integrano contro l'imbozzamento del rivestimento.</li><li>Le centine mantengono la sagoma del profilo e trasmettono i carichi locali alla struttura primaria.</li><li>Il rivestimento svolge un ruolo aerodinamico (forma del profilo) ma anche strutturale (collabora a flessione e torsione, partecipa al cassone alare).</li><li>Le superfici mobili sono elementi prevalentemente funzionali: alettoni (rollio), flap e slat (ipersostentazione), spoiler (controllo discesa e lift dumping).</li><li>Le winglet sono un'innovazione aerodinamica che riduce la resistenza indotta senza aumentare l'apertura alare.</li></ul></div></aside>
+</div>
+<nav class="exam-pagination">
+<a href="esempio-mim-2015.html" class="">
+<span class="label">Precedente</span>
+<span class="title">2015 · Esempio MIM</span>
+</a>
+<a href="2017.html" class="next">
+<span class="label">Successivo</span>
+<span class="title">2017 </span>
+</a>
+</nav>
+</article>
+<aside class="exam-aside">
+<div class="exam-aside-inner">
+<div class="toc-label">In questa pagina</div>
+<ul class="toc-list"><li><a href="#prova-non-distruttiva-su-un-componente-strutturale"><span class="toc-num">1</span>Prova non distruttiva su un componente strutturale: il controllo a ultrasuoni</a></li>
+<li><a href="#calcolo-del-consumo-per-una-tratta-di-450-km-a-800"><span class="toc-num">2</span>Calcolo del consumo per una tratta di 450 km a 8000 ft</a></li>
+<li><a href="#impianto-di-pressurizzazione-di-un-velivolo-commer"><span class="toc-num">3</span>Impianto di pressurizzazione di un velivolo commerciale</a></li>
+<li><a href="#funzioni-degli-elementi-costruttivi-della-semiala"><span class="toc-num">4</span>Funzioni degli elementi costruttivi della semiala</a></li></ul>
+</div>
+</aside>
+</div>
+</main>
+<footer class="site-footer">
+<div class="site-footer-inner">
+<p>Prof. Ing. Raucci Biagio · ITIS E. Majorana, Cassino · A.S. 2025/26</p>
+<p class="credit">Costruzioni Aeronautiche · Classe A038</p>
+</div>
+</footer>
+<script src="../assets/script.js"></script>
+</body>
+</html>
