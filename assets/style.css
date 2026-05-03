@@ -299,7 +299,7 @@ body {
   border-left: 4px solid var(--aero);
   border-radius: 6px;
   padding: var(--s-5) var(--s-6);
-  box-shadow: var(--shadow-soft);
+  box-shadow: var(--shadow-1);
 }
 
 .purpose-card p {
@@ -1081,3 +1081,111 @@ body {
 .color-word.red { color: var(--rust); font-weight: 600; }
 .color-word.green { color: var(--emerald); font-weight: 600; }
 .color-word.yellow { color: var(--amber); font-weight: 600; }
+
+
+/* Indice generale degli argomenti */
+.topics-section {
+  margin-top: var(--s-7);
+}
+
+.topics-intro-card {
+  background: linear-gradient(135deg, rgba(29, 53, 87, 0.07), rgba(69, 123, 157, 0.08));
+  border: 1px solid rgba(29, 53, 87, 0.12);
+  border-radius: 6px;
+  padding: clamp(1.2rem, 3vw, 2rem);
+  box-shadow: var(--shadow-1);
+  margin-bottom: var(--s-5);
+}
+
+.topics-intro-card p {
+  max-width: 78ch;
+  margin-top: 0;
+}
+
+.topic-search-label {
+  display: block;
+  font-weight: 700;
+  color: var(--aero);
+  margin: 1rem 0 0.35rem;
+}
+
+.topic-search {
+  width: 100%;
+  max-width: 720px;
+  border: 1px solid rgba(29, 53, 87, 0.22);
+  border-radius: 999px;
+  padding: 0.85rem 1.1rem;
+  font: inherit;
+  background: #fff;
+  color: var(--ink);
+  box-shadow: 0 8px 22px rgba(29, 53, 87, 0.08);
+}
+
+.topic-search:focus {
+  outline: 3px solid rgba(69, 123, 157, 0.18);
+  border-color: var(--aero-2);
+}
+
+.topic-search-hint {
+  color: var(--ink-3);
+  font-size: 0.95rem;
+  margin: 0.65rem 0 0;
+}
+
+.topics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: var(--s-4);
+}
+
+.topic-card {
+  background: var(--paper-2);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: 1.2rem;
+  box-shadow: var(--shadow-1);
+}
+
+.topic-card h3 {
+  margin: 0 0 0.9rem;
+  font-size: 1.05rem;
+  color: var(--aero);
+}
+
+.topic-links {
+  display: grid;
+  gap: 0.55rem;
+}
+
+.topic-link {
+  display: grid;
+  gap: 0.15rem;
+  text-decoration: none;
+  padding: 0.7rem 0.8rem;
+  border-radius: calc(6px - 2px);
+  border: 1px solid rgba(29, 53, 87, 0.08);
+  background: rgba(248, 250, 252, 0.78);
+  transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease;
+}
+
+.topic-link:hover {
+  transform: translateY(-1px);
+  border-color: rgba(29, 53, 87, 0.22);
+  background: #fff;
+}
+
+.topic-name {
+  color: var(--ink);
+  font-weight: 650;
+  line-height: 1.35;
+}
+
+.topic-source {
+  color: var(--ink-3);
+  font-size: 0.84rem;
+}
+
+.topic-card.is-empty,
+.topic-link.is-hidden {
+  display: none;
+}

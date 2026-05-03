@@ -31,3 +31,31 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
     }
   });
 });
+
+
+// Filtro dell'indice generale degli argomenti
+(() => {
+  const input = document.querySelector('#topic-search');
+  const links = Array.from(document.querySelectorAll('.topic-link'));
+  const cards = Array.from(document.querySelectorAll('.topic-card'));
+  const count = document.querySelector('#topic-count');
+  if (!input || !links.length) return;
+
+  const normalize = (text) => text.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+
+  input.addEventListener('input', () => {
+    const query = normalize(input.value.trim());
+    let visible = 0;
+    links.forEach(link => {
+      const haystack = normalize(link.dataset.topic || link.textContent);
+      const match = !query || haystack.includes(query);
+      link.classList.toggle('is-hidden', !match);
+      if (match) visible += 1;
+    });
+    cards.forEach(card => {
+      const hasVisibleLinks = card.querySelector('.topic-link:not(.is-hidden)');
+      card.classList.toggle('is-empty', !hasVisibleLinks);
+    });
+    if (count) count.textContent = visible;
+  });
+})();
