@@ -1439,3 +1439,6 @@ for p in sorted(OUT.rglob('*')):
         rel = p.relative_to(OUT)
         size = p.stat().st_size
         print(f"  {str(rel):40s} {size:>8d} bytes")
+
+
+# TOPIC_INDEX_HTML: sezione inserita manualmente in index.html per l'indice generale degli argomenti.
