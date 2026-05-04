@@ -1189,3 +1189,114 @@ body {
 .topic-link.is-hidden {
   display: none;
 }
+
+/* Variante collassabile dell'indice generale degli argomenti */
+.topics-accordion {
+  border: 1px solid rgba(29, 53, 87, 0.13);
+  border-radius: 6px;
+  background: linear-gradient(135deg, rgba(29, 53, 87, 0.06), rgba(69, 123, 157, 0.08));
+  box-shadow: var(--shadow-1);
+  overflow: hidden;
+}
+
+.topics-summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s-4);
+  padding: clamp(1.25rem, 3vw, 2rem);
+}
+
+.topics-summary::-webkit-details-marker {
+  display: none;
+}
+
+.topics-summary:focus-visible {
+  outline: 3px solid rgba(69, 123, 157, 0.28);
+  outline-offset: -3px;
+}
+
+.topics-summary-text {
+  max-width: 78ch;
+}
+
+.topics-summary-kicker {
+  display: inline-block;
+  margin-bottom: 0.35rem;
+  color: var(--aero-2);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.topics-summary .section-title {
+  margin-bottom: 0.35rem;
+}
+
+.topics-summary p {
+  margin: 0;
+  color: var(--ink-3);
+}
+
+.topics-summary-action {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: 1px solid rgba(29, 53, 87, 0.18);
+  background: rgba(255, 255, 255, 0.78);
+  border-radius: 999px;
+  padding: 0.65rem 1rem;
+  color: var(--aero);
+  font-weight: 800;
+  box-shadow: 0 8px 20px rgba(29, 53, 87, 0.08);
+}
+
+.topics-summary-action::after {
+  content: '+';
+  display: inline-grid;
+  place-items: center;
+  width: 1.35rem;
+  height: 1.35rem;
+  border-radius: 999px;
+  background: rgba(29, 53, 87, 0.09);
+  font-size: 1.05rem;
+  line-height: 1;
+}
+
+.topics-accordion[open] .topics-summary-action::after {
+  content: '−';
+}
+
+.summary-close-label,
+.topics-accordion[open] .summary-open-label {
+  display: none;
+}
+
+.topics-accordion[open] .summary-close-label {
+  display: inline;
+}
+
+.topics-panel {
+  padding: 0 clamp(1.25rem, 3vw, 2rem) clamp(1.25rem, 3vw, 2rem);
+}
+
+.topics-panel .topics-intro-card {
+  background: rgba(255, 255, 255, 0.76);
+  margin-bottom: var(--s-4);
+}
+
+@media (max-width: 720px) {
+  .topics-summary {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .topics-summary-action {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
