@@ -1206,6 +1206,7 @@ def site_header(active='', depth=0):
 </a>
 <nav class="site-nav">
 <a href="{rel}index.html" {nav_home}>Indice</a>
+<a href="{rel}index.html#indice-tematico">Argomenti</a>
 <a href="https://github.com" rel="noopener">GitHub</a>
 <a href="https://www.raucci.net" rel="noopener">Blog personale</a>
 </nav>
@@ -1255,6 +1256,95 @@ for ex in sorted_exams:
 <span class="exam-arrow">Apri</span>
 </a>""")
 
+TOPIC_INDEX_HTML = r"""
+<section class="topics-section container" id="indice-tematico">
+<details class="topics-accordion" id="topics-accordion">
+<summary class="topics-summary">
+<div class="topics-summary-text">
+<span class="topics-summary-kicker">Ricerca tematica trasversale alle prove</span>
+<h2 class="section-title">Indice generale degli argomenti</h2>
+<p>Apri questa sezione per cercare rapidamente un argomento senza scorrere le prove anno per anno.</p>
+</div>
+<span class="topics-summary-action" aria-hidden="true"><span class="summary-open-label">Apri indice</span><span class="summary-close-label">Chiudi indice</span></span>
+</summary>
+<div class="topics-panel">
+<div class="topics-intro-card">
+<p>Questa sezione raccoglie, in un unico indice, tutti i nuclei teorici ed esercitativi trattati nelle prove. Serve a raggiungere direttamente l’argomento di interesse senza consultare le tracce anno per anno.</p>
+<label class="topic-search-label" for="topic-search">Cerca un argomento</label>
+<input id="topic-search" class="topic-search" type="search" placeholder="Esempio: CND, pressurizzazione, flutter, turbofan, inviluppo..." autocomplete="off">
+<p class="topic-search-hint"><span id="topic-count">49</span> argomenti indicizzati.</p>
+</div>
+<div class="topics-grid">
+<article class="topic-card"><h3>Aerodinamica, meccanica del volo e prestazioni</h3><div class="topic-links">
+<a class="topic-link" href="esami/2025.html#virata-corretta-a-costante-tempo-di-inversione-e-c" data-topic="virata corretta a c_l costante: tempo di inversione e consumo 2025 aerodinamica, meccanica del volo e prestazioni"><span class="topic-name">Virata corretta a C_L costante: tempo di inversione e consumo</span><span class="topic-source">2025</span></a>
+<a class="topic-link" href="esami/2024.html#utilità-potenzialità-e-limiti-del-velivolo-uav" data-topic="utilità, potenzialità e limiti del velivolo uav 2024 aerodinamica, meccanica del volo e prestazioni"><span class="topic-name">Utilità, potenzialità e limiti del velivolo UAV</span><span class="topic-source">2024</span></a>
+<a class="topic-link" href="esami/2024.html#quota-di-tangenza-definizione-e-dipendenza-dalle-c" data-topic="quota di tangenza: definizione e dipendenza dalle caratteristiche del velivolo 2024 aerodinamica, meccanica del volo e prestazioni"><span class="topic-name">Quota di tangenza: definizione e dipendenza dalle caratteristiche del velivolo</span><span class="topic-source">2024</span></a>
+<a class="topic-link" href="esami/2023-straordinaria.html#fasi-della-manovra-di-decollo" data-topic="fasi della manovra di decollo 2023 — sessione straordinaria aerodinamica, meccanica del volo e prestazioni"><span class="topic-name">Fasi della manovra di decollo</span><span class="topic-source">2023 — sessione straordinaria</span></a>
+<a class="topic-link" href="esami/2019.html#diagramma-di-inviluppo-di-volo" data-topic="diagramma di inviluppo di volo 2019 aerodinamica, meccanica del volo e prestazioni"><span class="topic-name">Diagramma di inviluppo di volo</span><span class="topic-source">2019</span></a>
+<a class="topic-link" href="esami/2018.html#quota-di-tangenza-definizione-e-dipendenza-dalle-c" data-topic="quota di tangenza: definizione e dipendenza dalle caratteristiche del velivolo 2018 aerodinamica, meccanica del volo e prestazioni"><span class="topic-name">Quota di tangenza: definizione e dipendenza dalle caratteristiche del velivolo</span><span class="topic-source">2018</span></a>
+<a class="topic-link" href="esami/2018-suppletiva.html#massima-autonomia-oraria-alla-quota-di-17-500-ft" data-topic="massima autonomia oraria alla quota di 17 500 ft 2018 — sessione suppletiva aerodinamica, meccanica del volo e prestazioni"><span class="topic-name">Massima autonomia oraria alla quota di 17 500 ft</span><span class="topic-source">2018 — sessione suppletiva</span></a>
+<a class="topic-link" href="esami/2018-suppletiva.html#volo-librato-condizioni-per-la-salita-di-quota-in-" data-topic="volo librato: condizioni per la salita di quota in un aliante 2018 — sessione suppletiva aerodinamica, meccanica del volo e prestazioni"><span class="topic-name">Volo librato: condizioni per la salita di quota in un aliante</span><span class="topic-source">2018 — sessione suppletiva</span></a>
+</div></article>
+<article class="topic-card"><h3>Strutture, carichi, aeroelasticità e materiali</h3><div class="topic-links">
+<a class="topic-link" href="esami/2025-suppletiva.html#funzioni-degli-elementi-costruttivi-della-semiala-" data-topic="funzioni degli elementi costruttivi della semiala dell&#x27;aliante 2025 — sessione suppletiva strutture, carichi, aeroelasticità e materiali"><span class="topic-name">Funzioni degli elementi costruttivi della semiala dell&#x27;aliante</span><span class="topic-source">2025 — sessione suppletiva</span></a>
+<a class="topic-link" href="esami/2025-suppletiva.html#struttura-organizzativa-manutentiva-di-una-compagn" data-topic="struttura organizzativa manutentiva di una compagnia aerea 2025 — sessione suppletiva strutture, carichi, aeroelasticità e materiali"><span class="topic-name">Struttura organizzativa manutentiva di una compagnia aerea</span><span class="topic-source">2025 — sessione suppletiva</span></a>
+<a class="topic-link" href="esami/2025-straordinaria.html#funzioni-degli-elementi-dellimpennaggio-orizzontal" data-topic="funzioni degli elementi dell&#x27;impennaggio orizzontale 2025 — sessione straordinaria strutture, carichi, aeroelasticità e materiali"><span class="topic-name">Funzioni degli elementi dell&#x27;impennaggio orizzontale</span><span class="topic-source">2025 — sessione straordinaria</span></a>
+<a class="topic-link" href="esami/2025-straordinaria.html#flutter-divergenza-elastica-e-tecniche-di-prevenzi" data-topic="flutter, divergenza elastica e tecniche di prevenzione 2025 — sessione straordinaria strutture, carichi, aeroelasticità e materiali"><span class="topic-name">Flutter, divergenza elastica e tecniche di prevenzione</span><span class="topic-source">2025 — sessione straordinaria</span></a>
+<a class="topic-link" href="esami/2023.html#corrosione-in-ambito-aeronautico-problematiche-pre" data-topic="corrosione in ambito aeronautico: problematiche, prevenzione e controllo 2023 strutture, carichi, aeroelasticità e materiali"><span class="topic-name">Corrosione in ambito aeronautico: problematiche, prevenzione e controllo</span><span class="topic-source">2023</span></a>
+<a class="topic-link" href="esami/2023-straordinaria.html#ciclo-di-lavorazione-delle-strutture-in-materiale-" data-topic="ciclo di lavorazione delle strutture in materiale composito 2023 — sessione straordinaria strutture, carichi, aeroelasticità e materiali"><span class="topic-name">Ciclo di lavorazione delle strutture in materiale composito</span><span class="topic-source">2023 — sessione straordinaria</span></a>
+<a class="topic-link" href="esami/2019.html#sollecitazione-del-longherone-in-condizione-di-g-s" data-topic="sollecitazione del longherone in condizione di g-stallo a \texorpdfstring1,3 v_s 2019 strutture, carichi, aeroelasticità e materiali"><span class="topic-name">Sollecitazione del longherone in condizione di g-stallo a \texorpdfstring1,3 V_S</span><span class="topic-source">2019</span></a>
+<a class="topic-link" href="esami/2016.html#prova-non-distruttiva-su-un-componente-strutturale" data-topic="prova non distruttiva su un componente strutturale: il controllo a ultrasuoni 2016 strutture, carichi, aeroelasticità e materiali"><span class="topic-name">Prova non distruttiva su un componente strutturale: il controllo a ultrasuoni</span><span class="topic-source">2016</span></a>
+<a class="topic-link" href="esami/2016.html#funzioni-degli-elementi-costruttivi-della-semiala" data-topic="funzioni degli elementi costruttivi della semiala 2016 strutture, carichi, aeroelasticità e materiali"><span class="topic-name">Funzioni degli elementi costruttivi della semiala</span><span class="topic-source">2016</span></a>
+<a class="topic-link" href="esami/2015.html#soluzioni-costruttive-per-le-strutture-alari-e-mat" data-topic="soluzioni costruttive per le strutture alari e materiali impiegati 2015 strutture, carichi, aeroelasticità e materiali"><span class="topic-name">Soluzioni costruttive per le strutture alari e materiali impiegati</span><span class="topic-source">2015</span></a>
+<a class="topic-link" href="esami/2015.html#disegno-dassieme-della-struttura-dimensionata" data-topic="disegno d&#x27;assieme della struttura dimensionata 2015 strutture, carichi, aeroelasticità e materiali"><span class="topic-name">Disegno d&#x27;assieme della struttura dimensionata</span><span class="topic-source">2015</span></a>
+<a class="topic-link" href="esami/2015.html#cause-e-fenomeni-connessi-allaeroelasticità-delle-" data-topic="cause e fenomeni connessi all&#x27;aeroelasticità delle strutture 2015 strutture, carichi, aeroelasticità e materiali"><span class="topic-name">Cause e fenomeni connessi all&#x27;aeroelasticità delle strutture</span><span class="topic-source">2015</span></a>
+</div></article>
+<article class="topic-card"><h3>Impianti di bordo e sistemi</h3><div class="topic-links">
+<a class="topic-link" href="esami/2025-suppletiva.html#formazione-di-ghiaccio-sulle-ali-e-impianto-antigh" data-topic="formazione di ghiaccio sulle ali e impianto antighiaccio 2025 — sessione suppletiva impianti di bordo e sistemi"><span class="topic-name">Formazione di ghiaccio sulle ali e impianto antighiaccio</span><span class="topic-source">2025 — sessione suppletiva</span></a>
+<a class="topic-link" href="esami/2024.html#principale-strumentazione-di-bordo-di-un-velivolo" data-topic="principale strumentazione di bordo di un velivolo 2024 impianti di bordo e sistemi"><span class="topic-name">Principale strumentazione di bordo di un velivolo</span><span class="topic-source">2024</span></a>
+<a class="topic-link" href="esami/2024.html#sicurezza-del-trasporto-aereo-e-benessere-dei-pass" data-topic="sicurezza del trasporto aereo e benessere dei passeggeri 2024 impianti di bordo e sistemi"><span class="topic-name">Sicurezza del trasporto aereo e benessere dei passeggeri</span><span class="topic-source">2024</span></a>
+<a class="topic-link" href="esami/2023.html#impianto-antincendio-di-un-velivolo-commerciale" data-topic="impianto antincendio di un velivolo commerciale 2023 impianti di bordo e sistemi"><span class="topic-name">Impianto antincendio di un velivolo commerciale</span><span class="topic-source">2023</span></a>
+<a class="topic-link" href="esami/2023.html#motorizzazione-e-dimensionamento-del-serbatoio-com" data-topic="motorizzazione e dimensionamento del serbatoio combustibile 2023 impianti di bordo e sistemi"><span class="topic-name">Motorizzazione e dimensionamento del serbatoio combustibile</span><span class="topic-source">2023</span></a>
+<a class="topic-link" href="esami/2019.html#impianto-combustibile-del-velivolo" data-topic="impianto combustibile del velivolo 2019 impianti di bordo e sistemi"><span class="topic-name">Impianto combustibile del velivolo</span><span class="topic-source">2019</span></a>
+<a class="topic-link" href="esami/2018.html#formazione-di-ghiaccio-sulle-ali-problematiche-man" data-topic="formazione di ghiaccio sulle ali: problematiche, manutenzione e impianti antighiaccio 2018 impianti di bordo e sistemi"><span class="topic-name">Formazione di ghiaccio sulle ali: problematiche, manutenzione e impianti antighiaccio</span><span class="topic-source">2018</span></a>
+<a class="topic-link" href="esami/2018-suppletiva.html#impianto-di-pressurizzazione-e-condizionamento" data-topic="impianto di pressurizzazione e condizionamento 2018 — sessione suppletiva impianti di bordo e sistemi"><span class="topic-name">Impianto di pressurizzazione e condizionamento</span><span class="topic-source">2018 — sessione suppletiva</span></a>
+<a class="topic-link" href="esami/2017.html#descrizione-schematica-dellimpianto-combustibile" data-topic="descrizione schematica dell&#x27;impianto combustibile 2017 impianti di bordo e sistemi"><span class="topic-name">Descrizione schematica dell&#x27;impianto combustibile</span><span class="topic-source">2017</span></a>
+<a class="topic-link" href="esami/2016.html#impianto-di-pressurizzazione-di-un-velivolo-commer" data-topic="impianto di pressurizzazione di un velivolo commerciale 2016 impianti di bordo e sistemi"><span class="topic-name">Impianto di pressurizzazione di un velivolo commerciale</span><span class="topic-source">2016</span></a>
+<a class="topic-link" href="esami/2015.html#schema-dellimpianto-elettrico-di-bordo-e-principal" data-topic="schema dell&#x27;impianto elettrico di bordo e principali utenze 2015 impianti di bordo e sistemi"><span class="topic-name">Schema dell&#x27;impianto elettrico di bordo e principali utenze</span><span class="topic-source">2015</span></a>
+<a class="topic-link" href="esami/esempio-mim-2015.html#motorizzazione-e-dimensionamento-del-serbatoio-com" data-topic="motorizzazione e dimensionamento del serbatoio combustibile esempio mim 2015 impianti di bordo e sistemi"><span class="topic-name">Motorizzazione e dimensionamento del serbatoio combustibile</span><span class="topic-source">Esempio MIM 2015</span></a>
+</div></article>
+<article class="topic-card"><h3>Propulsione</h3><div class="topic-links">
+<a class="topic-link" href="esami/2025.html#funzionamento-del-motore-turbofan" data-topic="funzionamento del motore turbofan 2025 propulsione"><span class="topic-name">Funzionamento del motore turbofan</span><span class="topic-source">2025</span></a>
+<a class="topic-link" href="esami/2023-straordinaria.html#funzionamento-del-motore-a-reazione" data-topic="funzionamento del motore a reazione 2023 — sessione straordinaria propulsione"><span class="topic-name">Funzionamento del motore a reazione</span><span class="topic-source">2023 — sessione straordinaria</span></a>
+<a class="topic-link" href="esami/2017.html#caratteristiche-principali-della-propulsione-ad-el" data-topic="caratteristiche principali della propulsione ad elica 2017 propulsione"><span class="topic-name">Caratteristiche principali della propulsione ad elica</span><span class="topic-source">2017</span></a>
+</div></article>
+<article class="topic-card"><h3>Manutenzione, controlli e prove</h3><div class="topic-links">
+<a class="topic-link" href="esami/2025.html#controllo-cnd-con-liquidi-penetranti" data-topic="controllo cnd con liquidi penetranti 2025 manutenzione, controlli e prove"><span class="topic-name">Controllo CND con liquidi penetranti</span><span class="topic-source">2025</span></a>
+<a class="topic-link" href="esami/2025.html#manutenzione-di-2-livello-organizzazione-personale" data-topic="manutenzione di 2° livello: organizzazione, personale, tasks e tempi 2025 manutenzione, controlli e prove"><span class="topic-name">Manutenzione di 2° livello: organizzazione, personale, tasks e tempi</span><span class="topic-source">2025</span></a>
+<a class="topic-link" href="esami/2025-suppletiva.html#prova-non-distruttiva-con-liquidi-penetranti" data-topic="prova non distruttiva con liquidi penetranti 2025 — sessione suppletiva manutenzione, controlli e prove"><span class="topic-name">Prova non distruttiva con liquidi penetranti</span><span class="topic-source">2025 — sessione suppletiva</span></a>
+<a class="topic-link" href="esami/2025-straordinaria.html#prova-non-distruttiva-ad-ultrasuoni-principi-e-lim" data-topic="prova non distruttiva ad ultrasuoni: principi e limiti 2025 — sessione straordinaria manutenzione, controlli e prove"><span class="topic-name">Prova non distruttiva ad ultrasuoni: principi e limiti</span><span class="topic-source">2025 — sessione straordinaria</span></a>
+<a class="topic-link" href="esami/2025-straordinaria.html#documentazione-tecnica-nella-manutenzione-di-una-f" data-topic="documentazione tecnica nella manutenzione di una flotta commerciale 2025 — sessione straordinaria manutenzione, controlli e prove"><span class="topic-name">Documentazione tecnica nella manutenzione di una flotta commerciale</span><span class="topic-source">2025 — sessione straordinaria</span></a>
+<a class="topic-link" href="esami/2023.html#prove-a-terra-procedure-e-valutazione-dei-risultat" data-topic="prove a terra: procedure e valutazione dei risultati 2023 manutenzione, controlli e prove"><span class="topic-name">Prove a terra: procedure e valutazione dei risultati</span><span class="topic-source">2023</span></a>
+<a class="topic-link" href="esami/2019.html#cnd-magnetoscopico-procedura-di-applicazione" data-topic="cnd magnetoscopico: procedura di applicazione 2019 manutenzione, controlli e prove"><span class="topic-name">CND magnetoscopico: procedura di applicazione</span><span class="topic-source">2019</span></a>
+<a class="topic-link" href="esami/2017.html#controlli-per-la-manutenzione-regolare-del-velivol" data-topic="controlli per la manutenzione regolare del velivolo 2017 manutenzione, controlli e prove"><span class="topic-name">Controlli per la manutenzione regolare del velivolo</span><span class="topic-source">2017</span></a>
+<a class="topic-link" href="esami/esempio-mim-2015.html#procedimento-di-una-prova-non-distruttiva" data-topic="procedimento di una prova non distruttiva esempio mim 2015 manutenzione, controlli e prove"><span class="topic-name">Procedimento di una prova non distruttiva</span><span class="topic-source">Esempio MIM 2015</span></a>
+</div></article>
+<article class="topic-card"><h3>Normativa e certificazione</h3><div class="topic-links">
+<a class="topic-link" href="esami/2023-straordinaria.html#norme-di-riferimento-e-requisiti-per-la-certificaz" data-topic="norme di riferimento e requisiti per la certificazione degli aeromobili 2023 — sessione straordinaria normativa e certificazione"><span class="topic-name">Norme di riferimento e requisiti per la certificazione degli aeromobili</span><span class="topic-source">2023 — sessione straordinaria</span></a>
+<a class="topic-link" href="esami/esempio-mim-2015.html#caratteristiche-del-velivolo-e-norme-di-certificaz" data-topic="caratteristiche del velivolo e norme di certificazione esempio mim 2015 normativa e certificazione"><span class="topic-name">Caratteristiche del velivolo e norme di certificazione</span><span class="topic-source">Esempio MIM 2015</span></a>
+</div></article>
+<article class="topic-card"><h3>Altri argomenti</h3><div class="topic-links">
+<a class="topic-link" href="esami/2018.html#tipi-di-comandi-di-volo-e-loro-caratteristiche" data-topic="tipi di comandi di volo e loro caratteristiche 2018 altri argomenti"><span class="topic-name">Tipi di comandi di volo e loro caratteristiche</span><span class="topic-source">2018</span></a>
+<a class="topic-link" href="esami/2018-suppletiva.html#piano-orizzontale-di-coda-equilibrio-e-stabilità-l" data-topic="piano orizzontale di coda: equilibrio e stabilità longitudinale 2018 — sessione suppletiva altri argomenti"><span class="topic-name">Piano orizzontale di coda: equilibrio e stabilità longitudinale</span><span class="topic-source">2018 — sessione suppletiva</span></a>
+<a class="topic-link" href="esami/2016.html#calcolo-del-consumo-per-una-tratta-di-450-km-a-800" data-topic="calcolo del consumo per una tratta di 450 km a 8000 ft 2016 altri argomenti"><span class="topic-name">Calcolo del consumo per una tratta di 450 km a 8000 ft</span><span class="topic-source">2016</span></a>
+</div></article>
+</div>
+</div>
+</details>
+</section>
+
+"""
+
 index_html = head(
     "Esami di Stato · Costruzioni Aeronautiche",
     "Raccolta delle prove d'esame di Stato per la disciplina A038 (Costruzioni Aeronautiche), con risposte argomentate ai quesiti della seconda parte."
@@ -1285,6 +1375,8 @@ index_html = head(
 <p class="purpose-signature"><em>Prof. Ing. Raucci Biagio</em></p>
 </div>
 </section>
+
+{TOPIC_INDEX_HTML}
 
 <section class="exams-section container">
 <div class="section-head">
@@ -1441,4 +1533,4 @@ for p in sorted(OUT.rglob('*')):
         print(f"  {str(rel):40s} {size:>8d} bytes")
 
 
-# TOPIC_INDEX_HTML: sezione inserita manualmente in index.html per l'indice generale degli argomenti.
+# TOPIC_INDEX_HTML viene inserita automaticamente in index.html come sezione collassabile.
